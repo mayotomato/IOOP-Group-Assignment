@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.HotelTitle = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.HotelTitle.AutoSize = true;
             this.HotelTitle.Font = new System.Drawing.Font("French Script MT", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HotelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.HotelTitle.Location = new System.Drawing.Point(390, 109);
+            this.HotelTitle.Location = new System.Drawing.Point(395, 109);
             this.HotelTitle.Name = "HotelTitle";
             this.HotelTitle.Size = new System.Drawing.Size(711, 146);
             this.HotelTitle.TabIndex = 0;
@@ -152,7 +153,7 @@
             this.UserTypes.Controls.Add(this.radioButton2);
             this.UserTypes.Controls.Add(this.radioButton1);
             this.UserTypes.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserTypes.Location = new System.Drawing.Point(329, 585);
+            this.UserTypes.Location = new System.Drawing.Point(334, 585);
             this.UserTypes.Name = "UserTypes";
             this.UserTypes.Size = new System.Drawing.Size(873, 121);
             this.UserTypes.TabIndex = 11;
@@ -167,7 +168,7 @@
             this.LoginDetails.Controls.Add(this.label2);
             this.LoginDetails.Controls.Add(this.textBox1);
             this.LoginDetails.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginDetails.Location = new System.Drawing.Point(468, 273);
+            this.LoginDetails.Location = new System.Drawing.Point(473, 273);
             this.LoginDetails.Name = "LoginDetails";
             this.LoginDetails.Size = new System.Drawing.Size(578, 306);
             this.LoginDetails.TabIndex = 12;
@@ -185,7 +186,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(528, 768);
+            this.button1.Location = new System.Drawing.Point(533, 768);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(454, 62);
             this.button1.TabIndex = 13;
@@ -197,7 +198,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(581, 842);
+            this.label1.Location = new System.Drawing.Point(586, 842);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(344, 25);
             this.label1.TabIndex = 14;
@@ -216,6 +217,7 @@
             this.Controls.Add(this.LoginDetails);
             this.Controls.Add(this.UserTypes);
             this.Controls.Add(this.HotelTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoodStay Hotel";
