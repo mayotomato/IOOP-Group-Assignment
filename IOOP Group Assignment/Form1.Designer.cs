@@ -49,11 +49,11 @@
             // HotelTitle
             // 
             this.HotelTitle.AutoSize = true;
-            this.HotelTitle.Font = new System.Drawing.Font("French Script MT", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HotelTitle.Font = new System.Drawing.Font("Copperplate Gothic Light", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HotelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.HotelTitle.Location = new System.Drawing.Point(395, 109);
+            this.HotelTitle.Location = new System.Drawing.Point(168, 117);
             this.HotelTitle.Name = "HotelTitle";
-            this.HotelTitle.Size = new System.Drawing.Size(711, 146);
+            this.HotelTitle.Size = new System.Drawing.Size(1214, 138);
             this.HotelTitle.TabIndex = 0;
             this.HotelTitle.Text = "GoodStay Hotel";
             // 
