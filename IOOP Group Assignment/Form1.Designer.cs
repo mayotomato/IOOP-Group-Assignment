@@ -42,6 +42,7 @@
             this.LoginDetails = new System.Windows.Forms.GroupBox();
             this.LoginButton = new System.Windows.Forms.Button();
             this.LoginPagePrompt = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.UserTypes.SuspendLayout();
             this.LoginDetails.SuspendLayout();
             this.SuspendLayout();
@@ -147,7 +148,7 @@
             this.UserTypes.Controls.Add(this.ReceptionistRadio);
             this.UserTypes.Controls.Add(this.CustomerRadio);
             this.UserTypes.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserTypes.Location = new System.Drawing.Point(334, 585);
+            this.UserTypes.Location = new System.Drawing.Point(323, 619);
             this.UserTypes.Name = "UserTypes";
             this.UserTypes.Size = new System.Drawing.Size(873, 121);
             this.UserTypes.TabIndex = 11;
@@ -195,6 +196,16 @@
             this.LoginPagePrompt.TabIndex = 14;
             this.LoginPagePrompt.Text = "Username or password is incorrect";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(626, 582);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(282, 25);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "New user? Register account";
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -203,6 +214,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1548, 960);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.LoginPagePrompt);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.LoginDetails);
@@ -236,6 +248,7 @@
         private System.Windows.Forms.GroupBox LoginDetails;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label LoginPagePrompt;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
