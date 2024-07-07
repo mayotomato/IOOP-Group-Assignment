@@ -16,5 +16,10 @@ namespace IOOP_Group_Assignment
         {
             InitializeComponent();
         }
+
+        private void CustomerRadio_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

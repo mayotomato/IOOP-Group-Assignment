@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.HotelTitle = new System.Windows.Forms.Label();
             this.UsernameBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.UserLabel = new System.Windows.Forms.Label();
+            this.PasswordLabel = new System.Windows.Forms.Label();
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.CustomerRadio = new System.Windows.Forms.RadioButton();
             this.ReceptionistRadio = new System.Windows.Forms.RadioButton();
@@ -40,9 +40,10 @@
             this.HousekeepingRadio = new System.Windows.Forms.RadioButton();
             this.UserTypes = new System.Windows.Forms.GroupBox();
             this.LoginDetails = new System.Windows.Forms.GroupBox();
+            this.PasswordVisibilityButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.LoginPagePrompt = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.NewUserLinkLabel = new System.Windows.Forms.LinkLabel();
             this.UserTypes.SuspendLayout();
             this.LoginDetails.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             this.HotelTitle.AutoSize = true;
             this.HotelTitle.Font = new System.Drawing.Font("Copperplate Gothic Light", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HotelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.HotelTitle.Location = new System.Drawing.Point(168, 117);
+            this.HotelTitle.Location = new System.Drawing.Point(180, 119);
             this.HotelTitle.Name = "HotelTitle";
             this.HotelTitle.Size = new System.Drawing.Size(1214, 138);
             this.HotelTitle.TabIndex = 0;
@@ -67,25 +68,25 @@
             this.UsernameBox.Size = new System.Drawing.Size(454, 40);
             this.UsernameBox.TabIndex = 1;
             // 
-            // label2
+            // UserLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 33);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Username";
+            this.UserLabel.AutoSize = true;
+            this.UserLabel.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserLabel.Location = new System.Drawing.Point(54, 36);
+            this.UserLabel.Name = "UserLabel";
+            this.UserLabel.Size = new System.Drawing.Size(127, 33);
+            this.UserLabel.TabIndex = 3;
+            this.UserLabel.Text = "Username";
             // 
-            // label4
+            // PasswordLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 33);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Password";
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.Location = new System.Drawing.Point(54, 187);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(119, 33);
+            this.PasswordLabel.TabIndex = 5;
+            this.PasswordLabel.Text = "Password";
             // 
             // PasswordBox
             // 
@@ -95,6 +96,7 @@
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(454, 40);
             this.PasswordBox.TabIndex = 6;
+            this.PasswordBox.UseSystemPasswordChar = true;
             // 
             // CustomerRadio
             // 
@@ -106,6 +108,7 @@
             this.CustomerRadio.TabIndex = 7;
             this.CustomerRadio.Text = "Customer";
             this.CustomerRadio.UseVisualStyleBackColor = true;
+            this.CustomerRadio.CheckedChanged += new System.EventHandler(this.CustomerRadio_CheckedChanged);
             // 
             // ReceptionistRadio
             // 
@@ -117,6 +120,7 @@
             this.ReceptionistRadio.TabIndex = 8;
             this.ReceptionistRadio.Text = "Receptionist";
             this.ReceptionistRadio.UseVisualStyleBackColor = true;
+            this.ReceptionistRadio.CheckedChanged += new System.EventHandler(this.ReceptionistRadio_CheckedChanged);
             // 
             // ManagerRadio
             // 
@@ -128,6 +132,7 @@
             this.ManagerRadio.TabIndex = 9;
             this.ManagerRadio.Text = "Manager";
             this.ManagerRadio.UseVisualStyleBackColor = true;
+            this.ManagerRadio.CheckedChanged += new System.EventHandler(this.ManagerRadio_CheckedChanged);
             // 
             // HousekeepingRadio
             // 
@@ -139,6 +144,7 @@
             this.HousekeepingRadio.TabIndex = 10;
             this.HousekeepingRadio.Text = "Housekeeping";
             this.HousekeepingRadio.UseVisualStyleBackColor = true;
+            this.HousekeepingRadio.CheckedChanged += new System.EventHandler(this.HousekeepingRadio_CheckedChanged);
             // 
             // UserTypes
             // 
@@ -157,16 +163,29 @@
             // LoginDetails
             // 
             this.LoginDetails.AutoSize = true;
+            this.LoginDetails.Controls.Add(this.PasswordVisibilityButton);
             this.LoginDetails.Controls.Add(this.PasswordBox);
-            this.LoginDetails.Controls.Add(this.label4);
-            this.LoginDetails.Controls.Add(this.label2);
+            this.LoginDetails.Controls.Add(this.PasswordLabel);
+            this.LoginDetails.Controls.Add(this.UserLabel);
             this.LoginDetails.Controls.Add(this.UsernameBox);
             this.LoginDetails.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginDetails.Location = new System.Drawing.Point(473, 273);
             this.LoginDetails.Name = "LoginDetails";
-            this.LoginDetails.Size = new System.Drawing.Size(578, 306);
+            this.LoginDetails.Size = new System.Drawing.Size(585, 299);
             this.LoginDetails.TabIndex = 12;
             this.LoginDetails.TabStop = false;
+            // 
+            // PasswordVisibilityButton
+            // 
+            this.PasswordVisibilityButton.FlatAppearance.BorderSize = 0;
+            this.PasswordVisibilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PasswordVisibilityButton.Image = global::IOOP_Group_Assignment.Properties.Resources.Eye_Show;
+            this.PasswordVisibilityButton.Location = new System.Drawing.Point(520, 223);
+            this.PasswordVisibilityButton.Name = "PasswordVisibilityButton";
+            this.PasswordVisibilityButton.Size = new System.Drawing.Size(46, 40);
+            this.PasswordVisibilityButton.TabIndex = 16;
+            this.PasswordVisibilityButton.UseVisualStyleBackColor = true;
+            this.PasswordVisibilityButton.Click += new System.EventHandler(this.PasswordVisibilityButton_Click);
             // 
             // LoginButton
             // 
@@ -196,15 +215,16 @@
             this.LoginPagePrompt.TabIndex = 14;
             this.LoginPagePrompt.Text = "Username or password is incorrect";
             // 
-            // linkLabel1
+            // NewUserLinkLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(626, 582);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(282, 25);
-            this.linkLabel1.TabIndex = 15;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "New user? Register account";
+            this.NewUserLinkLabel.AutoSize = true;
+            this.NewUserLinkLabel.Location = new System.Drawing.Point(626, 582);
+            this.NewUserLinkLabel.Name = "NewUserLinkLabel";
+            this.NewUserLinkLabel.Size = new System.Drawing.Size(282, 25);
+            this.NewUserLinkLabel.TabIndex = 15;
+            this.NewUserLinkLabel.TabStop = true;
+            this.NewUserLinkLabel.Text = "New user? Register account";
+            this.NewUserLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NewUserLinkLabel_LinkClicked);
             // 
             // LoginPage
             // 
@@ -214,7 +234,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1548, 960);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.NewUserLinkLabel);
             this.Controls.Add(this.LoginPagePrompt);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.LoginDetails);
@@ -237,8 +257,8 @@
 
         private System.Windows.Forms.Label HotelTitle;
         private System.Windows.Forms.TextBox UsernameBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label UserLabel;
+        private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.RadioButton CustomerRadio;
         private System.Windows.Forms.RadioButton ReceptionistRadio;
@@ -248,7 +268,8 @@
         private System.Windows.Forms.GroupBox LoginDetails;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label LoginPagePrompt;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel NewUserLinkLabel;
+        private System.Windows.Forms.Button PasswordVisibilityButton;
     }
 }
 
