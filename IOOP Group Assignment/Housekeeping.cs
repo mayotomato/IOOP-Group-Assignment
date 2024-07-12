@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace IOOP_Group_Assignment
 {
-    public partial class LoginPage : Form
+    public partial class Housekeeping : Form
     {
-        public LoginPage()
+        public Housekeeping()
         {
             InitializeComponent();
         }
 
+        private void CustomerRadio_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
