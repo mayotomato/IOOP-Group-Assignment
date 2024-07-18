@@ -44,6 +44,7 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.LoginPagePrompt = new System.Windows.Forms.Label();
             this.NewUserLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.UserTypes.SuspendLayout();
             this.LoginDetails.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             this.HotelTitle.AutoSize = true;
             this.HotelTitle.Font = new System.Drawing.Font("Copperplate Gothic Light", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HotelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.HotelTitle.Location = new System.Drawing.Point(146, 87);
+            this.HotelTitle.Location = new System.Drawing.Point(140, 87);
             this.HotelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HotelTitle.Name = "HotelTitle";
             this.HotelTitle.Size = new System.Drawing.Size(607, 69);
@@ -163,7 +164,7 @@
             this.UserTypes.Controls.Add(this.ReceptionistRadio);
             this.UserTypes.Controls.Add(this.CustomerRadio);
             this.UserTypes.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserTypes.Location = new System.Drawing.Point(218, 347);
+            this.UserTypes.Location = new System.Drawing.Point(212, 347);
             this.UserTypes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserTypes.Name = "UserTypes";
             this.UserTypes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -180,7 +181,7 @@
             this.LoginDetails.Controls.Add(this.UserLabel);
             this.LoginDetails.Controls.Add(this.UsernameBox);
             this.LoginDetails.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginDetails.Location = new System.Drawing.Point(287, 167);
+            this.LoginDetails.Location = new System.Drawing.Point(281, 167);
             this.LoginDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginDetails.Name = "LoginDetails";
             this.LoginDetails.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -193,7 +194,7 @@
             this.PasswordVisibilityButton.FlatAppearance.BorderSize = 0;
             this.PasswordVisibilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PasswordVisibilityButton.Image = global::IOOP_Group_Assignment.Properties.Resources.Eye_Show;
-            this.PasswordVisibilityButton.Location = new System.Drawing.Point(263, 117);
+            this.PasswordVisibilityButton.Location = new System.Drawing.Point(263, 119);
             this.PasswordVisibilityButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PasswordVisibilityButton.Name = "PasswordVisibilityButton";
             this.PasswordVisibilityButton.Size = new System.Drawing.Size(32, 21);
@@ -212,7 +213,7 @@
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(322, 424);
+            this.LoginButton.Location = new System.Drawing.Point(316, 424);
             this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(244, 32);
@@ -224,7 +225,7 @@
             // 
             this.LoginPagePrompt.AutoSize = true;
             this.LoginPagePrompt.ForeColor = System.Drawing.Color.IndianRed;
-            this.LoginPagePrompt.Location = new System.Drawing.Point(360, 462);
+            this.LoginPagePrompt.Location = new System.Drawing.Point(354, 462);
             this.LoginPagePrompt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoginPagePrompt.Name = "LoginPagePrompt";
             this.LoginPagePrompt.Size = new System.Drawing.Size(169, 13);
@@ -235,7 +236,7 @@
             // NewUserLinkLabel
             // 
             this.NewUserLinkLabel.AutoSize = true;
-            this.NewUserLinkLabel.Location = new System.Drawing.Point(369, 328);
+            this.NewUserLinkLabel.Location = new System.Drawing.Point(363, 328);
             this.NewUserLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NewUserLinkLabel.Name = "NewUserLinkLabel";
             this.NewUserLinkLabel.Size = new System.Drawing.Size(142, 13);
@@ -243,6 +244,17 @@
             this.NewUserLinkLabel.TabStop = true;
             this.NewUserLinkLabel.Text = "New user? Register account";
             this.NewUserLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NewUserLinkLabel_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(389, 482);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(92, 13);
+            this.linkLabel1.TabIndex = 16;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot Password?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // LoginPage
             // 
@@ -252,6 +264,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.NewUserLinkLabel);
             this.Controls.Add(this.LoginPagePrompt);
             this.Controls.Add(this.LoginButton);
@@ -289,6 +302,7 @@
         private System.Windows.Forms.Label LoginPagePrompt;
         private System.Windows.Forms.LinkLabel NewUserLinkLabel;
         private System.Windows.Forms.Button PasswordVisibilityButton;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
