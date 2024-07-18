@@ -64,5 +64,9 @@ namespace IOOP_Group_Assignment
             }
         }
 
+        private void LoginPagePrompt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

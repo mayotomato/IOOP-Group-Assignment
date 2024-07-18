@@ -53,9 +53,10 @@
             this.HotelTitle.AutoSize = true;
             this.HotelTitle.Font = new System.Drawing.Font("Copperplate Gothic Light", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HotelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.HotelTitle.Location = new System.Drawing.Point(180, 119);
+            this.HotelTitle.Location = new System.Drawing.Point(146, 87);
+            this.HotelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HotelTitle.Name = "HotelTitle";
-            this.HotelTitle.Size = new System.Drawing.Size(1214, 138);
+            this.HotelTitle.Size = new System.Drawing.Size(607, 69);
             this.HotelTitle.TabIndex = 0;
             this.HotelTitle.Text = "GoodStay Hotel";
             // 
@@ -63,18 +64,20 @@
             // 
             this.UsernameBox.BackColor = System.Drawing.Color.White;
             this.UsernameBox.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameBox.Location = new System.Drawing.Point(60, 72);
+            this.UsernameBox.Location = new System.Drawing.Point(30, 37);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UsernameBox.Name = "UsernameBox";
-            this.UsernameBox.Size = new System.Drawing.Size(454, 40);
+            this.UsernameBox.Size = new System.Drawing.Size(229, 24);
             this.UsernameBox.TabIndex = 1;
             // 
             // UserLabel
             // 
             this.UserLabel.AutoSize = true;
             this.UserLabel.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLabel.Location = new System.Drawing.Point(54, 36);
+            this.UserLabel.Location = new System.Drawing.Point(27, 19);
+            this.UserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UserLabel.Name = "UserLabel";
-            this.UserLabel.Size = new System.Drawing.Size(127, 33);
+            this.UserLabel.Size = new System.Drawing.Size(66, 17);
             this.UserLabel.TabIndex = 3;
             this.UserLabel.Text = "Username";
             // 
@@ -82,9 +85,10 @@
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.Location = new System.Drawing.Point(54, 187);
+            this.PasswordLabel.Location = new System.Drawing.Point(27, 97);
+            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(119, 33);
+            this.PasswordLabel.Size = new System.Drawing.Size(61, 17);
             this.PasswordLabel.TabIndex = 5;
             this.PasswordLabel.Text = "Password";
             // 
@@ -92,9 +96,10 @@
             // 
             this.PasswordBox.BackColor = System.Drawing.Color.White;
             this.PasswordBox.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordBox.Location = new System.Drawing.Point(60, 223);
+            this.PasswordBox.Location = new System.Drawing.Point(30, 116);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.Size = new System.Drawing.Size(454, 40);
+            this.PasswordBox.Size = new System.Drawing.Size(229, 24);
             this.PasswordBox.TabIndex = 6;
             this.PasswordBox.UseSystemPasswordChar = true;
             // 
@@ -102,9 +107,10 @@
             // 
             this.CustomerRadio.AutoSize = true;
             this.CustomerRadio.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerRadio.Location = new System.Drawing.Point(99, 48);
+            this.CustomerRadio.Location = new System.Drawing.Point(50, 25);
+            this.CustomerRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CustomerRadio.Name = "CustomerRadio";
-            this.CustomerRadio.Size = new System.Drawing.Size(152, 37);
+            this.CustomerRadio.Size = new System.Drawing.Size(80, 21);
             this.CustomerRadio.TabIndex = 7;
             this.CustomerRadio.Text = "Customer";
             this.CustomerRadio.UseVisualStyleBackColor = true;
@@ -114,9 +120,10 @@
             // 
             this.ReceptionistRadio.AutoSize = true;
             this.ReceptionistRadio.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReceptionistRadio.Location = new System.Drawing.Point(257, 48);
+            this.ReceptionistRadio.Location = new System.Drawing.Point(128, 25);
+            this.ReceptionistRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ReceptionistRadio.Name = "ReceptionistRadio";
-            this.ReceptionistRadio.Size = new System.Drawing.Size(181, 37);
+            this.ReceptionistRadio.Size = new System.Drawing.Size(96, 21);
             this.ReceptionistRadio.TabIndex = 8;
             this.ReceptionistRadio.Text = "Receptionist";
             this.ReceptionistRadio.UseVisualStyleBackColor = true;
@@ -126,9 +133,10 @@
             // 
             this.ManagerRadio.AutoSize = true;
             this.ManagerRadio.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManagerRadio.Location = new System.Drawing.Point(444, 48);
+            this.ManagerRadio.Location = new System.Drawing.Point(222, 25);
+            this.ManagerRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ManagerRadio.Name = "ManagerRadio";
-            this.ManagerRadio.Size = new System.Drawing.Size(144, 37);
+            this.ManagerRadio.Size = new System.Drawing.Size(78, 21);
             this.ManagerRadio.TabIndex = 9;
             this.ManagerRadio.Text = "Manager";
             this.ManagerRadio.UseVisualStyleBackColor = true;
@@ -138,9 +146,10 @@
             // 
             this.HousekeepingRadio.AutoSize = true;
             this.HousekeepingRadio.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HousekeepingRadio.Location = new System.Drawing.Point(594, 48);
+            this.HousekeepingRadio.Location = new System.Drawing.Point(297, 25);
+            this.HousekeepingRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HousekeepingRadio.Name = "HousekeepingRadio";
-            this.HousekeepingRadio.Size = new System.Drawing.Size(199, 37);
+            this.HousekeepingRadio.Size = new System.Drawing.Size(105, 21);
             this.HousekeepingRadio.TabIndex = 10;
             this.HousekeepingRadio.Text = "Housekeeping";
             this.HousekeepingRadio.UseVisualStyleBackColor = true;
@@ -154,9 +163,11 @@
             this.UserTypes.Controls.Add(this.ReceptionistRadio);
             this.UserTypes.Controls.Add(this.CustomerRadio);
             this.UserTypes.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserTypes.Location = new System.Drawing.Point(323, 619);
+            this.UserTypes.Location = new System.Drawing.Point(218, 347);
+            this.UserTypes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserTypes.Name = "UserTypes";
-            this.UserTypes.Size = new System.Drawing.Size(873, 121);
+            this.UserTypes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserTypes.Size = new System.Drawing.Size(453, 65);
             this.UserTypes.TabIndex = 11;
             this.UserTypes.TabStop = false;
             // 
@@ -169,9 +180,11 @@
             this.LoginDetails.Controls.Add(this.UserLabel);
             this.LoginDetails.Controls.Add(this.UsernameBox);
             this.LoginDetails.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginDetails.Location = new System.Drawing.Point(473, 273);
+            this.LoginDetails.Location = new System.Drawing.Point(287, 167);
+            this.LoginDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginDetails.Name = "LoginDetails";
-            this.LoginDetails.Size = new System.Drawing.Size(585, 299);
+            this.LoginDetails.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginDetails.Size = new System.Drawing.Size(309, 159);
             this.LoginDetails.TabIndex = 12;
             this.LoginDetails.TabStop = false;
             // 
@@ -180,9 +193,10 @@
             this.PasswordVisibilityButton.FlatAppearance.BorderSize = 0;
             this.PasswordVisibilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PasswordVisibilityButton.Image = global::IOOP_Group_Assignment.Properties.Resources.Eye_Show;
-            this.PasswordVisibilityButton.Location = new System.Drawing.Point(520, 223);
+            this.PasswordVisibilityButton.Location = new System.Drawing.Point(263, 117);
+            this.PasswordVisibilityButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PasswordVisibilityButton.Name = "PasswordVisibilityButton";
-            this.PasswordVisibilityButton.Size = new System.Drawing.Size(46, 40);
+            this.PasswordVisibilityButton.Size = new System.Drawing.Size(32, 21);
             this.PasswordVisibilityButton.TabIndex = 16;
             this.PasswordVisibilityButton.UseVisualStyleBackColor = true;
             this.PasswordVisibilityButton.Click += new System.EventHandler(this.PasswordVisibilityButton_Click);
@@ -198,9 +212,10 @@
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(533, 768);
+            this.LoginButton.Location = new System.Drawing.Point(322, 424);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(454, 62);
+            this.LoginButton.Size = new System.Drawing.Size(244, 32);
             this.LoginButton.TabIndex = 13;
             this.LoginButton.Text = "Log in";
             this.LoginButton.UseVisualStyleBackColor = false;
@@ -209,18 +224,21 @@
             // 
             this.LoginPagePrompt.AutoSize = true;
             this.LoginPagePrompt.ForeColor = System.Drawing.Color.IndianRed;
-            this.LoginPagePrompt.Location = new System.Drawing.Point(586, 842);
+            this.LoginPagePrompt.Location = new System.Drawing.Point(360, 462);
+            this.LoginPagePrompt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoginPagePrompt.Name = "LoginPagePrompt";
-            this.LoginPagePrompt.Size = new System.Drawing.Size(344, 25);
+            this.LoginPagePrompt.Size = new System.Drawing.Size(169, 13);
             this.LoginPagePrompt.TabIndex = 14;
             this.LoginPagePrompt.Text = "Username or password is incorrect";
+            this.LoginPagePrompt.Click += new System.EventHandler(this.LoginPagePrompt_Click);
             // 
             // NewUserLinkLabel
             // 
             this.NewUserLinkLabel.AutoSize = true;
-            this.NewUserLinkLabel.Location = new System.Drawing.Point(626, 582);
+            this.NewUserLinkLabel.Location = new System.Drawing.Point(369, 328);
+            this.NewUserLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NewUserLinkLabel.Name = "NewUserLinkLabel";
-            this.NewUserLinkLabel.Size = new System.Drawing.Size(282, 25);
+            this.NewUserLinkLabel.Size = new System.Drawing.Size(142, 13);
             this.NewUserLinkLabel.TabIndex = 15;
             this.NewUserLinkLabel.TabStop = true;
             this.NewUserLinkLabel.Text = "New user? Register account";
@@ -228,12 +246,12 @@
             // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1548, 960);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.NewUserLinkLabel);
             this.Controls.Add(this.LoginPagePrompt);
             this.Controls.Add(this.LoginButton);
@@ -241,6 +259,7 @@
             this.Controls.Add(this.UserTypes);
             this.Controls.Add(this.HotelTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoodStay Hotel";
