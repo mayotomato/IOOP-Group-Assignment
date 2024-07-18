@@ -58,11 +58,11 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Housekeeping.cs">
+    <Compile Include="HousekeepingPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Housekeeping.Designer.cs">
-      <DependentUpon>Housekeeping.cs</DependentUpon>
+    <Compile Include="HousekeepingPage.Designer.cs">
+      <DependentUpon>HousekeepingPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +75,8 @@
     <EmbeddedResource Include="CustomerPage.resx">
       <DependentUpon>CustomerPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Housekeeping.resx">
-      <DependentUpon>Housekeeping.cs</DependentUpon>
+    <EmbeddedResource Include="HousekeepingPage.resx">
+      <DependentUpon>HousekeepingPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

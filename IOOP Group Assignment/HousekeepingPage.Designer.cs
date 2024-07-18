@@ -1,6 +1,6 @@
 ﻿namespace IOOP_Group_Assignment
 {
-    partial class Housekeeping
+    partial class HousekeepingPage
     {
         /// <summary>
         /// Required designer variable.

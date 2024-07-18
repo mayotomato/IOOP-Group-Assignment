@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IOOP_Group_Assignment
 {
-    public partial class Housekeeping : Form
+    public partial class HousekeepingPage : Form
     {
-        public Housekeeping()
+        public HousekeepingPage()
         {
             InitializeComponent();
         }
