@@ -31,12 +31,12 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // splitter1
@@ -63,16 +63,6 @@
             this.monthCalendar1.Location = new System.Drawing.Point(639, 22);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 46);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Profile picture";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -122,6 +112,16 @@
             this.linkLabel4.TabIndex = 8;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "linkLabel4";
+            // 
+            // button1
+            // 
+            this.button1.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 46);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CustomerPage
             // 

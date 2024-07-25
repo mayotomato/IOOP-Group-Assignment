@@ -106,12 +106,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\person_110935.ico" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Eye_Hide.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Eye_Show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_110935 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_110935 %282%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
