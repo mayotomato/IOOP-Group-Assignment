@@ -42,30 +42,30 @@
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Location = new System.Drawing.Point(31, 249);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(71, 13);
+            this.linkLabel4.Size = new System.Drawing.Size(112, 13);
             this.linkLabel4.TabIndex = 17;
             this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Send Review";
+            this.linkLabel4.Text = "Check In / Check Out";
             // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Location = new System.Drawing.Point(31, 223);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(111, 13);
+            this.linkLabel3.Size = new System.Drawing.Size(69, 13);
             this.linkLabel3.TabIndex = 16;
             this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Manage Reservations";
+            this.linkLabel3.Text = "Reservations";
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(31, 198);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(86, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(98, 13);
             this.linkLabel2.TabIndex = 15;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Available Rooms";
+            this.linkLabel2.Text = "Manage Customers";
             // 
             // linkLabel1
             // 
@@ -120,6 +120,7 @@
             this.Name = "ReceptionPage";
             this.Text = "ReceptionPage";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
