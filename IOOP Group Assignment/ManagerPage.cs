@@ -16,5 +16,10 @@ namespace IOOP_Group_Assignment
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
