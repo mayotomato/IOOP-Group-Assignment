@@ -185,7 +185,7 @@
             // pnl_Main
             // 
             this.pnl_Main.Controls.Add(this.btn_test);
-            this.pnl_Main.Location = new System.Drawing.Point(254, 58);
+            this.pnl_Main.Location = new System.Drawing.Point(257, 61);
             this.pnl_Main.Name = "pnl_Main";
             this.pnl_Main.Size = new System.Drawing.Size(615, 487);
             this.pnl_Main.TabIndex = 7;
@@ -241,6 +241,7 @@
             this.txtbox_Password.Name = "txtbox_Password";
             this.txtbox_Password.Size = new System.Drawing.Size(100, 20);
             this.txtbox_Password.TabIndex = 10;
+            this.txtbox_Password.UseSystemPasswordChar = true;
             // 
             // txtbox_Username
             // 
@@ -828,9 +829,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.pnl_Manage_Housekeeping);
+            this.Controls.Add(this.pnl_Manage_Accounts);
             this.Controls.Add(this.pnl_Report);
             this.Controls.Add(this.pnl_Manage_Rooms);
-            this.Controls.Add(this.pnl_Manage_Accounts);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.lnklbl_View_Report);
             this.Controls.Add(this.lnklb_Manage_Housekeeping);
