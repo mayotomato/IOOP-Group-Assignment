@@ -52,6 +52,12 @@
     <Compile Include="CustomerPage.Designer.cs">
       <DependentUpon>CustomerPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="HK_RoomCleaningSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HK_RoomCleaningSchedule.Designer.cs">
+      <DependentUpon>HK_RoomCleaningSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <EmbeddedResource Include="CustomerPage.resx">
       <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HK_RoomCleaningSchedule.resx">
+      <DependentUpon>HK_RoomCleaningSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HousekeepingPage.resx">
       <DependentUpon>HousekeepingPage.cs</DependentUpon>

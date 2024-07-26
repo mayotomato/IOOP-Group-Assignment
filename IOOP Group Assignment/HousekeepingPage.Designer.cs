@@ -35,6 +35,8 @@
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.ProfilePictureButton = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.HousekeepingLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SuppliesLabel
@@ -105,6 +107,23 @@
             this.splitter1.TabIndex = 18;
             this.splitter1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(226, 61);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(646, 487);
+            this.panel1.TabIndex = 25;
+            // 
+            // HousekeepingLabel
+            // 
+            this.HousekeepingLabel.AutoSize = true;
+            this.HousekeepingLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HousekeepingLabel.Location = new System.Drawing.Point(226, 12);
+            this.HousekeepingLabel.Name = "HousekeepingLabel";
+            this.HousekeepingLabel.Size = new System.Drawing.Size(168, 33);
+            this.HousekeepingLabel.TabIndex = 0;
+            this.HousekeepingLabel.Text = "Housekeeping";
+            // 
             // HousekeepingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +132,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.HousekeepingLabel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.SuppliesLabel);
             this.Controls.Add(this.UpcomingLabel);
             this.Controls.Add(this.RoomCleanLabel);
@@ -121,6 +142,7 @@
             this.Controls.Add(this.ProfilePictureButton);
             this.Controls.Add(this.splitter1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "HousekeepingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoodStay Hotel";
@@ -138,6 +160,8 @@
         private System.Windows.Forms.Label UserNameLabel;
         private System.Windows.Forms.Button ProfilePictureButton;
         private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label HousekeepingLabel;
     }
 }
 
