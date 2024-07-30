@@ -828,11 +828,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.pnl_Manage_Accounts);
+            this.Controls.Add(this.pnl_Manage_Rooms);
             this.Controls.Add(this.pnl_Manage_Housekeeping);
             this.Controls.Add(this.pnl_Manage_Accounts);
             this.Controls.Add(this.pnl_Report);
-            this.Controls.Add(this.pnl_Manage_Rooms);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.lnklbl_View_Report);
             this.Controls.Add(this.lnklb_Manage_Housekeeping);
