@@ -27,5 +27,10 @@ namespace IOOP_Group_Assignment
         {
 
         }
+
+        private void HousekeepingPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

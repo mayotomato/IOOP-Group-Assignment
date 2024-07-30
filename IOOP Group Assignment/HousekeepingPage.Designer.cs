@@ -28,62 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuppliesLabel = new System.Windows.Forms.LinkLabel();
-            this.UpcomingLabel = new System.Windows.Forms.LinkLabel();
-            this.RoomCleanLabel = new System.Windows.Forms.LinkLabel();
-            this.HomeLabel = new System.Windows.Forms.LinkLabel();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.ProfilePictureButton = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.HousekeepingLabel = new System.Windows.Forms.Label();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // SuppliesLabel
-            // 
-            this.SuppliesLabel.AutoSize = true;
-            this.SuppliesLabel.Location = new System.Drawing.Point(31, 249);
-            this.SuppliesLabel.Name = "SuppliesLabel";
-            this.SuppliesLabel.Size = new System.Drawing.Size(89, 13);
-            this.SuppliesLabel.TabIndex = 24;
-            this.SuppliesLabel.TabStop = true;
-            this.SuppliesLabel.Text = "Manage Supplies";
-            // 
-            // UpcomingLabel
-            // 
-            this.UpcomingLabel.AutoSize = true;
-            this.UpcomingLabel.Location = new System.Drawing.Point(31, 223);
-            this.UpcomingLabel.Name = "UpcomingLabel";
-            this.UpcomingLabel.Size = new System.Drawing.Size(151, 13);
-            this.UpcomingLabel.TabIndex = 23;
-            this.UpcomingLabel.TabStop = true;
-            this.UpcomingLabel.Text = "Upcoming Room Reservations";
-            // 
-            // RoomCleanLabel
-            // 
-            this.RoomCleanLabel.AutoSize = true;
-            this.RoomCleanLabel.Location = new System.Drawing.Point(31, 198);
-            this.RoomCleanLabel.Name = "RoomCleanLabel";
-            this.RoomCleanLabel.Size = new System.Drawing.Size(127, 13);
-            this.RoomCleanLabel.TabIndex = 22;
-            this.RoomCleanLabel.TabStop = true;
-            this.RoomCleanLabel.Text = "Room Cleaning Schedule";
-            this.RoomCleanLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RoomCleanLabel_LinkClicked);
-            // 
-            // HomeLabel
-            // 
-            this.HomeLabel.AutoSize = true;
-            this.HomeLabel.Location = new System.Drawing.Point(31, 172);
-            this.HomeLabel.Name = "HomeLabel";
-            this.HomeLabel.Size = new System.Drawing.Size(35, 13);
-            this.HomeLabel.TabIndex = 21;
-            this.HomeLabel.TabStop = true;
-            this.HomeLabel.Text = "Home";
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Location = new System.Drawing.Point(72, 29);
+            this.UserNameLabel.Location = new System.Drawing.Point(72, 320);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(35, 13);
             this.UserNameLabel.TabIndex = 20;
@@ -92,37 +49,98 @@
             // ProfilePictureButton
             // 
             this.ProfilePictureButton.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.ProfilePictureButton.Location = new System.Drawing.Point(12, 12);
+            this.ProfilePictureButton.Location = new System.Drawing.Point(12, 303);
             this.ProfilePictureButton.Name = "ProfilePictureButton";
             this.ProfilePictureButton.Size = new System.Drawing.Size(49, 46);
             this.ProfilePictureButton.TabIndex = 19;
             this.ProfilePictureButton.UseVisualStyleBackColor = true;
             // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.DarkBlue;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(220, 561);
-            this.splitter1.TabIndex = 18;
-            this.splitter1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(226, 61);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(646, 487);
-            this.panel1.TabIndex = 25;
-            // 
             // HousekeepingLabel
             // 
             this.HousekeepingLabel.AutoSize = true;
-            this.HousekeepingLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HousekeepingLabel.Location = new System.Drawing.Point(226, 12);
+            this.HousekeepingLabel.Font = new System.Drawing.Font("Copperplate Gothic Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HousekeepingLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.HousekeepingLabel.Location = new System.Drawing.Point(158, 40);
             this.HousekeepingLabel.Name = "HousekeepingLabel";
-            this.HousekeepingLabel.Size = new System.Drawing.Size(168, 33);
+            this.HousekeepingLabel.Size = new System.Drawing.Size(254, 35);
             this.HousekeepingLabel.TabIndex = 0;
             this.HousekeepingLabel.Text = "Housekeeping";
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.AutoSize = true;
+            this.LoginButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.LoginButton.FlatAppearance.BorderSize = 0;
+            this.LoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.Color.White;
+            this.LoginButton.Location = new System.Drawing.Point(193, 251);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(186, 32);
+            this.LoginButton.TabIndex = 29;
+            this.LoginButton.Text = "Manage Supplies";
+            this.LoginButton.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.AutoSize = true;
+            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(193, 147);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(186, 32);
+            this.button5.TabIndex = 30;
+            this.button5.Text = "Room Cleaning Schedule";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.AutoSize = true;
+            this.button7.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(193, 199);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(186, 32);
+            this.button7.TabIndex = 32;
+            this.button7.Text = "Upcoming Room Reservations";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.AutoSize = true;
+            this.button6.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(193, 98);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(186, 32);
+            this.button6.TabIndex = 31;
+            this.button6.Text = "Rooms";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // HousekeepingPage
             // 
@@ -131,37 +149,33 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.HousekeepingLabel);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.SuppliesLabel);
-            this.Controls.Add(this.UpcomingLabel);
-            this.Controls.Add(this.RoomCleanLabel);
-            this.Controls.Add(this.HomeLabel);
             this.Controls.Add(this.UserNameLabel);
             this.Controls.Add(this.ProfilePictureButton);
-            this.Controls.Add(this.splitter1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "HousekeepingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoodStay Hotel";
+            this.Load += new System.EventHandler(this.HousekeepingPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel SuppliesLabel;
-        private System.Windows.Forms.LinkLabel UpcomingLabel;
-        private System.Windows.Forms.LinkLabel RoomCleanLabel;
-        private System.Windows.Forms.LinkLabel HomeLabel;
         private System.Windows.Forms.Label UserNameLabel;
         private System.Windows.Forms.Button ProfilePictureButton;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label HousekeepingLabel;
+        private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
     }
 }
 
