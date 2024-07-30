@@ -24,11 +24,11 @@ namespace IOOP_Group_Assignment
 
         private void ManagerPage_Load(object sender, EventArgs e)
         {
-            /*pnl_Main.Visible = true;
+            pnl_Main.Visible = true;
             pnl_Manage_Accounts.Visible = false;
             pnl_Manage_Rooms.Visible = false;
             pnl_Manage_Housekeeping.Visible = false;
-            pnl_Report.Visible = false;*/
+            pnl_Report.Visible = false;
 
             //wait should i declare the Form objects of the subpages when the main Manager form loads or do i delcare them after their corresponding buttons get pressed
 
