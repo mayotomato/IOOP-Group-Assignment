@@ -32,7 +32,6 @@
             this.HousekeepingLabel = new System.Windows.Forms.Label();
             this.btn_ManageSupply = new System.Windows.Forms.Button();
             this.btn_Schedule = new System.Windows.Forms.Button();
-            this.btn_Rooms = new System.Windows.Forms.Button();
             this.btn_Pfp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -67,8 +66,8 @@
             this.btn_ManageSupply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ManageSupply.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ManageSupply.ForeColor = System.Drawing.Color.White;
-            this.btn_ManageSupply.Location = new System.Drawing.Point(193, 231);
-            this.btn_ManageSupply.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ManageSupply.Location = new System.Drawing.Point(190, 189);
+            this.btn_ManageSupply.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ManageSupply.Name = "btn_ManageSupply";
             this.btn_ManageSupply.Size = new System.Drawing.Size(186, 32);
             this.btn_ManageSupply.TabIndex = 29;
@@ -86,33 +85,13 @@
             this.btn_Schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Schedule.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Schedule.ForeColor = System.Drawing.Color.White;
-            this.btn_Schedule.Location = new System.Drawing.Point(193, 182);
-            this.btn_Schedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Schedule.Location = new System.Drawing.Point(190, 140);
+            this.btn_Schedule.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Schedule.Name = "btn_Schedule";
             this.btn_Schedule.Size = new System.Drawing.Size(186, 32);
             this.btn_Schedule.TabIndex = 30;
             this.btn_Schedule.Text = "Schedule";
             this.btn_Schedule.UseVisualStyleBackColor = false;
-            // 
-            // btn_Rooms
-            // 
-            this.btn_Rooms.AutoSize = true;
-            this.btn_Rooms.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_Rooms.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btn_Rooms.FlatAppearance.BorderSize = 0;
-            this.btn_Rooms.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_Rooms.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_Rooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Rooms.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Rooms.ForeColor = System.Drawing.Color.White;
-            this.btn_Rooms.Location = new System.Drawing.Point(193, 133);
-            this.btn_Rooms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Rooms.Name = "btn_Rooms";
-            this.btn_Rooms.Size = new System.Drawing.Size(186, 32);
-            this.btn_Rooms.TabIndex = 31;
-            this.btn_Rooms.Text = "Rooms";
-            this.btn_Rooms.UseVisualStyleBackColor = false;
-            this.btn_Rooms.Click += new System.EventHandler(this.btn_Rooms_Click);
             // 
             // btn_Pfp
             // 
@@ -131,13 +110,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.btn_Rooms);
             this.Controls.Add(this.btn_Schedule);
             this.Controls.Add(this.btn_ManageSupply);
             this.Controls.Add(this.HousekeepingLabel);
             this.Controls.Add(this.lbl_Username);
             this.Controls.Add(this.btn_Pfp);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "HousekeepingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -154,7 +132,6 @@
         private System.Windows.Forms.Label HousekeepingLabel;
         private System.Windows.Forms.Button btn_ManageSupply;
         private System.Windows.Forms.Button btn_Schedule;
-        private System.Windows.Forms.Button btn_Rooms;
     }
 }
 
