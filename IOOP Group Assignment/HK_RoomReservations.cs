@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IOOP_Group_Assignment
 {
-    public partial class ReceptionPage : Form
+    public partial class HK_RoomReservations : Form
     {
-        public ReceptionPage()
+        public HK_RoomReservations()
         {
             InitializeComponent();
         }

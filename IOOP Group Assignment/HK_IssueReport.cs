@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace IOOP_Group_Assignment
 {
-    public partial class CustomerPage : Form
+    public partial class HK_IssueReport : Form
     {
-        public CustomerPage()
+        public HK_IssueReport()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
