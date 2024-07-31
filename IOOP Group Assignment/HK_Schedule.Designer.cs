@@ -71,6 +71,7 @@
             // 
             // tabClnSchdl
             // 
+            this.tabClnSchdl.BackColor = System.Drawing.Color.White;
             this.tabClnSchdl.Controls.Add(this.data_RoomCleaning);
             this.tabClnSchdl.Controls.Add(this.pnl_RoomDetailView);
             this.tabClnSchdl.Controls.Add(this.btn_RoomChoose);
@@ -81,7 +82,6 @@
             this.tabClnSchdl.Size = new System.Drawing.Size(565, 422);
             this.tabClnSchdl.TabIndex = 0;
             this.tabClnSchdl.Text = "Cleaning Schedule";
-            this.tabClnSchdl.UseVisualStyleBackColor = true;
             // 
             // data_RoomCleaning
             // 
