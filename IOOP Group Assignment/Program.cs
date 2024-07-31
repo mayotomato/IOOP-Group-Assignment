@@ -16,7 +16,7 @@ namespace IOOP_Group_Assignment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginPage());
+            Application.Run(new Customer());
         }
     }
 }
