@@ -28,109 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pnl_Supplies = new System.Windows.Forms.Panel();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.txtbox_SupplyCount = new System.Windows.Forms.TextBox();
+            this.txtbox_SupplyType = new System.Windows.Forms.TextBox();
+            this.txtbox_SupplyName = new System.Windows.Forms.TextBox();
+            this.btn_Confirm = new System.Windows.Forms.Button();
+            this.lbl_SupplyCount = new System.Windows.Forms.Label();
+            this.lbl_SupplyType = new System.Windows.Forms.Label();
+            this.lbl_SupplyName = new System.Windows.Forms.Label();
             this.data_Supplies = new System.Windows.Forms.DataGridView();
             this.btn_SupplyChoose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.pnl_Supplies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Supplies)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnl_Supplies
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(203, 60);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(364, 352);
-            this.panel2.TabIndex = 15;
+            this.pnl_Supplies.Controls.Add(this.btn_Delete);
+            this.pnl_Supplies.Controls.Add(this.txtbox_SupplyCount);
+            this.pnl_Supplies.Controls.Add(this.txtbox_SupplyType);
+            this.pnl_Supplies.Controls.Add(this.txtbox_SupplyName);
+            this.pnl_Supplies.Controls.Add(this.btn_Confirm);
+            this.pnl_Supplies.Controls.Add(this.lbl_SupplyCount);
+            this.pnl_Supplies.Controls.Add(this.lbl_SupplyType);
+            this.pnl_Supplies.Controls.Add(this.lbl_SupplyName);
+            this.pnl_Supplies.Location = new System.Drawing.Point(203, 60);
+            this.pnl_Supplies.Name = "pnl_Supplies";
+            this.pnl_Supplies.Size = new System.Drawing.Size(364, 352);
+            this.pnl_Supplies.TabIndex = 15;
             // 
-            // button2
+            // btn_Delete
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(16, 185);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 29);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Delete Supply";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Delete.Enabled = false;
+            this.btn_Delete.Location = new System.Drawing.Point(16, 185);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(119, 29);
+            this.btn_Delete.TabIndex = 14;
+            this.btn_Delete.Text = "Delete Supply";
+            this.btn_Delete.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtbox_SupplyCount
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(16, 148);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(331, 26);
-            this.textBox3.TabIndex = 12;
+            this.txtbox_SupplyCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_SupplyCount.Location = new System.Drawing.Point(16, 148);
+            this.txtbox_SupplyCount.Name = "txtbox_SupplyCount";
+            this.txtbox_SupplyCount.Size = new System.Drawing.Size(331, 26);
+            this.txtbox_SupplyCount.TabIndex = 12;
             // 
-            // textBox2
+            // txtbox_SupplyType
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(16, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(331, 26);
-            this.textBox2.TabIndex = 11;
+            this.txtbox_SupplyType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_SupplyType.Location = new System.Drawing.Point(16, 87);
+            this.txtbox_SupplyType.Name = "txtbox_SupplyType";
+            this.txtbox_SupplyType.Size = new System.Drawing.Size(331, 26);
+            this.txtbox_SupplyType.TabIndex = 11;
             // 
-            // textBox1
+            // txtbox_SupplyName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(16, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 26);
-            this.textBox1.TabIndex = 10;
+            this.txtbox_SupplyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_SupplyName.Location = new System.Drawing.Point(16, 34);
+            this.txtbox_SupplyName.Name = "txtbox_SupplyName";
+            this.txtbox_SupplyName.Size = new System.Drawing.Size(331, 26);
+            this.txtbox_SupplyName.TabIndex = 10;
             // 
-            // button1
+            // btn_Confirm
             // 
-            this.button1.Location = new System.Drawing.Point(228, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 29);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Confirm.Location = new System.Drawing.Point(228, 185);
+            this.btn_Confirm.Name = "btn_Confirm";
+            this.btn_Confirm.Size = new System.Drawing.Size(119, 29);
+            this.btn_Confirm.TabIndex = 9;
+            this.btn_Confirm.Text = "Confirm";
+            this.btn_Confirm.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lbl_SupplyCount
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 19);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Count:";
+            this.lbl_SupplyCount.AutoSize = true;
+            this.lbl_SupplyCount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SupplyCount.Location = new System.Drawing.Point(12, 126);
+            this.lbl_SupplyCount.Name = "lbl_SupplyCount";
+            this.lbl_SupplyCount.Size = new System.Drawing.Size(54, 19);
+            this.lbl_SupplyCount.TabIndex = 2;
+            this.lbl_SupplyCount.Text = "Count:";
             // 
-            // label5
+            // lbl_SupplyType
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 19);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Type:";
+            this.lbl_SupplyType.AutoSize = true;
+            this.lbl_SupplyType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SupplyType.Location = new System.Drawing.Point(12, 65);
+            this.lbl_SupplyType.Name = "lbl_SupplyType";
+            this.lbl_SupplyType.Size = new System.Drawing.Size(46, 19);
+            this.lbl_SupplyType.TabIndex = 1;
+            this.lbl_SupplyType.Text = "Type:";
             // 
-            // label6
+            // lbl_SupplyName
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(186, 19);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Supply/Equipment Name:";
+            this.lbl_SupplyName.AutoSize = true;
+            this.lbl_SupplyName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SupplyName.Location = new System.Drawing.Point(12, 12);
+            this.lbl_SupplyName.Name = "lbl_SupplyName";
+            this.lbl_SupplyName.Size = new System.Drawing.Size(186, 19);
+            this.lbl_SupplyName.TabIndex = 0;
+            this.lbl_SupplyName.Text = "Supply/Equipment Name:";
             // 
             // data_Supplies
             // 
@@ -169,14 +169,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnl_Supplies);
             this.Controls.Add(this.data_Supplies);
             this.Controls.Add(this.btn_SupplyChoose);
             this.Name = "HK_Supplies";
             this.Text = "HK_Supplies";
             this.Load += new System.EventHandler(this.HK_Supplies_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnl_Supplies.ResumeLayout(false);
+            this.pnl_Supplies.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Supplies)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,15 +185,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnl_Supplies;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.TextBox txtbox_SupplyCount;
+        private System.Windows.Forms.TextBox txtbox_SupplyType;
+        private System.Windows.Forms.TextBox txtbox_SupplyName;
+        private System.Windows.Forms.Button btn_Confirm;
+        private System.Windows.Forms.Label lbl_SupplyCount;
+        private System.Windows.Forms.Label lbl_SupplyType;
+        private System.Windows.Forms.Label lbl_SupplyName;
         private System.Windows.Forms.DataGridView data_Supplies;
         private System.Windows.Forms.Button btn_SupplyChoose;
         private System.Windows.Forms.Label label1;

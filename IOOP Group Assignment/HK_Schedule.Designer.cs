@@ -42,7 +42,7 @@
             this.cal_Cleaning = new System.Windows.Forms.MonthCalendar();
             this.tabReservations = new System.Windows.Forms.TabPage();
             this.data_Reservations = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_RoomDetailView2 = new System.Windows.Forms.Panel();
             this.btn_Report2 = new System.Windows.Forms.Button();
             this.btn_MarkPrepared = new System.Windows.Forms.Button();
             this.lbl_Condition2 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.pnl_RoomDetailView.SuspendLayout();
             this.tabReservations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Reservations)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnl_RoomDetailView2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Schedule
@@ -181,7 +181,7 @@
             // tabReservations
             // 
             this.tabReservations.Controls.Add(this.data_Reservations);
-            this.tabReservations.Controls.Add(this.panel1);
+            this.tabReservations.Controls.Add(this.pnl_RoomDetailView2);
             this.tabReservations.Controls.Add(this.btn_RoomChoose2);
             this.tabReservations.Controls.Add(this.cal_Reservations);
             this.tabReservations.Location = new System.Drawing.Point(4, 22);
@@ -202,18 +202,18 @@
             this.data_Reservations.TabIndex = 15;
             this.data_Reservations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // panel1
+            // pnl_RoomDetailView2
             // 
-            this.panel1.Controls.Add(this.btn_Report2);
-            this.panel1.Controls.Add(this.btn_MarkPrepared);
-            this.panel1.Controls.Add(this.lbl_Condition2);
-            this.panel1.Controls.Add(this.lbl_Checkin);
-            this.panel1.Controls.Add(this.lbl_RoomNum2);
-            this.panel1.Location = new System.Drawing.Point(192, 200);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(364, 213);
-            this.panel1.TabIndex = 14;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnl_RoomDetailView2.Controls.Add(this.btn_Report2);
+            this.pnl_RoomDetailView2.Controls.Add(this.btn_MarkPrepared);
+            this.pnl_RoomDetailView2.Controls.Add(this.lbl_Condition2);
+            this.pnl_RoomDetailView2.Controls.Add(this.lbl_Checkin);
+            this.pnl_RoomDetailView2.Controls.Add(this.lbl_RoomNum2);
+            this.pnl_RoomDetailView2.Location = new System.Drawing.Point(192, 200);
+            this.pnl_RoomDetailView2.Name = "pnl_RoomDetailView2";
+            this.pnl_RoomDetailView2.Size = new System.Drawing.Size(364, 213);
+            this.pnl_RoomDetailView2.TabIndex = 14;
+            this.pnl_RoomDetailView2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_Report2
             // 
@@ -300,8 +300,8 @@
             this.pnl_RoomDetailView.PerformLayout();
             this.tabReservations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data_Reservations)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnl_RoomDetailView2.ResumeLayout(false);
+            this.pnl_RoomDetailView2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -322,7 +322,7 @@
         private System.Windows.Forms.MonthCalendar cal_Cleaning;
         private System.Windows.Forms.TabPage tabReservations;
         private System.Windows.Forms.DataGridView data_Reservations;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_RoomDetailView2;
         private System.Windows.Forms.Button btn_Report2;
         private System.Windows.Forms.Button btn_MarkPrepared;
         private System.Windows.Forms.Label lbl_Condition2;

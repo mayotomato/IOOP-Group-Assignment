@@ -31,7 +31,7 @@
             this.lbl_Username = new System.Windows.Forms.Label();
             this.HousekeepingLabel = new System.Windows.Forms.Label();
             this.btn_ManageSupply = new System.Windows.Forms.Button();
-            this.btn_RoomCleaning = new System.Windows.Forms.Button();
+            this.btn_Schedule = new System.Windows.Forms.Button();
             this.btn_Rooms = new System.Windows.Forms.Button();
             this.btn_Pfp = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -75,24 +75,24 @@
             this.btn_ManageSupply.Text = "Manage Supplies";
             this.btn_ManageSupply.UseVisualStyleBackColor = false;
             // 
-            // btn_RoomCleaning
+            // btn_Schedule
             // 
-            this.btn_RoomCleaning.AutoSize = true;
-            this.btn_RoomCleaning.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_RoomCleaning.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btn_RoomCleaning.FlatAppearance.BorderSize = 0;
-            this.btn_RoomCleaning.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_RoomCleaning.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_RoomCleaning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RoomCleaning.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RoomCleaning.ForeColor = System.Drawing.Color.White;
-            this.btn_RoomCleaning.Location = new System.Drawing.Point(193, 182);
-            this.btn_RoomCleaning.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_RoomCleaning.Name = "btn_RoomCleaning";
-            this.btn_RoomCleaning.Size = new System.Drawing.Size(186, 32);
-            this.btn_RoomCleaning.TabIndex = 30;
-            this.btn_RoomCleaning.Text = "Schedule";
-            this.btn_RoomCleaning.UseVisualStyleBackColor = false;
+            this.btn_Schedule.AutoSize = true;
+            this.btn_Schedule.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Schedule.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Schedule.FlatAppearance.BorderSize = 0;
+            this.btn_Schedule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Schedule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Schedule.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Schedule.ForeColor = System.Drawing.Color.White;
+            this.btn_Schedule.Location = new System.Drawing.Point(193, 182);
+            this.btn_Schedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Schedule.Name = "btn_Schedule";
+            this.btn_Schedule.Size = new System.Drawing.Size(186, 32);
+            this.btn_Schedule.TabIndex = 30;
+            this.btn_Schedule.Text = "Schedule";
+            this.btn_Schedule.UseVisualStyleBackColor = false;
             // 
             // btn_Rooms
             // 
@@ -132,7 +132,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.btn_Rooms);
-            this.Controls.Add(this.btn_RoomCleaning);
+            this.Controls.Add(this.btn_Schedule);
             this.Controls.Add(this.btn_ManageSupply);
             this.Controls.Add(this.HousekeepingLabel);
             this.Controls.Add(this.lbl_Username);
@@ -153,7 +153,7 @@
         private System.Windows.Forms.Button btn_Pfp;
         private System.Windows.Forms.Label HousekeepingLabel;
         private System.Windows.Forms.Button btn_ManageSupply;
-        private System.Windows.Forms.Button btn_RoomCleaning;
+        private System.Windows.Forms.Button btn_Schedule;
         private System.Windows.Forms.Button btn_Rooms;
     }
 }
