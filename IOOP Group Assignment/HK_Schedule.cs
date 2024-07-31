@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IOOP_Group_Assignment
 {
-    public partial class HK_RoomCleaningSchedule : Form
+    public partial class HK_Schedule : Form
     {
-        public HK_RoomCleaningSchedule()
+        public HK_Schedule()
         {
             InitializeComponent();
         }
@@ -38,6 +38,11 @@ namespace IOOP_Group_Assignment
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void HK_RoomCleaningSchedule_Load(object sender, EventArgs e)
         {
 
         }

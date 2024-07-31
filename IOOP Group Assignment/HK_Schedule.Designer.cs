@@ -1,6 +1,6 @@
 ﻿namespace IOOP_Group_Assignment
 {
-    partial class HK_RoomCleaningSchedule
+    partial class HK_Schedule
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.tab_Schedule = new System.Windows.Forms.TabControl();
             this.tabClnSchdl = new System.Windows.Forms.TabPage();
-            this.tabReservations = new System.Windows.Forms.TabPage();
             this.data_RoomCleaning = new System.Windows.Forms.DataGridView();
             this.pnl_RoomDetailView = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -41,22 +40,23 @@
             this.lbl_RoomNum = new System.Windows.Forms.Label();
             this.btn_RoomChoose = new System.Windows.Forms.Button();
             this.cal_Cleaning = new System.Windows.Forms.MonthCalendar();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabReservations = new System.Windows.Forms.TabPage();
             this.tab_Schedule.SuspendLayout();
             this.tabClnSchdl.SuspendLayout();
-            this.tabReservations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_RoomCleaning)).BeginInit();
             this.pnl_RoomDetailView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabReservations.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Schedule
@@ -66,7 +66,7 @@
             this.tab_Schedule.Location = new System.Drawing.Point(5, 9);
             this.tab_Schedule.Name = "tab_Schedule";
             this.tab_Schedule.SelectedIndex = 0;
-            this.tab_Schedule.Size = new System.Drawing.Size(475, 448);
+            this.tab_Schedule.Size = new System.Drawing.Size(573, 448);
             this.tab_Schedule.TabIndex = 0;
             // 
             // tabClnSchdl
@@ -78,24 +78,10 @@
             this.tabClnSchdl.Location = new System.Drawing.Point(4, 22);
             this.tabClnSchdl.Name = "tabClnSchdl";
             this.tabClnSchdl.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClnSchdl.Size = new System.Drawing.Size(467, 422);
+            this.tabClnSchdl.Size = new System.Drawing.Size(565, 422);
             this.tabClnSchdl.TabIndex = 0;
             this.tabClnSchdl.Text = "Cleaning Schedule";
             this.tabClnSchdl.UseVisualStyleBackColor = true;
-            // 
-            // tabReservations
-            // 
-            this.tabReservations.Controls.Add(this.dataGridView1);
-            this.tabReservations.Controls.Add(this.panel1);
-            this.tabReservations.Controls.Add(this.button7);
-            this.tabReservations.Controls.Add(this.monthCalendar1);
-            this.tabReservations.Location = new System.Drawing.Point(4, 22);
-            this.tabReservations.Name = "tabReservations";
-            this.tabReservations.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReservations.Size = new System.Drawing.Size(467, 422);
-            this.tabReservations.TabIndex = 1;
-            this.tabReservations.Text = "Upcoming Reservations";
-            this.tabReservations.UseVisualStyleBackColor = true;
             // 
             // data_RoomCleaning
             // 
@@ -113,9 +99,9 @@
             this.pnl_RoomDetailView.Controls.Add(this.lbl_Condition);
             this.pnl_RoomDetailView.Controls.Add(this.lbl_Availability);
             this.pnl_RoomDetailView.Controls.Add(this.lbl_RoomNum);
-            this.pnl_RoomDetailView.Location = new System.Drawing.Point(205, 200);
+            this.pnl_RoomDetailView.Location = new System.Drawing.Point(192, 200);
             this.pnl_RoomDetailView.Name = "pnl_RoomDetailView";
-            this.pnl_RoomDetailView.Size = new System.Drawing.Size(261, 213);
+            this.pnl_RoomDetailView.Size = new System.Drawing.Size(364, 213);
             this.pnl_RoomDetailView.TabIndex = 10;
             // 
             // button3
@@ -187,79 +173,16 @@
             // 
             // cal_Cleaning
             // 
-            this.cal_Cleaning.Location = new System.Drawing.Point(205, 26);
+            this.cal_Cleaning.Location = new System.Drawing.Point(192, 26);
             this.cal_Cleaning.Name = "cal_Cleaning";
             this.cal_Cleaning.TabIndex = 8;
             // 
-            // dataGridView1
+            // monthCalendar1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(170, 352);
-            this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(205, 200);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 213);
-            this.panel1.TabIndex = 14;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(10, 137);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 29);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Report Issue";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(10, 102);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(119, 29);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Mark Prepared";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Condition:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Check-in Time:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Room Number: ";
+            this.monthCalendar1.Location = new System.Drawing.Point(192, 26);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 12;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // button7
             // 
@@ -272,33 +195,111 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // monthCalendar1
+            // panel1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(205, 26);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 12;
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(192, 200);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(364, 213);
+            this.panel1.TabIndex = 14;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Room Number: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Check-in Time:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Condition:";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(10, 102);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(119, 29);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Mark Prepared";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(10, 137);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 29);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Report Issue";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 26);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(170, 352);
+            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // tabReservations
+            // 
+            this.tabReservations.Controls.Add(this.dataGridView1);
+            this.tabReservations.Controls.Add(this.panel1);
+            this.tabReservations.Controls.Add(this.button7);
+            this.tabReservations.Controls.Add(this.monthCalendar1);
+            this.tabReservations.Location = new System.Drawing.Point(4, 22);
+            this.tabReservations.Name = "tabReservations";
+            this.tabReservations.Padding = new System.Windows.Forms.Padding(3);
+            this.tabReservations.Size = new System.Drawing.Size(565, 422);
+            this.tabReservations.TabIndex = 1;
+            this.tabReservations.Text = "Upcoming Reservations";
+            this.tabReservations.UseVisualStyleBackColor = true;
             // 
             // HK_RoomCleaningSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.tab_Schedule);
             this.MaximizeBox = false;
             this.Name = "HK_RoomCleaningSchedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HK_RoomCleaningSchedule";
+            this.Load += new System.EventHandler(this.HK_RoomCleaningSchedule_Load);
             this.tab_Schedule.ResumeLayout(false);
             this.tabClnSchdl.ResumeLayout(false);
-            this.tabReservations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data_RoomCleaning)).EndInit();
             this.pnl_RoomDetailView.ResumeLayout(false);
             this.pnl_RoomDetailView.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabReservations.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

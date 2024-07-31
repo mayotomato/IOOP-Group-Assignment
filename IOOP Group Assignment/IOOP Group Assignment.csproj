@@ -52,11 +52,11 @@
     <Compile Include="HK_IssueReport.Designer.cs">
       <DependentUpon>HK_IssueReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="HK_RoomCleaningSchedule.cs">
+    <Compile Include="HK_Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HK_RoomCleaningSchedule.Designer.cs">
-      <DependentUpon>HK_RoomCleaningSchedule.cs</DependentUpon>
+    <Compile Include="HK_Schedule.Designer.cs">
+      <DependentUpon>HK_Schedule.cs</DependentUpon>
     </Compile>
     <Compile Include="HK_RoomReservations.cs">
       <SubType>Form</SubType>
@@ -81,8 +81,8 @@
     <EmbeddedResource Include="HK_IssueReport.resx">
       <DependentUpon>HK_IssueReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HK_RoomCleaningSchedule.resx">
-      <DependentUpon>HK_RoomCleaningSchedule.cs</DependentUpon>
+    <EmbeddedResource Include="HK_Schedule.resx">
+      <DependentUpon>HK_Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HousekeepingPage.resx">
       <DependentUpon>HousekeepingPage.cs</DependentUpon>
