@@ -16,5 +16,10 @@ namespace IOOP_Group_Assignment
         {
             InitializeComponent();
         }
+
+        private void UpdateProfile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
