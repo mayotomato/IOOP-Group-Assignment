@@ -34,7 +34,6 @@
             this.btn_RoomCleaning = new System.Windows.Forms.Button();
             this.btn_Rooms = new System.Windows.Forms.Button();
             this.btn_Pfp = new System.Windows.Forms.Button();
-            this.btn_UpcomingRooms = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_Username
@@ -68,7 +67,7 @@
             this.btn_ManageSupply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ManageSupply.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ManageSupply.ForeColor = System.Drawing.Color.White;
-            this.btn_ManageSupply.Location = new System.Drawing.Point(193, 249);
+            this.btn_ManageSupply.Location = new System.Drawing.Point(193, 231);
             this.btn_ManageSupply.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ManageSupply.Name = "btn_ManageSupply";
             this.btn_ManageSupply.Size = new System.Drawing.Size(186, 32);
@@ -87,7 +86,7 @@
             this.btn_RoomCleaning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RoomCleaning.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_RoomCleaning.ForeColor = System.Drawing.Color.White;
-            this.btn_RoomCleaning.Location = new System.Drawing.Point(193, 147);
+            this.btn_RoomCleaning.Location = new System.Drawing.Point(193, 182);
             this.btn_RoomCleaning.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RoomCleaning.Name = "btn_RoomCleaning";
             this.btn_RoomCleaning.Size = new System.Drawing.Size(186, 32);
@@ -106,7 +105,7 @@
             this.btn_Rooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Rooms.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Rooms.ForeColor = System.Drawing.Color.White;
-            this.btn_Rooms.Location = new System.Drawing.Point(193, 98);
+            this.btn_Rooms.Location = new System.Drawing.Point(193, 133);
             this.btn_Rooms.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Rooms.Name = "btn_Rooms";
             this.btn_Rooms.Size = new System.Drawing.Size(186, 32);
@@ -123,25 +122,6 @@
             this.btn_Pfp.TabIndex = 19;
             this.btn_Pfp.UseVisualStyleBackColor = true;
             // 
-            // btn_UpcomingRooms
-            // 
-            this.btn_UpcomingRooms.AutoSize = true;
-            this.btn_UpcomingRooms.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_UpcomingRooms.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btn_UpcomingRooms.FlatAppearance.BorderSize = 0;
-            this.btn_UpcomingRooms.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_UpcomingRooms.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_UpcomingRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpcomingRooms.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UpcomingRooms.ForeColor = System.Drawing.Color.White;
-            this.btn_UpcomingRooms.Location = new System.Drawing.Point(193, 197);
-            this.btn_UpcomingRooms.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_UpcomingRooms.Name = "btn_UpcomingRooms";
-            this.btn_UpcomingRooms.Size = new System.Drawing.Size(186, 32);
-            this.btn_UpcomingRooms.TabIndex = 32;
-            this.btn_UpcomingRooms.Text = "Upcoming Room Reservations";
-            this.btn_UpcomingRooms.UseVisualStyleBackColor = false;
-            // 
             // HousekeepingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,7 +130,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.btn_UpcomingRooms);
             this.Controls.Add(this.btn_Rooms);
             this.Controls.Add(this.btn_RoomCleaning);
             this.Controls.Add(this.btn_ManageSupply);
@@ -175,7 +154,6 @@
         private System.Windows.Forms.Button btn_ManageSupply;
         private System.Windows.Forms.Button btn_RoomCleaning;
         private System.Windows.Forms.Button btn_Rooms;
-        private System.Windows.Forms.Button btn_UpcomingRooms;
     }
 }
 
