@@ -139,7 +139,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Pfp);
             this.Name = "UpdateProfile";
-            this.Text = "UpdateProfile";
+            this.Text = "Update Profile";
             this.ResumeLayout(false);
             this.PerformLayout();
 

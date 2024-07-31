@@ -77,7 +77,7 @@
             this.Controls.Add(this.txtbox_Notes);
             this.Name = "HK_IssueReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HK_IssueReport";
+            this.Text = "Issue Report";
             this.ResumeLayout(false);
             this.PerformLayout();
 

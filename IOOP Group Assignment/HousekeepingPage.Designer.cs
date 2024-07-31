@@ -121,7 +121,7 @@
             this.MaximizeBox = false;
             this.Name = "HousekeepingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "o";
+            this.Text = "Housekeeping";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -290,7 +290,7 @@
             this.MaximizeBox = false;
             this.Name = "HK_Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HK_Schedule";
+            this.Text = "Schedule";
             this.tab_Schedule.ResumeLayout(false);
             this.tabClnSchdl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data_RoomCleaning)).EndInit();

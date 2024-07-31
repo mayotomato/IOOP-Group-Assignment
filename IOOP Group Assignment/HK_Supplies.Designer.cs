@@ -174,7 +174,7 @@
             this.Controls.Add(this.btn_SupplyChoose);
             this.Name = "HK_Supplies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HK_Supplies";
+            this.Text = "Supplies";
             this.pnl_Supplies.ResumeLayout(false);
             this.pnl_Supplies.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Supplies)).EndInit();
