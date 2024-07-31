@@ -17,19 +17,6 @@ namespace IOOP_Group_Assignment
             InitializeComponent();
         }
 
-        private void HK_Supplies_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void lbl_RoomNum_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

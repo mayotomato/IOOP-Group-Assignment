@@ -73,6 +73,7 @@
             this.btn_ManageSupply.TabIndex = 29;
             this.btn_ManageSupply.Text = "Manage Supplies";
             this.btn_ManageSupply.UseVisualStyleBackColor = false;
+            this.btn_ManageSupply.Click += new System.EventHandler(this.btn_ManageSupply_Click);
             // 
             // btn_Schedule
             // 
@@ -92,6 +93,7 @@
             this.btn_Schedule.TabIndex = 30;
             this.btn_Schedule.Text = "Schedule";
             this.btn_Schedule.UseVisualStyleBackColor = false;
+            this.btn_Schedule.Click += new System.EventHandler(this.btn_Schedule_Click);
             // 
             // btn_Pfp
             // 
@@ -120,7 +122,6 @@
             this.Name = "HousekeepingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "o";
-            this.Load += new System.EventHandler(this.HousekeepingPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

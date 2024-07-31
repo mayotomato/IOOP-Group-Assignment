@@ -12,30 +12,23 @@ namespace IOOP_Group_Assignment
 {
     public partial class HousekeepingPage : Form
     {
-        public HousekeepingPage()
+
+        public HousekeepingPage() 
         {
             InitializeComponent();
         }
 
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btn_Schedule_Click(object sender, EventArgs e)
         {
-
+            HK_Schedule f1 = new HK_Schedule();
+            f1.ShowDialog();
         }
 
-        private void RoomCleanLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btn_ManageSupply_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void HousekeepingPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Rooms_Click(object sender, EventArgs e)
-        {
-            
+            HK_Supplies f2 = new HK_Supplies();
+            f2.ShowDialog();
         }
     }
 }

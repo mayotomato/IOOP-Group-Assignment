@@ -113,6 +113,7 @@
             this.btn_Report.TabIndex = 10;
             this.btn_Report.Text = "Report Issue";
             this.btn_Report.UseVisualStyleBackColor = true;
+            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
             // btn_MarkDirty
             // 
@@ -175,11 +176,13 @@
             // cal_Cleaning
             // 
             this.cal_Cleaning.Location = new System.Drawing.Point(192, 26);
+            this.cal_Cleaning.MaxSelectionCount = 1;
             this.cal_Cleaning.Name = "cal_Cleaning";
             this.cal_Cleaning.TabIndex = 8;
             // 
             // tabReservations
             // 
+            this.tabReservations.BackColor = System.Drawing.Color.White;
             this.tabReservations.Controls.Add(this.data_Reservations);
             this.tabReservations.Controls.Add(this.pnl_RoomDetailView2);
             this.tabReservations.Controls.Add(this.btn_RoomChoose2);
@@ -190,7 +193,6 @@
             this.tabReservations.Size = new System.Drawing.Size(565, 422);
             this.tabReservations.TabIndex = 1;
             this.tabReservations.Text = "Upcoming Reservations";
-            this.tabReservations.UseVisualStyleBackColor = true;
             // 
             // data_Reservations
             // 
@@ -200,7 +202,6 @@
             this.data_Reservations.RowHeadersWidth = 82;
             this.data_Reservations.Size = new System.Drawing.Size(170, 352);
             this.data_Reservations.TabIndex = 15;
-            this.data_Reservations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pnl_RoomDetailView2
             // 
@@ -213,7 +214,6 @@
             this.pnl_RoomDetailView2.Name = "pnl_RoomDetailView2";
             this.pnl_RoomDetailView2.Size = new System.Drawing.Size(364, 213);
             this.pnl_RoomDetailView2.TabIndex = 14;
-            this.pnl_RoomDetailView2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_Report2
             // 
@@ -272,14 +272,13 @@
             this.btn_RoomChoose2.TabIndex = 13;
             this.btn_RoomChoose2.Text = "Choose Room";
             this.btn_RoomChoose2.UseVisualStyleBackColor = false;
-            this.btn_RoomChoose2.Click += new System.EventHandler(this.button7_Click);
             // 
             // cal_Reservations
             // 
             this.cal_Reservations.Location = new System.Drawing.Point(192, 26);
+            this.cal_Reservations.MaxSelectionCount = 1;
             this.cal_Reservations.Name = "cal_Reservations";
             this.cal_Reservations.TabIndex = 12;
-            this.cal_Reservations.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // HK_Schedule
             // 
@@ -292,7 +291,6 @@
             this.Name = "HK_Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HK_Schedule";
-            this.Load += new System.EventHandler(this.HK_RoomCleaningSchedule_Load);
             this.tab_Schedule.ResumeLayout(false);
             this.tabClnSchdl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data_RoomCleaning)).EndInit();

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace IOOP_Group_Assignment
 {
-    public partial class HK_Schedule : Form
+    public partial class UpdateProfile : Form
     {
-        public HK_Schedule()
+        public UpdateProfile()
         {
             InitializeComponent();
-        }
-
-        private void btn_Report_Click(object sender, EventArgs e)
-        {
-            HK_IssueReport f3 = new HK_IssueReport();
-            f3.ShowDialog();
         }
     }
 }
