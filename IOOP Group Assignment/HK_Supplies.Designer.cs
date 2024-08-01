@@ -101,6 +101,7 @@
             this.btn_Confirm.TabIndex = 9;
             this.btn_Confirm.Text = "Confirm";
             this.btn_Confirm.UseVisualStyleBackColor = true;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // lbl_SupplyCount
             // 

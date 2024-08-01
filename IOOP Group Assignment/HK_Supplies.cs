@@ -17,6 +17,31 @@ namespace IOOP_Group_Assignment
             InitializeComponent();
         }
 
+        private void btn_Confirm_Click(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void AddSupply()
+        {
+            string SupplyName = txtbox_SupplyName.Text;
+            string SupplyType = txtbox_SupplyType.Text;
+            try
+            {
+                int SupplyCount = int.Parse(txtbox_SupplyCount.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Incorrect Supply Count");
+            }
+
+
+
+                
+
+            
+        }
     }
+
+        
 }
