@@ -12,9 +12,12 @@ namespace IOOP_Group_Assignment
 {
     public partial class ManagerPage : Form
     {
+        private Manager admin;
+
         public ManagerPage()
         {
             InitializeComponent();
+            admin = new Manager("testusername", "testpassword", "testID");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,7 +25,7 @@ namespace IOOP_Group_Assignment
 
         }
 
-        private void ManagerPage_Load(object sender, EventArgs e)
+        public void ManagerPage_Load(object sender, EventArgs e)
         {
             /*pnl_Main.Visible = true;
             pnl_Manage_Accounts.Visible = false;
@@ -32,6 +35,7 @@ namespace IOOP_Group_Assignment
 
             //wait should i declare the Form objects of the subpages when the main Manager form loads or do i delcare them after their corresponding buttons get pressed
 
+            
         }
 
         private void lnklbl_Manage_Account_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -42,9 +46,7 @@ namespace IOOP_Group_Assignment
             pnl_Manage_Housekeeping.Visible = false;
             pnl_Report.Visible = false;*/
 
-            ManageAccountsForm form = new ManageAccountsForm();
-
-            form.Show();
+            
         }
 
         private void lnklbl_Manage_Room_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -55,9 +57,7 @@ namespace IOOP_Group_Assignment
             pnl_Manage_Housekeeping.Visible = false;
             pnl_Report.Visible = false;*/
 
-            ManageRoomsForm form = new ManageRoomsForm();
-
-            form.Show();
+            
 
 
         }
@@ -70,9 +70,7 @@ namespace IOOP_Group_Assignment
             pnl_Manage_Housekeeping.Visible = true;
             pnl_Report.Visible = false;*/
 
-            ManageHousekeepingForm form = new ManageHousekeepingForm();
-
-            form.Show();
+            
 
         }
 
@@ -89,9 +87,35 @@ namespace IOOP_Group_Assignment
             pnl_Manage_Housekeeping.Visible = false;
             pnl_Report.Visible = true;*/
 
+            
+        }
+        private void btn_Manage_Accounts_Click(object sender, EventArgs e)
+        {
+            admin.ManageAccounts();
+        }
+        private void btn_Click(object sender, EventArgs e)
+        {
+            ManageRoomsForm form = new ManageRoomsForm();
+
+            form.Show();
+        }
+        private void btn_Manage_Housekeeping_Click(object sender, EventArgs e)
+        {
+            ManageHousekeepingForm form = new ManageHousekeepingForm();
+
+            form.Show();
+        }
+        private void btn_View_Report_Click(object sender, EventArgs e)
+        {
             ViewReportForm form = new ViewReportForm();
 
             form.Show();
         }
+
+        
+
+        
+
+        
     }
 }

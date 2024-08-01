@@ -52,7 +52,7 @@
             this.pnl_Manage_Housekeeping.Controls.Add(this.lbl_Assign_Worker);
             this.pnl_Manage_Housekeeping.Controls.Add(this.dataGridView2);
             this.pnl_Manage_Housekeeping.Controls.Add(this.dataGridView1);
-            this.pnl_Manage_Housekeeping.Location = new System.Drawing.Point(135, 37);
+            this.pnl_Manage_Housekeeping.Location = new System.Drawing.Point(12, 12);
             this.pnl_Manage_Housekeeping.Name = "pnl_Manage_Housekeeping";
             this.pnl_Manage_Housekeeping.Size = new System.Drawing.Size(615, 487);
             this.pnl_Manage_Housekeeping.TabIndex = 11;
@@ -129,9 +129,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(638, 509);
             this.Controls.Add(this.pnl_Manage_Housekeeping);
             this.Name = "ManageHousekeepingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Housekeeping";
             this.pnl_Manage_Housekeeping.ResumeLayout(false);
             this.pnl_Manage_Housekeeping.PerformLayout();

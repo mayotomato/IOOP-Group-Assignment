@@ -58,7 +58,7 @@
             // 
             this.tabcntrl_Manage_Accounts.Controls.Add(this.Add);
             this.tabcntrl_Manage_Accounts.Controls.Add(this.Edit);
-            this.tabcntrl_Manage_Accounts.Location = new System.Drawing.Point(165, 60);
+            this.tabcntrl_Manage_Accounts.Location = new System.Drawing.Point(12, 12);
             this.tabcntrl_Manage_Accounts.Name = "tabcntrl_Manage_Accounts";
             this.tabcntrl_Manage_Accounts.SelectedIndex = 0;
             this.tabcntrl_Manage_Accounts.Size = new System.Drawing.Size(555, 441);
@@ -154,7 +154,6 @@
             this.btn_Add_User.TabIndex = 0;
             this.btn_Add_User.Text = "Confirm";
             this.btn_Add_User.UseVisualStyleBackColor = true;
-            this.btn_Add_User.Click += new System.EventHandler(this.btn_Add_User_Click);
             // 
             // Edit
             // 
@@ -250,9 +249,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(578, 460);
             this.Controls.Add(this.tabcntrl_Manage_Accounts);
             this.Name = "ManageAccountsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Accounts";
             this.tabcntrl_Manage_Accounts.ResumeLayout(false);
             this.Add.ResumeLayout(false);

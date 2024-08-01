@@ -16,5 +16,10 @@ namespace IOOP_Group_Assignment
         {
             InitializeComponent();
         }
+
+        private void ViewReportForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -17,9 +17,5 @@ namespace IOOP_Group_Assignment
             InitializeComponent();
         }
 
-        private void btn_Add_User_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
