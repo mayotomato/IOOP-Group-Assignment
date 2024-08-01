@@ -64,6 +64,7 @@
     <Compile Include="HK_Supplies.Designer.cs">
       <DependentUpon>HK_Supplies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Housekeeping.cs" />
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
