@@ -23,9 +23,7 @@ namespace IOOP_Group_Assignment
 
          public void ManageAccounts()
         {
-            ManageAccountsForm form = new ManageAccountsForm();
-
-            form.Show();
+            
 
         }
     }

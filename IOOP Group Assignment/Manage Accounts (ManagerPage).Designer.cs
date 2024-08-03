@@ -154,6 +154,7 @@
             this.btn_Add_User.TabIndex = 0;
             this.btn_Add_User.Text = "Confirm";
             this.btn_Add_User.UseVisualStyleBackColor = true;
+            this.btn_Add_User.Click += new System.EventHandler(this.btn_Add_User_Click);
             // 
             // Edit
             // 

@@ -91,7 +91,9 @@ namespace IOOP_Group_Assignment
         }
         private void btn_Manage_Accounts_Click(object sender, EventArgs e)
         {
-            admin.ManageAccounts();
+            ManageAccountsForm form = new ManageAccountsForm();
+
+            form.Show();
         }
         private void btn_Click(object sender, EventArgs e)
         {
