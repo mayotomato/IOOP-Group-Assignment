@@ -86,10 +86,10 @@
             // data_RoomCleaning
             // 
             this.data_RoomCleaning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_RoomCleaning.Location = new System.Drawing.Point(6, 26);
+            this.data_RoomCleaning.Location = new System.Drawing.Point(6, 6);
             this.data_RoomCleaning.Name = "data_RoomCleaning";
             this.data_RoomCleaning.RowHeadersWidth = 82;
-            this.data_RoomCleaning.Size = new System.Drawing.Size(170, 352);
+            this.data_RoomCleaning.Size = new System.Drawing.Size(553, 191);
             this.data_RoomCleaning.TabIndex = 11;
             // 
             // pnl_RoomDetailView
@@ -100,14 +100,15 @@
             this.pnl_RoomDetailView.Controls.Add(this.lbl_Condition);
             this.pnl_RoomDetailView.Controls.Add(this.lbl_Availability);
             this.pnl_RoomDetailView.Controls.Add(this.lbl_RoomNum);
-            this.pnl_RoomDetailView.Location = new System.Drawing.Point(192, 200);
+            this.pnl_RoomDetailView.Location = new System.Drawing.Point(6, 203);
             this.pnl_RoomDetailView.Name = "pnl_RoomDetailView";
-            this.pnl_RoomDetailView.Size = new System.Drawing.Size(364, 213);
+            this.pnl_RoomDetailView.Size = new System.Drawing.Size(322, 213);
             this.pnl_RoomDetailView.TabIndex = 10;
+            this.pnl_RoomDetailView.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_RoomDetailView_Paint);
             // 
             // btn_Report
             // 
-            this.btn_Report.Location = new System.Drawing.Point(10, 172);
+            this.btn_Report.Location = new System.Drawing.Point(3, 181);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Size = new System.Drawing.Size(119, 29);
             this.btn_Report.TabIndex = 10;
@@ -117,7 +118,7 @@
             // 
             // btn_MarkDirty
             // 
-            this.btn_MarkDirty.Location = new System.Drawing.Point(10, 137);
+            this.btn_MarkDirty.Location = new System.Drawing.Point(200, 181);
             this.btn_MarkDirty.Name = "btn_MarkDirty";
             this.btn_MarkDirty.Size = new System.Drawing.Size(119, 29);
             this.btn_MarkDirty.TabIndex = 9;
@@ -126,7 +127,7 @@
             // 
             // btn_MarkClean
             // 
-            this.btn_MarkClean.Location = new System.Drawing.Point(10, 102);
+            this.btn_MarkClean.Location = new System.Drawing.Point(200, 146);
             this.btn_MarkClean.Name = "btn_MarkClean";
             this.btn_MarkClean.Size = new System.Drawing.Size(119, 29);
             this.btn_MarkClean.TabIndex = 8;
@@ -166,7 +167,7 @@
             // btn_RoomChoose
             // 
             this.btn_RoomChoose.BackColor = System.Drawing.SystemColors.Window;
-            this.btn_RoomChoose.Location = new System.Drawing.Point(57, 384);
+            this.btn_RoomChoose.Location = new System.Drawing.Point(440, 387);
             this.btn_RoomChoose.Name = "btn_RoomChoose";
             this.btn_RoomChoose.Size = new System.Drawing.Size(119, 29);
             this.btn_RoomChoose.TabIndex = 9;
@@ -175,7 +176,7 @@
             // 
             // cal_Cleaning
             // 
-            this.cal_Cleaning.Location = new System.Drawing.Point(192, 26);
+            this.cal_Cleaning.Location = new System.Drawing.Point(332, 203);
             this.cal_Cleaning.MaxSelectionCount = 1;
             this.cal_Cleaning.Name = "cal_Cleaning";
             this.cal_Cleaning.TabIndex = 8;
@@ -197,10 +198,10 @@
             // data_Reservations
             // 
             this.data_Reservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_Reservations.Location = new System.Drawing.Point(6, 26);
+            this.data_Reservations.Location = new System.Drawing.Point(6, 6);
             this.data_Reservations.Name = "data_Reservations";
             this.data_Reservations.RowHeadersWidth = 82;
-            this.data_Reservations.Size = new System.Drawing.Size(170, 352);
+            this.data_Reservations.Size = new System.Drawing.Size(553, 191);
             this.data_Reservations.TabIndex = 15;
             // 
             // pnl_RoomDetailView2
@@ -210,14 +211,14 @@
             this.pnl_RoomDetailView2.Controls.Add(this.lbl_Condition2);
             this.pnl_RoomDetailView2.Controls.Add(this.lbl_Checkin);
             this.pnl_RoomDetailView2.Controls.Add(this.lbl_RoomNum2);
-            this.pnl_RoomDetailView2.Location = new System.Drawing.Point(192, 200);
+            this.pnl_RoomDetailView2.Location = new System.Drawing.Point(6, 203);
             this.pnl_RoomDetailView2.Name = "pnl_RoomDetailView2";
-            this.pnl_RoomDetailView2.Size = new System.Drawing.Size(364, 213);
+            this.pnl_RoomDetailView2.Size = new System.Drawing.Size(322, 213);
             this.pnl_RoomDetailView2.TabIndex = 14;
             // 
             // btn_Report2
             // 
-            this.btn_Report2.Location = new System.Drawing.Point(10, 137);
+            this.btn_Report2.Location = new System.Drawing.Point(3, 181);
             this.btn_Report2.Name = "btn_Report2";
             this.btn_Report2.Size = new System.Drawing.Size(119, 29);
             this.btn_Report2.TabIndex = 10;
@@ -226,7 +227,7 @@
             // 
             // btn_MarkPrepared
             // 
-            this.btn_MarkPrepared.Location = new System.Drawing.Point(10, 102);
+            this.btn_MarkPrepared.Location = new System.Drawing.Point(200, 181);
             this.btn_MarkPrepared.Name = "btn_MarkPrepared";
             this.btn_MarkPrepared.Size = new System.Drawing.Size(119, 29);
             this.btn_MarkPrepared.TabIndex = 8;
@@ -266,16 +267,17 @@
             // btn_RoomChoose2
             // 
             this.btn_RoomChoose2.BackColor = System.Drawing.SystemColors.Window;
-            this.btn_RoomChoose2.Location = new System.Drawing.Point(57, 384);
+            this.btn_RoomChoose2.Location = new System.Drawing.Point(440, 387);
             this.btn_RoomChoose2.Name = "btn_RoomChoose2";
             this.btn_RoomChoose2.Size = new System.Drawing.Size(119, 29);
             this.btn_RoomChoose2.TabIndex = 13;
             this.btn_RoomChoose2.Text = "Choose Room";
             this.btn_RoomChoose2.UseVisualStyleBackColor = false;
+            this.btn_RoomChoose2.Click += new System.EventHandler(this.btn_RoomChoose2_Click);
             // 
             // cal_Reservations
             // 
-            this.cal_Reservations.Location = new System.Drawing.Point(192, 26);
+            this.cal_Reservations.Location = new System.Drawing.Point(332, 203);
             this.cal_Reservations.MaxSelectionCount = 1;
             this.cal_Reservations.Name = "cal_Reservations";
             this.cal_Reservations.TabIndex = 12;

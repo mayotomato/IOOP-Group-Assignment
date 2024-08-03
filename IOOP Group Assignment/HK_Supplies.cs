@@ -20,10 +20,11 @@ namespace IOOP_Group_Assignment
             
         }
 
+        public string SupplyType;
+
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             string SupplyName = txtbox_SupplyName.Text;
-            string SupplyType = txtbox_SupplyType.Text;
             int SupplyCount = 0;
             try
             {
@@ -41,39 +42,38 @@ namespace IOOP_Group_Assignment
                 return;
             }
 
-            AddSupply(SupplyName, SupplyType, SupplyCount);
+            Housekeeper house = new Housekeeper();
+            house.AddSupply(SupplyName, SupplyType, SupplyCount);
+
         }
 
-        public void AddSupply(string SupplyName, string SupplyType, int SupplyCount)
+        private void LoadData()
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
-            con.Open();
+            string query = "SELECT * FROM Supplies"; 
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO Supplies(SupplyType, SuppliesName, Count)" +
-                "values (@a, @b, @c)", con);
-            cmd.Parameters.AddWithValue("@a", SupplyName);
-            cmd.Parameters.AddWithValue("@b", SupplyType);
-            cmd.Parameters.AddWithValue("@c", SupplyCount);
+            using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, ConfigurationManager.ConnectionStrings["myCS"].ToString()))
+            {
+                DataSet dataSet = new DataSet();
 
-            try
-            {
-                cmd.ExecuteNonQuery(); 
-                MessageBox.Show("Supply added successfully.");
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show($"An error occurred while adding the supply: {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An unexpected error occurred: {ex.Message}");
-            }
-            finally
-            {
-                con.Close(); 
-            }
+                dataAdapter.Fill(dataSet, "Supplies");
 
+                data_Supplies.DataSource = dataSet.Tables["Supplies"];
+            }
+        }
 
+        private void radio_Cleaning_CheckedChanged(object sender, EventArgs e)
+        {
+            SupplyType = "CleaningSupplies";
+        }
+
+        private void radio_Equipment_CheckedChanged(object sender, EventArgs e)
+        {
+            SupplyType = "Equipment";
+        }
+
+        private void HK_Supplies_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 

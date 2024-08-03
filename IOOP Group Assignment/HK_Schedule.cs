@@ -22,5 +22,15 @@ namespace IOOP_Group_Assignment
             HK_IssueReport f3 = new HK_IssueReport();
             f3.ShowDialog();
         }
+
+        private void pnl_RoomDetailView_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_RoomChoose2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

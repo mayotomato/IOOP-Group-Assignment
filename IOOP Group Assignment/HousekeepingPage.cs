@@ -30,5 +30,11 @@ namespace IOOP_Group_Assignment
             HK_Supplies f2 = new HK_Supplies();
             f2.ShowDialog();
         }
+
+        private void btn_Pfp_Click(object sender, EventArgs e)
+        {
+            UpdateProfile f3 = new UpdateProfile();
+            f3.ShowDialog();
+        }
     }
 }

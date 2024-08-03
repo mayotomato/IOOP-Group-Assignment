@@ -103,6 +103,7 @@
             this.btn_Pfp.Size = new System.Drawing.Size(49, 46);
             this.btn_Pfp.TabIndex = 19;
             this.btn_Pfp.UseVisualStyleBackColor = true;
+            this.btn_Pfp.Click += new System.EventHandler(this.btn_Pfp_Click);
             // 
             // HousekeepingPage
             // 
