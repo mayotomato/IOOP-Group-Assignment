@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnl_Manage_Housekeeping = new System.Windows.Forms.Panel();
             this.btn_Assign = new System.Windows.Forms.Button();
             this.lbl_Maintenance_Date = new System.Windows.Forms.Label();
@@ -35,11 +36,39 @@
             this.lbl_Assign_Room = new System.Windows.Forms.Label();
             this.tmp_Arrow = new System.Windows.Forms.Label();
             this.lbl_Assign_Worker = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.datagrid_Schedule_Rooms = new System.Windows.Forms.DataGridView();
+            this.roomIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.floorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amenitiesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ratePerNightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availabilityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastCleanedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintenanceNotesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scheduledForCleanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.goodStayHotelDatabaseROOMSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodStayHotelDatabaseROOMS = new IOOP_Group_Assignment.GoodStayHotelDatabaseROOMS();
+            this.datagrid_Schedule_Housekeepers = new System.Windows.Forms.DataGridView();
+            this.housekeeperIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.housekeepersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodStayHotelDatabaseDataSetHOUSEKEEPERS = new IOOP_Group_Assignment.GoodStayHotelDatabaseDataSetHOUSEKEEPERS();
+            this.housekeepersTableAdapter = new IOOP_Group_Assignment.GoodStayHotelDatabaseDataSetHOUSEKEEPERSTableAdapters.HousekeepersTableAdapter();
+            this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomsTableAdapter = new IOOP_Group_Assignment.GoodStayHotelDatabaseROOMSTableAdapters.RoomsTableAdapter();
+            this.roomsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pnl_Manage_Housekeeping.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Schedule_Rooms)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodStayHotelDatabaseROOMSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodStayHotelDatabaseROOMS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Schedule_Housekeepers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.housekeepersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodStayHotelDatabaseDataSetHOUSEKEEPERS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Manage_Housekeeping
@@ -50,8 +79,8 @@
             this.pnl_Manage_Housekeeping.Controls.Add(this.lbl_Assign_Room);
             this.pnl_Manage_Housekeeping.Controls.Add(this.tmp_Arrow);
             this.pnl_Manage_Housekeeping.Controls.Add(this.lbl_Assign_Worker);
-            this.pnl_Manage_Housekeeping.Controls.Add(this.dataGridView2);
-            this.pnl_Manage_Housekeeping.Controls.Add(this.dataGridView1);
+            this.pnl_Manage_Housekeeping.Controls.Add(this.datagrid_Schedule_Rooms);
+            this.pnl_Manage_Housekeeping.Controls.Add(this.datagrid_Schedule_Housekeepers);
             this.pnl_Manage_Housekeeping.Location = new System.Drawing.Point(12, 12);
             this.pnl_Manage_Housekeeping.Name = "pnl_Manage_Housekeeping";
             this.pnl_Manage_Housekeeping.Size = new System.Drawing.Size(615, 487);
@@ -65,6 +94,7 @@
             this.btn_Assign.TabIndex = 7;
             this.btn_Assign.Text = "Assign";
             this.btn_Assign.UseVisualStyleBackColor = true;
+            this.btn_Assign.Click += new System.EventHandler(this.btn_Assign_Click);
             // 
             // lbl_Maintenance_Date
             // 
@@ -109,21 +139,170 @@
             this.lbl_Assign_Worker.TabIndex = 2;
             this.lbl_Assign_Worker.Text = "Assign Worker:";
             // 
-            // dataGridView2
+            // datagrid_Schedule_Rooms
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(362, 54);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(219, 151);
-            this.dataGridView2.TabIndex = 1;
+            this.datagrid_Schedule_Rooms.AllowUserToAddRows = false;
+            this.datagrid_Schedule_Rooms.AllowUserToDeleteRows = false;
+            this.datagrid_Schedule_Rooms.AllowUserToResizeColumns = false;
+            this.datagrid_Schedule_Rooms.AllowUserToResizeRows = false;
+            this.datagrid_Schedule_Rooms.AutoGenerateColumns = false;
+            this.datagrid_Schedule_Rooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_Schedule_Rooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.roomIDDataGridViewTextBoxColumn,
+            this.roomNumberDataGridViewTextBoxColumn,
+            this.floorDataGridViewTextBoxColumn,
+            this.amenitiesDataGridViewTextBoxColumn,
+            this.ratePerNightDataGridViewTextBoxColumn,
+            this.availabilityDataGridViewTextBoxColumn,
+            this.conditionDataGridViewTextBoxColumn,
+            this.lastCleanedDateDataGridViewTextBoxColumn,
+            this.maintenanceNotesDataGridViewTextBoxColumn,
+            this.scheduledForCleanDataGridViewTextBoxColumn});
+            this.datagrid_Schedule_Rooms.DataSource = this.roomsBindingSource2;
+            this.datagrid_Schedule_Rooms.Location = new System.Drawing.Point(362, 54);
+            this.datagrid_Schedule_Rooms.MultiSelect = false;
+            this.datagrid_Schedule_Rooms.Name = "datagrid_Schedule_Rooms";
+            this.datagrid_Schedule_Rooms.ReadOnly = true;
+            this.datagrid_Schedule_Rooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datagrid_Schedule_Rooms.Size = new System.Drawing.Size(219, 151);
+            this.datagrid_Schedule_Rooms.TabIndex = 1;
             // 
-            // dataGridView1
+            // roomIDDataGridViewTextBoxColumn
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(219, 151);
-            this.dataGridView1.TabIndex = 0;
+            this.roomIDDataGridViewTextBoxColumn.DataPropertyName = "RoomID";
+            this.roomIDDataGridViewTextBoxColumn.HeaderText = "RoomID";
+            this.roomIDDataGridViewTextBoxColumn.Name = "roomIDDataGridViewTextBoxColumn";
+            this.roomIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roomNumberDataGridViewTextBoxColumn
+            // 
+            this.roomNumberDataGridViewTextBoxColumn.DataPropertyName = "RoomNumber";
+            this.roomNumberDataGridViewTextBoxColumn.HeaderText = "RoomNumber";
+            this.roomNumberDataGridViewTextBoxColumn.Name = "roomNumberDataGridViewTextBoxColumn";
+            this.roomNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // floorDataGridViewTextBoxColumn
+            // 
+            this.floorDataGridViewTextBoxColumn.DataPropertyName = "Floor";
+            this.floorDataGridViewTextBoxColumn.HeaderText = "Floor";
+            this.floorDataGridViewTextBoxColumn.Name = "floorDataGridViewTextBoxColumn";
+            this.floorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amenitiesDataGridViewTextBoxColumn
+            // 
+            this.amenitiesDataGridViewTextBoxColumn.DataPropertyName = "Amenities";
+            this.amenitiesDataGridViewTextBoxColumn.HeaderText = "Amenities";
+            this.amenitiesDataGridViewTextBoxColumn.Name = "amenitiesDataGridViewTextBoxColumn";
+            this.amenitiesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ratePerNightDataGridViewTextBoxColumn
+            // 
+            this.ratePerNightDataGridViewTextBoxColumn.DataPropertyName = "RatePerNight";
+            this.ratePerNightDataGridViewTextBoxColumn.HeaderText = "RatePerNight";
+            this.ratePerNightDataGridViewTextBoxColumn.Name = "ratePerNightDataGridViewTextBoxColumn";
+            this.ratePerNightDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // availabilityDataGridViewTextBoxColumn
+            // 
+            this.availabilityDataGridViewTextBoxColumn.DataPropertyName = "Availability";
+            this.availabilityDataGridViewTextBoxColumn.HeaderText = "Availability";
+            this.availabilityDataGridViewTextBoxColumn.Name = "availabilityDataGridViewTextBoxColumn";
+            this.availabilityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conditionDataGridViewTextBoxColumn
+            // 
+            this.conditionDataGridViewTextBoxColumn.DataPropertyName = "Condition";
+            this.conditionDataGridViewTextBoxColumn.HeaderText = "Condition";
+            this.conditionDataGridViewTextBoxColumn.Name = "conditionDataGridViewTextBoxColumn";
+            this.conditionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastCleanedDateDataGridViewTextBoxColumn
+            // 
+            this.lastCleanedDateDataGridViewTextBoxColumn.DataPropertyName = "LastCleanedDate";
+            this.lastCleanedDateDataGridViewTextBoxColumn.HeaderText = "LastCleanedDate";
+            this.lastCleanedDateDataGridViewTextBoxColumn.Name = "lastCleanedDateDataGridViewTextBoxColumn";
+            this.lastCleanedDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // maintenanceNotesDataGridViewTextBoxColumn
+            // 
+            this.maintenanceNotesDataGridViewTextBoxColumn.DataPropertyName = "MaintenanceNotes";
+            this.maintenanceNotesDataGridViewTextBoxColumn.HeaderText = "MaintenanceNotes";
+            this.maintenanceNotesDataGridViewTextBoxColumn.Name = "maintenanceNotesDataGridViewTextBoxColumn";
+            this.maintenanceNotesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // scheduledForCleanDataGridViewTextBoxColumn
+            // 
+            this.scheduledForCleanDataGridViewTextBoxColumn.DataPropertyName = "ScheduledForClean";
+            this.scheduledForCleanDataGridViewTextBoxColumn.HeaderText = "ScheduledForClean";
+            this.scheduledForCleanDataGridViewTextBoxColumn.Name = "scheduledForCleanDataGridViewTextBoxColumn";
+            this.scheduledForCleanDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roomsBindingSource2
+            // 
+            this.roomsBindingSource2.DataMember = "Rooms";
+            this.roomsBindingSource2.DataSource = this.goodStayHotelDatabaseROOMSBindingSource;
+            // 
+            // goodStayHotelDatabaseROOMSBindingSource
+            // 
+            this.goodStayHotelDatabaseROOMSBindingSource.DataSource = this.goodStayHotelDatabaseROOMS;
+            this.goodStayHotelDatabaseROOMSBindingSource.Position = 0;
+            // 
+            // goodStayHotelDatabaseROOMS
+            // 
+            this.goodStayHotelDatabaseROOMS.DataSetName = "GoodStayHotelDatabaseROOMS";
+            this.goodStayHotelDatabaseROOMS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // datagrid_Schedule_Housekeepers
+            // 
+            this.datagrid_Schedule_Housekeepers.AllowUserToAddRows = false;
+            this.datagrid_Schedule_Housekeepers.AllowUserToDeleteRows = false;
+            this.datagrid_Schedule_Housekeepers.AllowUserToResizeColumns = false;
+            this.datagrid_Schedule_Housekeepers.AllowUserToResizeRows = false;
+            this.datagrid_Schedule_Housekeepers.AutoGenerateColumns = false;
+            this.datagrid_Schedule_Housekeepers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_Schedule_Housekeepers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.housekeeperIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn});
+            this.datagrid_Schedule_Housekeepers.DataSource = this.housekeepersBindingSource;
+            this.datagrid_Schedule_Housekeepers.Location = new System.Drawing.Point(30, 54);
+            this.datagrid_Schedule_Housekeepers.MultiSelect = false;
+            this.datagrid_Schedule_Housekeepers.Name = "datagrid_Schedule_Housekeepers";
+            this.datagrid_Schedule_Housekeepers.ReadOnly = true;
+            this.datagrid_Schedule_Housekeepers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datagrid_Schedule_Housekeepers.Size = new System.Drawing.Size(219, 151);
+            this.datagrid_Schedule_Housekeepers.TabIndex = 0;
+            // 
+            // housekeeperIDDataGridViewTextBoxColumn
+            // 
+            this.housekeeperIDDataGridViewTextBoxColumn.DataPropertyName = "HousekeeperID";
+            this.housekeeperIDDataGridViewTextBoxColumn.HeaderText = "HousekeeperID";
+            this.housekeeperIDDataGridViewTextBoxColumn.Name = "housekeeperIDDataGridViewTextBoxColumn";
+            this.housekeeperIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // housekeepersBindingSource
+            // 
+            this.housekeepersBindingSource.DataMember = "Housekeepers";
+            this.housekeepersBindingSource.DataSource = this.goodStayHotelDatabaseDataSetHOUSEKEEPERS;
+            // 
+            // goodStayHotelDatabaseDataSetHOUSEKEEPERS
+            // 
+            this.goodStayHotelDatabaseDataSetHOUSEKEEPERS.DataSetName = "GoodStayHotelDatabaseDataSetHOUSEKEEPERS";
+            this.goodStayHotelDatabaseDataSetHOUSEKEEPERS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // housekeepersTableAdapter
+            // 
+            this.housekeepersTableAdapter.ClearBeforeFill = true;
+            // 
+            // roomsTableAdapter
+            // 
+            this.roomsTableAdapter.ClearBeforeFill = true;
             // 
             // ManageHousekeepingForm
             // 
@@ -135,10 +314,18 @@
             this.Name = "ManageHousekeepingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Housekeeping";
+            this.Load += new System.EventHandler(this.ManageHousekeepingForm_Load);
             this.pnl_Manage_Housekeeping.ResumeLayout(false);
             this.pnl_Manage_Housekeeping.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Schedule_Rooms)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodStayHotelDatabaseROOMSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodStayHotelDatabaseROOMS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Schedule_Housekeepers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.housekeepersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodStayHotelDatabaseDataSetHOUSEKEEPERS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,7 +339,28 @@
         private System.Windows.Forms.Label lbl_Assign_Room;
         private System.Windows.Forms.Label tmp_Arrow;
         private System.Windows.Forms.Label lbl_Assign_Worker;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView datagrid_Schedule_Rooms;
+        private System.Windows.Forms.DataGridView datagrid_Schedule_Housekeepers;
+        private GoodStayHotelDatabaseDataSetHOUSEKEEPERS goodStayHotelDatabaseDataSetHOUSEKEEPERS;
+        private System.Windows.Forms.BindingSource housekeepersBindingSource;
+        private GoodStayHotelDatabaseDataSetHOUSEKEEPERSTableAdapters.HousekeepersTableAdapter housekeepersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn housekeeperIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private GoodStayHotelDatabaseROOMS goodStayHotelDatabaseROOMS;
+        private System.Windows.Forms.BindingSource goodStayHotelDatabaseROOMSBindingSource;
+        private System.Windows.Forms.BindingSource roomsBindingSource;
+        private GoodStayHotelDatabaseROOMSTableAdapters.RoomsTableAdapter roomsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn floorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amenitiesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ratePerNightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn availabilityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn conditionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastCleanedDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintenanceNotesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scheduledForCleanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource roomsBindingSource2;
+        private System.Windows.Forms.BindingSource roomsBindingSource1;
     }
 }

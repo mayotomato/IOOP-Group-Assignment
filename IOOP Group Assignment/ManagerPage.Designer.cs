@@ -45,18 +45,6 @@
             this.lblTitle.Size = new System.Drawing.Size(113, 33);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Manager";
-            this.lblTitle.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lnklbl_Manage_Room
-            // 
-            this.lnklbl_Manage_Room.AutoSize = true;
-            this.lnklbl_Manage_Room.Location = new System.Drawing.Point(236, 204);
-            this.lnklbl_Manage_Room.Name = "lnklbl_Manage_Room";
-            this.lnklbl_Manage_Room.Size = new System.Drawing.Size(82, 13);
-            this.lnklbl_Manage_Room.TabIndex = 4;
-            this.lnklbl_Manage_Room.TabStop = true;
-            this.lnklbl_Manage_Room.Text = "Manage Rooms";
-            this.lnklbl_Manage_Room.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklbl_Manage_Room_LinkClicked);
             // 
             // btn_Manage_Accounts
             // 

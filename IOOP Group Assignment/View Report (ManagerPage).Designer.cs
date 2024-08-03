@@ -29,26 +29,29 @@
         private void InitializeComponent()
         {
             this.pnl_Report = new System.Windows.Forms.Panel();
+            this.lbl_Rooms = new System.Windows.Forms.Label();
+            this.lbl_Revenue = new System.Windows.Forms.Label();
+            this.lbl_Revenue_label = new System.Windows.Forms.Label();
+            this.cal = new System.Windows.Forms.MonthCalendar();
             this.grpbox_Total_Revenue = new System.Windows.Forms.GroupBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpbox_Rooms_Reserved = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.lbl_Revenue_label = new System.Windows.Forms.Label();
-            this.lbl_Revenue = new System.Windows.Forms.Label();
-            this.lbl_Rooms = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbl_Total_Revenue = new System.Windows.Forms.Label();
+            this.lbl_Total_Rooms = new System.Windows.Forms.Label();
+            this.listview_Rooms = new System.Windows.Forms.ListView();
             this.pnl_Report.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grpbox_Total_Revenue.SuspendLayout();
+            this.grpbox_Rooms_Reserved.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Report
             // 
-            this.pnl_Report.Controls.Add(this.dataGridView1);
+            this.pnl_Report.Controls.Add(this.listview_Rooms);
             this.pnl_Report.Controls.Add(this.lbl_Rooms);
             this.pnl_Report.Controls.Add(this.lbl_Revenue);
             this.pnl_Report.Controls.Add(this.lbl_Revenue_label);
-            this.pnl_Report.Controls.Add(this.monthCalendar1);
+            this.pnl_Report.Controls.Add(this.cal);
             this.pnl_Report.Controls.Add(this.grpbox_Total_Revenue);
             this.pnl_Report.Controls.Add(this.lblTitle);
             this.pnl_Report.Controls.Add(this.grpbox_Rooms_Reserved);
@@ -58,8 +61,43 @@
             this.pnl_Report.Size = new System.Drawing.Size(615, 487);
             this.pnl_Report.TabIndex = 12;
             // 
+            // lbl_Rooms
+            // 
+            this.lbl_Rooms.AutoSize = true;
+            this.lbl_Rooms.Location = new System.Drawing.Point(388, 240);
+            this.lbl_Rooms.Name = "lbl_Rooms";
+            this.lbl_Rooms.Size = new System.Drawing.Size(92, 13);
+            this.lbl_Rooms.TabIndex = 7;
+            this.lbl_Rooms.Text = "Rooms Occupied:";
+            // 
+            // lbl_Revenue
+            // 
+            this.lbl_Revenue.AutoSize = true;
+            this.lbl_Revenue.Location = new System.Drawing.Point(431, 198);
+            this.lbl_Revenue.Name = "lbl_Revenue";
+            this.lbl_Revenue.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Revenue.TabIndex = 6;
+            this.lbl_Revenue.Text = "[]";
+            // 
+            // lbl_Revenue_label
+            // 
+            this.lbl_Revenue_label.AutoSize = true;
+            this.lbl_Revenue_label.Location = new System.Drawing.Point(410, 165);
+            this.lbl_Revenue_label.Name = "lbl_Revenue_label";
+            this.lbl_Revenue_label.Size = new System.Drawing.Size(54, 13);
+            this.lbl_Revenue_label.TabIndex = 5;
+            this.lbl_Revenue_label.Text = "Revenue:";
+            // 
+            // cal
+            // 
+            this.cal.Location = new System.Drawing.Point(19, 138);
+            this.cal.MaxSelectionCount = 1;
+            this.cal.Name = "cal";
+            this.cal.TabIndex = 4;
+            // 
             // grpbox_Total_Revenue
             // 
+            this.grpbox_Total_Revenue.Controls.Add(this.lbl_Total_Revenue);
             this.grpbox_Total_Revenue.Location = new System.Drawing.Point(34, 64);
             this.grpbox_Total_Revenue.Name = "grpbox_Total_Revenue";
             this.grpbox_Total_Revenue.Size = new System.Drawing.Size(200, 62);
@@ -79,6 +117,7 @@
             // 
             // grpbox_Rooms_Reserved
             // 
+            this.grpbox_Rooms_Reserved.Controls.Add(this.lbl_Total_Rooms);
             this.grpbox_Rooms_Reserved.Location = new System.Drawing.Point(345, 66);
             this.grpbox_Rooms_Reserved.Name = "grpbox_Rooms_Reserved";
             this.grpbox_Rooms_Reserved.Size = new System.Drawing.Size(200, 62);
@@ -94,47 +133,32 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
             // 
-            // monthCalendar1
+            // lbl_Total_Revenue
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(19, 138);
-            this.monthCalendar1.MaxSelectionCount = 1;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 4;
+            this.lbl_Total_Revenue.AutoSize = true;
+            this.lbl_Total_Revenue.Location = new System.Drawing.Point(93, 29);
+            this.lbl_Total_Revenue.Name = "lbl_Total_Revenue";
+            this.lbl_Total_Revenue.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Total_Revenue.TabIndex = 9;
+            this.lbl_Total_Revenue.Text = "[]";
             // 
-            // lbl_Revenue_label
+            // lbl_Total_Rooms
             // 
-            this.lbl_Revenue_label.AutoSize = true;
-            this.lbl_Revenue_label.Location = new System.Drawing.Point(410, 165);
-            this.lbl_Revenue_label.Name = "lbl_Revenue_label";
-            this.lbl_Revenue_label.Size = new System.Drawing.Size(54, 13);
-            this.lbl_Revenue_label.TabIndex = 5;
-            this.lbl_Revenue_label.Text = "Revenue:";
+            this.lbl_Total_Rooms.AutoSize = true;
+            this.lbl_Total_Rooms.Location = new System.Drawing.Point(95, 27);
+            this.lbl_Total_Rooms.Name = "lbl_Total_Rooms";
+            this.lbl_Total_Rooms.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Total_Rooms.TabIndex = 10;
+            this.lbl_Total_Rooms.Text = "[]";
             // 
-            // lbl_Revenue
+            // listview_Rooms
             // 
-            this.lbl_Revenue.AutoSize = true;
-            this.lbl_Revenue.Location = new System.Drawing.Point(431, 198);
-            this.lbl_Revenue.Name = "lbl_Revenue";
-            this.lbl_Revenue.Size = new System.Drawing.Size(13, 13);
-            this.lbl_Revenue.TabIndex = 6;
-            this.lbl_Revenue.Text = "[]";
-            // 
-            // lbl_Rooms
-            // 
-            this.lbl_Rooms.AutoSize = true;
-            this.lbl_Rooms.Location = new System.Drawing.Point(388, 240);
-            this.lbl_Rooms.Name = "lbl_Rooms";
-            this.lbl_Rooms.Size = new System.Drawing.Size(92, 13);
-            this.lbl_Rooms.TabIndex = 7;
-            this.lbl_Rooms.Text = "Rooms Occupied:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(320, 273);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 195);
-            this.dataGridView1.TabIndex = 8;
+            this.listview_Rooms.HideSelection = false;
+            this.listview_Rooms.Location = new System.Drawing.Point(332, 266);
+            this.listview_Rooms.Name = "listview_Rooms";
+            this.listview_Rooms.Size = new System.Drawing.Size(213, 185);
+            this.listview_Rooms.TabIndex = 9;
+            this.listview_Rooms.UseCompatibleStateImageBehavior = false;
             // 
             // ViewReportForm
             // 
@@ -148,7 +172,10 @@
             this.Load += new System.EventHandler(this.ViewReportForm_Load);
             this.pnl_Report.ResumeLayout(false);
             this.pnl_Report.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.grpbox_Total_Revenue.ResumeLayout(false);
+            this.grpbox_Total_Revenue.PerformLayout();
+            this.grpbox_Rooms_Reserved.ResumeLayout(false);
+            this.grpbox_Rooms_Reserved.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -163,7 +190,9 @@
         private System.Windows.Forms.Label lbl_Rooms;
         private System.Windows.Forms.Label lbl_Revenue;
         private System.Windows.Forms.Label lbl_Revenue_label;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MonthCalendar cal;
+        private System.Windows.Forms.Label lbl_Total_Revenue;
+        private System.Windows.Forms.Label lbl_Total_Rooms;
+        private System.Windows.Forms.ListView listview_Rooms;
     }
 }

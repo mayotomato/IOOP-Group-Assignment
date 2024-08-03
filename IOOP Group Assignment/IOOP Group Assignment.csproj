@@ -68,6 +68,26 @@
     <Compile Include="CustomerPage.Designer.cs">
       <DependentUpon>CustomerPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="GoodStayHotelDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GoodStayHotelDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodStayHotelDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GoodStayHotelDatabaseDataSetHOUSEKEEPERS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GoodStayHotelDatabaseROOMS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodStayHotelDatabaseROOMS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="View Report %28ManagerPage%29.cs">
       <SubType>Form</SubType>
@@ -150,6 +170,50 @@
     <EmbeddedResource Include="View Report %28ManagerPage%29.resx">
       <DependentUpon>View Report %28ManagerPage%29.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="GoodStayHotelDatabaseDataSet.xsc">
+      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoodStayHotelDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet.xss">
+      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet1.xsc">
+      <DependentUpon>GoodStayHotelDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoodStayHotelDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet1.xss">
+      <DependentUpon>GoodStayHotelDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsc">
+      <DependentUpon>GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoodStayHotelDatabaseDataSetHOUSEKEEPERS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xss">
+      <DependentUpon>GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseROOMS.xsc">
+      <DependentUpon>GoodStayHotelDatabaseROOMS.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseROOMS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoodStayHotelDatabaseROOMS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoodStayHotelDatabaseROOMS.xss">
+      <DependentUpon>GoodStayHotelDatabaseROOMS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
