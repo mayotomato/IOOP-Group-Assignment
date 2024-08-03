@@ -15,9 +15,6 @@ namespace IOOP_Group_Assignment
 
         private void AddSupply() 
         {
-            string SupplyName = txtbox_SupplyName.Text;
-            string SupplyType;
-            int SupplyCount;
 
             
         }

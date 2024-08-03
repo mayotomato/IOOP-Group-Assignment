@@ -22,34 +22,56 @@ namespace IOOP_Group_Assignment
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        public void AddSupply()
-        {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
-            con.Open();
-
             string SupplyName = txtbox_SupplyName.Text;
             string SupplyType = txtbox_SupplyType.Text;
+            int SupplyCount = 0;
             try
             {
-                int SupplyCount = int.Parse(txtbox_SupplyCount.Text);
+                SupplyCount = int.Parse(txtbox_SupplyCount.Text);
             }
             catch (FormatException)
             {
                 MessageBox.Show("Incorrect Supply Count value");
+                return;
             }
 
-            if (string.IsNullOrEmpty(SupplyName)) || string.IsNullOrEmpty(SupplyType)
+            if (string.IsNullOrEmpty(SupplyName) || string.IsNullOrEmpty(SupplyType))
             {
                 MessageBox.Show("Please fill in all the required fields.");
                 return;
             }
 
-            
+            AddSupply(SupplyName, SupplyType, SupplyCount);
+        }
 
+        public void AddSupply(string SupplyName, string SupplyType, int SupplyCount)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+            con.Open();
 
+            SqlCommand cmd = new SqlCommand("INSERT INTO Supplies(SupplyType, SuppliesName, Count)" +
+                "values (@a, @b, @c)", con);
+            cmd.Parameters.AddWithValue("@a", SupplyName);
+            cmd.Parameters.AddWithValue("@b", SupplyType);
+            cmd.Parameters.AddWithValue("@c", SupplyCount);
+
+            try
+            {
+                cmd.ExecuteNonQuery(); 
+                MessageBox.Show("Supply added successfully.");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"An error occurred while adding the supply: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}");
+            }
+            finally
+            {
+                con.Close(); 
+            }
 
 
         }
