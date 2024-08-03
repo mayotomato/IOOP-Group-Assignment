@@ -82,6 +82,7 @@
             this.tabClnSchdl.Size = new System.Drawing.Size(565, 422);
             this.tabClnSchdl.TabIndex = 0;
             this.tabClnSchdl.Text = "Cleaning Schedule";
+            this.tabClnSchdl.Click += new System.EventHandler(this.tabClnSchdl_Click);
             // 
             // data_RoomCleaning
             // 
@@ -194,6 +195,7 @@
             this.tabReservations.Size = new System.Drawing.Size(565, 422);
             this.tabReservations.TabIndex = 1;
             this.tabReservations.Text = "Upcoming Reservations";
+            this.tabReservations.Click += new System.EventHandler(this.tabReservations_Click);
             // 
             // data_Reservations
             // 
@@ -203,6 +205,7 @@
             this.data_Reservations.RowHeadersWidth = 82;
             this.data_Reservations.Size = new System.Drawing.Size(553, 191);
             this.data_Reservations.TabIndex = 15;
+            this.data_Reservations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Reservations_CellContentClick);
             // 
             // pnl_RoomDetailView2
             // 

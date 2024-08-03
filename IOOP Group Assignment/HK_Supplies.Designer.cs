@@ -86,13 +86,13 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Enabled = false;
             this.btn_Delete.Location = new System.Drawing.Point(16, 185);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(119, 29);
             this.btn_Delete.TabIndex = 14;
             this.btn_Delete.Text = "Delete Supply";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // txtbox_SupplyCount
             // 
@@ -154,10 +154,13 @@
             // 
             this.data_Supplies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_Supplies.Location = new System.Drawing.Point(17, 60);
+            this.data_Supplies.MultiSelect = false;
             this.data_Supplies.Name = "data_Supplies";
+            this.data_Supplies.ReadOnly = true;
             this.data_Supplies.RowHeadersWidth = 82;
             this.data_Supplies.Size = new System.Drawing.Size(552, 151);
             this.data_Supplies.TabIndex = 14;
+            this.data_Supplies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Supplies_CellContentClick);
             // 
             // label1
             // 
