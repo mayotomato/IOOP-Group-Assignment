@@ -168,7 +168,7 @@
             // btn_RoomChoose
             // 
             this.btn_RoomChoose.BackColor = System.Drawing.SystemColors.Window;
-            this.btn_RoomChoose.Location = new System.Drawing.Point(440, 387);
+            this.btn_RoomChoose.Location = new System.Drawing.Point(440, 202);
             this.btn_RoomChoose.Name = "btn_RoomChoose";
             this.btn_RoomChoose.Size = new System.Drawing.Size(119, 29);
             this.btn_RoomChoose.TabIndex = 9;
@@ -177,7 +177,7 @@
             // 
             // cal_Cleaning
             // 
-            this.cal_Cleaning.Location = new System.Drawing.Point(332, 203);
+            this.cal_Cleaning.Location = new System.Drawing.Point(332, 254);
             this.cal_Cleaning.MaxSelectionCount = 1;
             this.cal_Cleaning.Name = "cal_Cleaning";
             this.cal_Cleaning.TabIndex = 8;
@@ -270,7 +270,7 @@
             // btn_RoomChoose2
             // 
             this.btn_RoomChoose2.BackColor = System.Drawing.SystemColors.Window;
-            this.btn_RoomChoose2.Location = new System.Drawing.Point(440, 387);
+            this.btn_RoomChoose2.Location = new System.Drawing.Point(440, 202);
             this.btn_RoomChoose2.Name = "btn_RoomChoose2";
             this.btn_RoomChoose2.Size = new System.Drawing.Size(119, 29);
             this.btn_RoomChoose2.TabIndex = 13;
@@ -280,10 +280,11 @@
             // 
             // cal_Reservations
             // 
-            this.cal_Reservations.Location = new System.Drawing.Point(332, 203);
+            this.cal_Reservations.Location = new System.Drawing.Point(332, 254);
             this.cal_Reservations.MaxSelectionCount = 1;
             this.cal_Reservations.Name = "cal_Reservations";
             this.cal_Reservations.TabIndex = 12;
+            this.cal_Reservations.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.cal_Reservations_DateChanged);
             // 
             // HK_Schedule
             // 
