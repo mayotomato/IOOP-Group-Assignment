@@ -45,6 +45,7 @@
             this.btn_Refresh2 = new System.Windows.Forms.Button();
             this.data_Reservations = new System.Windows.Forms.DataGridView();
             this.pnl_RoomDetailView2 = new System.Windows.Forms.Panel();
+            this.lbl_Warning = new System.Windows.Forms.Label();
             this.btn_Report2 = new System.Windows.Forms.Button();
             this.btn_MarkPrepared = new System.Windows.Forms.Button();
             this.lbl_Condition2 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.lbl_RoomNum2 = new System.Windows.Forms.Label();
             this.btn_RoomChoose2 = new System.Windows.Forms.Button();
             this.cal_Reservations = new System.Windows.Forms.MonthCalendar();
-            this.lbl_Warning = new System.Windows.Forms.Label();
             this.tab_Schedule.SuspendLayout();
             this.tabClnSchdl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_RoomCleaning)).BeginInit();
@@ -122,7 +122,6 @@
             this.pnl_RoomDetailView.Name = "pnl_RoomDetailView";
             this.pnl_RoomDetailView.Size = new System.Drawing.Size(292, 213);
             this.pnl_RoomDetailView.TabIndex = 10;
-            this.pnl_RoomDetailView.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_RoomDetailView_Paint);
             // 
             // btn_Report
             // 
@@ -142,6 +141,7 @@
             this.btn_MarkDirty.TabIndex = 9;
             this.btn_MarkDirty.Text = "Mark Dirty";
             this.btn_MarkDirty.UseVisualStyleBackColor = true;
+            this.btn_MarkDirty.Click += new System.EventHandler(this.btn_MarkDirty_Click);
             // 
             // btn_MarkClean
             // 
@@ -151,6 +151,7 @@
             this.btn_MarkClean.TabIndex = 8;
             this.btn_MarkClean.Text = "Mark Cleaned";
             this.btn_MarkClean.UseVisualStyleBackColor = true;
+            this.btn_MarkClean.Click += new System.EventHandler(this.btn_MarkClean_Click);
             // 
             // lbl_Condition
             // 
@@ -191,6 +192,7 @@
             this.btn_RoomChoose.TabIndex = 9;
             this.btn_RoomChoose.Text = "Choose Room";
             this.btn_RoomChoose.UseVisualStyleBackColor = false;
+            this.btn_RoomChoose.Click += new System.EventHandler(this.btn_RoomChoose_Click);
             // 
             // cal_Cleaning
             // 
@@ -198,6 +200,7 @@
             this.cal_Cleaning.MaxSelectionCount = 1;
             this.cal_Cleaning.Name = "cal_Cleaning";
             this.cal_Cleaning.TabIndex = 8;
+            this.cal_Cleaning.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.cal_Cleaning_DateChanged);
             // 
             // tabReservations
             // 
@@ -249,6 +252,15 @@
             this.pnl_RoomDetailView2.Name = "pnl_RoomDetailView2";
             this.pnl_RoomDetailView2.Size = new System.Drawing.Size(292, 213);
             this.pnl_RoomDetailView2.TabIndex = 14;
+            // 
+            // lbl_Warning
+            // 
+            this.lbl_Warning.AutoSize = true;
+            this.lbl_Warning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_Warning.Location = new System.Drawing.Point(13, 94);
+            this.lbl_Warning.Name = "lbl_Warning";
+            this.lbl_Warning.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Warning.TabIndex = 13;
             // 
             // btn_Report2
             // 
@@ -317,15 +329,6 @@
             this.cal_Reservations.Name = "cal_Reservations";
             this.cal_Reservations.TabIndex = 12;
             this.cal_Reservations.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.cal_Reservations_DateChanged);
-            // 
-            // lbl_Warning
-            // 
-            this.lbl_Warning.AutoSize = true;
-            this.lbl_Warning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_Warning.Location = new System.Drawing.Point(13, 94);
-            this.lbl_Warning.Name = "lbl_Warning";
-            this.lbl_Warning.Size = new System.Drawing.Size(0, 13);
-            this.lbl_Warning.TabIndex = 13;
             // 
             // HK_Schedule
             // 

@@ -33,9 +33,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtbox_SupplyName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbox_Name = new System.Windows.Forms.TextBox();
+            this.txtbox_Username = new System.Windows.Forms.TextBox();
+            this.txtbox_Password = new System.Windows.Forms.TextBox();
+            this.btn_Confirm = new System.Windows.Forms.Button();
             this.btn_Pfp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -90,29 +91,40 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "Password:";
             // 
-            // txtbox_SupplyName
+            // txtbox_Name
             // 
-            this.txtbox_SupplyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbox_SupplyName.Location = new System.Drawing.Point(133, 116);
-            this.txtbox_SupplyName.Name = "txtbox_SupplyName";
-            this.txtbox_SupplyName.Size = new System.Drawing.Size(331, 26);
-            this.txtbox_SupplyName.TabIndex = 31;
+            this.txtbox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_Name.Location = new System.Drawing.Point(133, 116);
+            this.txtbox_Name.Name = "txtbox_Name";
+            this.txtbox_Name.Size = new System.Drawing.Size(331, 26);
+            this.txtbox_Name.TabIndex = 31;
             // 
-            // textBox1
+            // txtbox_Username
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(133, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 26);
-            this.textBox1.TabIndex = 32;
+            this.txtbox_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_Username.Location = new System.Drawing.Point(133, 161);
+            this.txtbox_Username.Name = "txtbox_Username";
+            this.txtbox_Username.Size = new System.Drawing.Size(331, 26);
+            this.txtbox_Username.TabIndex = 32;
             // 
-            // textBox2
+            // txtbox_Password
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(133, 211);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(331, 26);
-            this.textBox2.TabIndex = 33;
+            this.txtbox_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_Password.Location = new System.Drawing.Point(133, 211);
+            this.txtbox_Password.Name = "txtbox_Password";
+            this.txtbox_Password.Size = new System.Drawing.Size(331, 26);
+            this.txtbox_Password.TabIndex = 33;
+            // 
+            // btn_Confirm
+            // 
+            this.btn_Confirm.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_Confirm.Location = new System.Drawing.Point(361, 248);
+            this.btn_Confirm.Name = "btn_Confirm";
+            this.btn_Confirm.Size = new System.Drawing.Size(119, 29);
+            this.btn_Confirm.TabIndex = 55;
+            this.btn_Confirm.Text = "Confirm";
+            this.btn_Confirm.UseVisualStyleBackColor = false;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // btn_Pfp
             // 
@@ -129,10 +141,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(484, 261);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtbox_SupplyName);
+            this.ClientSize = new System.Drawing.Size(484, 281);
+            this.Controls.Add(this.btn_Confirm);
+            this.Controls.Add(this.txtbox_Password);
+            this.Controls.Add(this.txtbox_Username);
+            this.Controls.Add(this.txtbox_Name);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
@@ -156,8 +169,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtbox_SupplyName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtbox_Name;
+        private System.Windows.Forms.TextBox txtbox_Username;
+        private System.Windows.Forms.TextBox txtbox_Password;
+        private System.Windows.Forms.Button btn_Confirm;
     }
 }

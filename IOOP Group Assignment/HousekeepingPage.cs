@@ -33,8 +33,10 @@ namespace IOOP_Group_Assignment
 
         private void btn_Pfp_Click(object sender, EventArgs e)
         {
-            UpdateProfile f3 = new UpdateProfile();
+            UpdateProfile f3 = new UpdateProfile(1); //Please change 1 to HousekeeperID received when logging in
             f3.ShowDialog();
         }
+
+
     }
 }

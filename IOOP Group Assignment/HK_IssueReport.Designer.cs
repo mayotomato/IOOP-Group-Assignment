@@ -66,6 +66,7 @@
             this.btn_Report.TabIndex = 9;
             this.btn_Report.Text = "Report";
             this.btn_Report.UseVisualStyleBackColor = true;
+            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
             // HK_IssueReport
             // 
@@ -79,6 +80,7 @@
             this.Name = "HK_IssueReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Issue Report";
+            this.Load += new System.EventHandler(this.HK_IssueReport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

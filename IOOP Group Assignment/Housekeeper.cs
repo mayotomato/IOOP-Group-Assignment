@@ -21,10 +21,8 @@ namespace IOOP_Group_Assignment
 
         public void DeleteEntryFromSupplies(int id)
         {
-            // Connection string (replace with your actual connection string)
             string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
 
-            // SQL query to delete the record
             string query = "DELETE FROM Supplies WHERE SuppliesID = @ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -84,40 +82,33 @@ namespace IOOP_Group_Assignment
             }
         }
 
-        public Tuple<string, string> RetrieveRoomInformation(string roomid)
+        public Tuple<string, string, string> RetrieveRoomInformation(string roomid)
         {
-            // Connection string (replace with your actual connection string)
             string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                // Open the connection
                 con.Open();
 
-                // Create the SQL command with parameterized query
-                string query = "SELECT RoomNumber, Condition FROM Rooms WHERE RoomID = @RoomID";
+                string query = "SELECT RoomNumber, Condition, Availability FROM Rooms WHERE RoomID = @RoomID";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    // Add parameter to the command
                     cmd.Parameters.AddWithValue("@RoomID", roomid);
 
-                    // Execute the command and retrieve data
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            // Retrieve RoomNumber and Condition
                             string roomNumber = reader["RoomNumber"].ToString();
                             string condition = reader["Condition"].ToString();
+                            string availability = reader["Availability"].ToString();
 
-                            // Return the values as a tuple
-                            return Tuple.Create(roomNumber, condition);
+                            return Tuple.Create(roomNumber, condition, availability);
                         }
                         else
                         {
-                            // Handle case where no record is found
-                            return Tuple.Create("Not Found", "Not Found");
+                            return Tuple.Create("Not Found", "Not Found", "Not Found");
                         }
                     }
                 }

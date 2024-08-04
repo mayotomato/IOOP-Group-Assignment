@@ -14,6 +14,7 @@ namespace IOOP_Group_Assignment
 {
     public partial class HK_Schedule : Form
     {
+        DateTime today = DateTime.Today;
         public string sqlDateFormat;
         public List<string> rowData;
 
@@ -22,19 +23,41 @@ namespace IOOP_Group_Assignment
             InitializeComponent();
             data_Reservations.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             data_RoomCleaning.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            List<string> rowData = new List<string>();
+            rowData = new List<string>();
+            string shortDate = today.ToString("yyyy-MM-dd");
+            sqlDateFormat = shortDate;
         }
 
         private void btn_Report_Click(object sender, EventArgs e)
         {
-            HK_IssueReport f3 = new HK_IssueReport();
-            f3.ShowDialog();
+            try
+            {
+                string roomid = rowData[1];
+                Housekeeper house = new Housekeeper();
+                var roomInfo = house.RetrieveRoomInformation(roomid);
+
+                string roomnum = roomInfo.Item1;
+
+                HK_IssueReport f3 = new HK_IssueReport(roomnum, roomid);
+                f3.ShowDialog();
+            }
+
+            catch (System.ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Please select a room first");
+                return;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
+
+            
         }
 
-        private void pnl_RoomDetailView_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        //RESERVATION SCHEDULE
 
         private void btn_RoomChoose2_Click(object sender, EventArgs e)
         {
@@ -42,19 +65,14 @@ namespace IOOP_Group_Assignment
             if (data_Reservations.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = data_Reservations.SelectedRows[0];
+                rowData.Clear();
 
-
-                // Retrieve data from selected row
                 foreach (DataGridViewCell cell in selectedRow.Cells)
                 {
                     rowData.Add(cell.Value?.ToString() ?? "NULL");
                 }
 
-                // Display data in a message box
-                MessageBox.Show("Selected Row Data:\n" + string.Join("\n", rowData));
-
                 UpdateReservationsPnl();
-
             }
             else
             {
@@ -62,45 +80,58 @@ namespace IOOP_Group_Assignment
             }
         }
 
-        private void UpdateReservationsPnl() 
+        private void UpdateReservationsPnl()
         {
-            // Set the Check-in time label
-            lbl_Checkin.Text = "Check-in Time: " + rowData[2];
-
-            // Retrieve RoomID
-            string roomid = rowData[1]; // Ensure this index matches the RoomID column
-
-            // Retrieve information from the Rooms table
-            Housekeeper house = new Housekeeper();
-            var roomInfo = house.RetrieveRoomInformation(roomid);
-
-            lbl_RoomNum2.Text = "Room Number: " + roomInfo.Item1;
-            lbl_Condition2.Text = "Condition: " + roomInfo.Item2;
-
-            if (roomInfo.Item2 == "Clean")
+            if (rowData.Count > 2)
             {
-                lbl_Warning.Text = "*Room must be prepared";
+                lbl_Checkin.Text = "Check-in Time: " + rowData[2];
+                string roomid = rowData[1];
+
+                Housekeeper house = new Housekeeper();
+                var roomInfo = house.RetrieveRoomInformation(roomid);
+
+                lbl_RoomNum2.Text = "Room Number: " + roomInfo.Item1;
+                lbl_Condition2.Text = "Condition: " + roomInfo.Item2;
+
+                if (roomInfo.Item2 == "Clean")
+                {
+                    lbl_Warning.Text = "*Room must be prepared";
+                }
+                else if (roomInfo.Item2 == "Dirty")
+                {
+                    lbl_Warning.Text = "*Room must be cleaned then prepared";
+                }
             }
-            else if (roomInfo.Item2 == "Dirty")
+            else
             {
-                lbl_Warning.Text = "*Room must be cleaned then prepared";
+                MessageBox.Show("Row data is incomplete.");
             }
         }
-    
 
-        
+
+
 
         private void LoadCleaning()
         {
-            string query = "SELECT * FROM " + "HousekeepingSchedule";
+            // Define the query with a parameter placeholder
+            string query = "SELECT * FROM HousekeepingSchedule WHERE CAST(CleanDate AS DATE) = @CleanDate";
 
-            using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, ConfigurationManager.ConnectionStrings["myCS"].ToString()))
+            // Create a new SqlConnection
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString()))
             {
-                DataSet dataSet = new DataSet();
+                // Create a SqlDataAdapter with the query and connection
+                using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection))
+                {
+                    // Add the parameter with the date value
+                    dataAdapter.SelectCommand.Parameters.AddWithValue("@CleanDate", sqlDateFormat);
 
-                dataAdapter.Fill(dataSet, "HousekeepingSchedule");
+                    // Create a DataSet and fill it with the data
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet, "HousekeepingSchedule");
 
-                data_RoomCleaning.DataSource = dataSet.Tables["HousekeepingSchedule"];
+                    // Bind the DataSet to the DataGridView
+                    data_RoomCleaning.DataSource = dataSet.Tables["HousekeepingSchedule"];
+                }
             }
         }
 
@@ -112,9 +143,7 @@ namespace IOOP_Group_Assignment
             using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, ConfigurationManager.ConnectionStrings["myCS"].ToString()))
             {
                 DataSet dataSet = new DataSet();
-
                 dataAdapter.Fill(dataSet, "Reservations");
-
                 data_Reservations.DataSource = dataSet.Tables["Reservations"];
             }
         }
@@ -140,7 +169,7 @@ namespace IOOP_Group_Assignment
         {
             DateTime selectedDate = e.Start.Date;
             sqlDateFormat = selectedDate.ToString("yyyy-MM-dd");
-            
+
             LoadReservations();
 
         }
@@ -155,34 +184,179 @@ namespace IOOP_Group_Assignment
             LoadCleaning();
         }
 
-        private void btn_MarkPrepared_Click(object sender, EventArgs e) { }
-        //{
-        //    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
-        //    con.Open();
+        private void btn_MarkPrepared_Click(object sender, EventArgs e)
+        {
+            if (rowData.Count > 2)
+            {
+                int roomID = Convert.ToInt32(rowData[1]);
 
-        //    SqlCommand cmd = new SqlCommand("UPDATE Supplies SET SuppliesName = @SupplyName WHERE SuppliesID = @ID", con);
-        //    cmd.Parameters.AddWithValue("@SupplyName", newSupplyName);
-        //    cmd.Parameters.AddWithValue("@ID", id);
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString()))
+                {
+                    con.Open();
 
-        //    try
-        //    {
-        //        int rowsAffected = cmd.ExecuteNonQuery();
+                    using (SqlCommand cmd = new SqlCommand("UPDATE Rooms SET Condition = 'Prepared' WHERE RoomID = @RoomNumber", con))
+                    {
+                        cmd.Parameters.AddWithValue("@RoomNumber", roomID);
 
-        //        if (rowsAffected > 0)
-        //        {
-        //            MessageBox.Show("Record updated successfully.");
+                        try
+                        {
+                            int rowsAffected = cmd.ExecuteNonQuery();
 
-        //            LoadData("Supplies");
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("No record found with the specified ID.");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error: " + ex.Message);
-        //    }
-        //}
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Record updated successfully.");
+                                LoadReservations();
+                                UpdateReservationsPnl();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No record found with the specified Room Number.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No room number available for update.");
+            }
+        }
+
+        //CLEANING SCHEDULE
+
+        private void cal_Cleaning_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            DateTime selectedDate = e.Start.Date;
+            sqlDateFormat = selectedDate.ToString("yyyy-MM-dd");
+
+            LoadCleaning();
+        }
+
+        private void btn_RoomChoose_Click(object sender, EventArgs e)
+        {
+            if (data_RoomCleaning.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = data_RoomCleaning.SelectedRows[0];
+                rowData.Clear();
+
+                foreach (DataGridViewCell cell in selectedRow.Cells)
+                {
+                    rowData.Add(cell.Value?.ToString() ?? "NULL");
+                }
+
+                UpdateCleaningPnl();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to view.");
+            }
+
+
+
+        }
+        private void UpdateCleaningPnl()
+        {
+            if (rowData.Count > 2)
+            {
+                string roomid = rowData[1];
+
+                Housekeeper house = new Housekeeper();
+                var roomInfo = house.RetrieveRoomInformation(roomid);
+
+                lbl_RoomNum.Text = "Room Number: " + roomInfo.Item1;
+                lbl_Availability.Text = "Availability: " + roomInfo.Item3;
+                lbl_Condition.Text = "Condition: " + roomInfo.Item2;
+            }
+            else
+            {
+                MessageBox.Show("Row data is incomplete.");
+            }
+        }
+
+        private void btn_MarkClean_Click(object sender, EventArgs e)
+        {
+            if (rowData.Count > 2)
+            {
+                int roomID = Convert.ToInt32(rowData[1]);
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString()))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand("UPDATE Rooms SET Condition = 'Clean' WHERE RoomID = @RoomNumber", con))
+                    {
+                        cmd.Parameters.AddWithValue("@RoomNumber", roomID);
+
+                        try
+                        {
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Record updated successfully.");
+                                LoadCleaning();
+                                UpdateCleaningPnl();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No record found with the specified Room Number.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No room number available for update.");
+            }
+        }
+
+        private void btn_MarkDirty_Click(object sender, EventArgs e)
+        {
+            if (rowData.Count > 2)
+            {
+                int roomID = Convert.ToInt32(rowData[1]);
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString()))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand("UPDATE Rooms SET Condition = 'Dirty' WHERE RoomID = @RoomNumber", con))
+                    {
+                        cmd.Parameters.AddWithValue("@RoomNumber", roomID);
+
+                        try
+                        {
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Record updated successfully.");
+                                LoadCleaning();
+                                UpdateCleaningPnl();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No record found with the specified Room Number.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No room number available for update.");
+            }
+        }
     }
 }
