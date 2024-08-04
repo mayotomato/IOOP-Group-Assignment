@@ -29,19 +29,20 @@ namespace IOOP_Group_Assignment
 
         private void btn_Rooms_Click(object sender, EventArgs e)
         {
-            Send_review f2 = new Send_review();
+            Rooms1 f2 = new Rooms1();
             f2.Show();
         }
 
-        private void btn_sendreview_Click(object sender, EventArgs e)
-        {
-            Send_review f2 = new Send_review();
-            f2.Show();
-        }
 
         private void btn_Managereservations_Click(object sender, EventArgs e)
         {
             Manage_reservations f2 = new Manage_reservations();
+            f2.Show();
+        }
+
+        private void btnSend_review_Click(object sender, EventArgs e)
+        {
+            Send_review f2 = new Send_review();
             f2.Show();
         }
     }
