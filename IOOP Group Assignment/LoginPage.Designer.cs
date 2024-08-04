@@ -146,6 +146,7 @@
             this.LoginButton.TabIndex = 13;
             this.LoginButton.Text = "Log in";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // LoginPagePrompt
             // 

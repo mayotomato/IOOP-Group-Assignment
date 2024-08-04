@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.pnl_Report = new System.Windows.Forms.Panel();
+            this.listview_Rooms = new System.Windows.Forms.ListView();
             this.lbl_Rooms = new System.Windows.Forms.Label();
             this.lbl_Revenue = new System.Windows.Forms.Label();
             this.lbl_Revenue_label = new System.Windows.Forms.Label();
-            this.cal = new System.Windows.Forms.MonthCalendar();
+            this.cal_Reservation = new System.Windows.Forms.MonthCalendar();
             this.grpbox_Total_Revenue = new System.Windows.Forms.GroupBox();
+            this.lbl_Total_Revenue = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpbox_Rooms_Reserved = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_Total_Revenue = new System.Windows.Forms.Label();
             this.lbl_Total_Rooms = new System.Windows.Forms.Label();
-            this.listview_Rooms = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnl_Report.SuspendLayout();
             this.grpbox_Total_Revenue.SuspendLayout();
             this.grpbox_Rooms_Reserved.SuspendLayout();
@@ -51,7 +51,7 @@
             this.pnl_Report.Controls.Add(this.lbl_Rooms);
             this.pnl_Report.Controls.Add(this.lbl_Revenue);
             this.pnl_Report.Controls.Add(this.lbl_Revenue_label);
-            this.pnl_Report.Controls.Add(this.cal);
+            this.pnl_Report.Controls.Add(this.cal_Reservation);
             this.pnl_Report.Controls.Add(this.grpbox_Total_Revenue);
             this.pnl_Report.Controls.Add(this.lblTitle);
             this.pnl_Report.Controls.Add(this.grpbox_Rooms_Reserved);
@@ -60,6 +60,15 @@
             this.pnl_Report.Name = "pnl_Report";
             this.pnl_Report.Size = new System.Drawing.Size(615, 487);
             this.pnl_Report.TabIndex = 12;
+            // 
+            // listview_Rooms
+            // 
+            this.listview_Rooms.HideSelection = false;
+            this.listview_Rooms.Location = new System.Drawing.Point(332, 266);
+            this.listview_Rooms.Name = "listview_Rooms";
+            this.listview_Rooms.Size = new System.Drawing.Size(213, 185);
+            this.listview_Rooms.TabIndex = 9;
+            this.listview_Rooms.UseCompatibleStateImageBehavior = false;
             // 
             // lbl_Rooms
             // 
@@ -88,12 +97,12 @@
             this.lbl_Revenue_label.TabIndex = 5;
             this.lbl_Revenue_label.Text = "Revenue:";
             // 
-            // cal
+            // cal_Reservation
             // 
-            this.cal.Location = new System.Drawing.Point(19, 138);
-            this.cal.MaxSelectionCount = 1;
-            this.cal.Name = "cal";
-            this.cal.TabIndex = 4;
+            this.cal_Reservation.Location = new System.Drawing.Point(19, 138);
+            this.cal_Reservation.MaxSelectionCount = 1;
+            this.cal_Reservation.Name = "cal_Reservation";
+            this.cal_Reservation.TabIndex = 4;
             // 
             // grpbox_Total_Revenue
             // 
@@ -104,6 +113,15 @@
             this.grpbox_Total_Revenue.TabIndex = 2;
             this.grpbox_Total_Revenue.TabStop = false;
             this.grpbox_Total_Revenue.Text = "Total Revenue";
+            // 
+            // lbl_Total_Revenue
+            // 
+            this.lbl_Total_Revenue.AutoSize = true;
+            this.lbl_Total_Revenue.Location = new System.Drawing.Point(93, 29);
+            this.lbl_Total_Revenue.Name = "lbl_Total_Revenue";
+            this.lbl_Total_Revenue.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Total_Revenue.TabIndex = 9;
+            this.lbl_Total_Revenue.Text = "[]";
             // 
             // lblTitle
             // 
@@ -125,23 +143,6 @@
             this.grpbox_Rooms_Reserved.TabStop = false;
             this.grpbox_Rooms_Reserved.Text = "Total Rooms Reserved";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 0;
-            // 
-            // lbl_Total_Revenue
-            // 
-            this.lbl_Total_Revenue.AutoSize = true;
-            this.lbl_Total_Revenue.Location = new System.Drawing.Point(93, 29);
-            this.lbl_Total_Revenue.Name = "lbl_Total_Revenue";
-            this.lbl_Total_Revenue.Size = new System.Drawing.Size(13, 13);
-            this.lbl_Total_Revenue.TabIndex = 9;
-            this.lbl_Total_Revenue.Text = "[]";
-            // 
             // lbl_Total_Rooms
             // 
             this.lbl_Total_Rooms.AutoSize = true;
@@ -151,14 +152,13 @@
             this.lbl_Total_Rooms.TabIndex = 10;
             this.lbl_Total_Rooms.Text = "[]";
             // 
-            // listview_Rooms
+            // label1
             // 
-            this.listview_Rooms.HideSelection = false;
-            this.listview_Rooms.Location = new System.Drawing.Point(332, 266);
-            this.listview_Rooms.Name = "listview_Rooms";
-            this.listview_Rooms.Size = new System.Drawing.Size(213, 185);
-            this.listview_Rooms.TabIndex = 9;
-            this.listview_Rooms.UseCompatibleStateImageBehavior = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 0;
             // 
             // ViewReportForm
             // 
@@ -190,9 +190,9 @@
         private System.Windows.Forms.Label lbl_Rooms;
         private System.Windows.Forms.Label lbl_Revenue;
         private System.Windows.Forms.Label lbl_Revenue_label;
-        private System.Windows.Forms.MonthCalendar cal;
-        private System.Windows.Forms.Label lbl_Total_Revenue;
+        private System.Windows.Forms.MonthCalendar cal_Reservation;
         private System.Windows.Forms.Label lbl_Total_Rooms;
         private System.Windows.Forms.ListView listview_Rooms;
+        private System.Windows.Forms.Label lbl_Total_Revenue;
     }
 }

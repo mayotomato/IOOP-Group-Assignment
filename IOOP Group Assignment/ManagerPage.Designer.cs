@@ -46,6 +46,13 @@
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Manager";
             // 
+            // lnklbl_Manage_Room
+            // 
+            this.lnklbl_Manage_Room.Location = new System.Drawing.Point(0, 0);
+            this.lnklbl_Manage_Room.Name = "lnklbl_Manage_Room";
+            this.lnklbl_Manage_Room.Size = new System.Drawing.Size(100, 23);
+            this.lnklbl_Manage_Room.TabIndex = 18;
+            // 
             // btn_Manage_Accounts
             // 
             this.btn_Manage_Accounts.AutoSize = true;

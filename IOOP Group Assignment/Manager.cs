@@ -219,7 +219,6 @@ namespace IOOP_Group_Assignment
             SqlCommand command = new SqlCommand("SELECT RoomID FROM Reservations WHERE CheckInDateTime = @date", connection);
             using (connection)
             {
-
                 {
                     // Add parameter to prevent SQL injection and set the date value
                     command.Parameters.AddWithValue("@date", date);
@@ -315,7 +314,6 @@ namespace IOOP_Group_Assignment
             {
                 using (command)
                 {
-
                     try
                     {
                         // Open the connection
@@ -354,7 +352,6 @@ namespace IOOP_Group_Assignment
             {
                 using (command)
                 {
-
                     try
                     {
                         // Open the connection

@@ -28,7 +28,6 @@ namespace IOOP_Group_Assignment
         {
             // TODO: This line of code loads data into the 'goodStayHotelDatabaseROOMS.Rooms' table. You can move, or remove it, as needed.
             this.roomsTableAdapter.Fill(this.goodStayHotelDatabaseROOMS.Rooms);
-            MessageBox.Show(timebox_Edit_Cleaned.Value.ToString());
 
         }
 

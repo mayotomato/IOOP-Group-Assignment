@@ -17,7 +17,7 @@ namespace IOOP_Group_Assignment
         public ViewReportForm(Manager admin)
         {
             InitializeComponent();
-            cal.DateChanged += cal_DateChanged;
+            cal_Reservation.DateChanged += cal_DateChanged;
             this.admin = admin;
 
         }
