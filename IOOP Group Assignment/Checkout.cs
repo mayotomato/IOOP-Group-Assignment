@@ -109,10 +109,5 @@ namespace IOOP_Group_Assignment
         {
 
         }
-
-        private void CheckOut_btn_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

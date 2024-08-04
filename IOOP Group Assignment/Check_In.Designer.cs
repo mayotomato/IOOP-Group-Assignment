@@ -48,7 +48,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(286, 9);
+            this.label6.Location = new System.Drawing.Point(286, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(226, 29);
             this.label6.TabIndex = 80;

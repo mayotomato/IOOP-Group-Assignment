@@ -82,7 +82,7 @@
             // 
             this.labelBill.AutoSize = true;
             this.labelBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.labelBill.Location = new System.Drawing.Point(654, 118);
+            this.labelBill.Location = new System.Drawing.Point(624, 306);
             this.labelBill.Name = "labelBill";
             this.labelBill.Size = new System.Drawing.Size(0, 13);
             this.labelBill.TabIndex = 81;
@@ -101,7 +101,7 @@
             // 
             // name_TextBox
             // 
-            this.name_TextBox.Location = new System.Drawing.Point(445, 131);
+            this.name_TextBox.Location = new System.Drawing.Point(445, 121);
             this.name_TextBox.Name = "name_TextBox";
             this.name_TextBox.Size = new System.Drawing.Size(166, 20);
             this.name_TextBox.TabIndex = 78;
@@ -111,11 +111,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(275, 129);
+            this.label3.Location = new System.Drawing.Point(275, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 76;
-            this.label3.Text = "Full Name ";
+            this.label3.Text = "Full Name:";
             // 
             // ComboBoxRoomType
             // 

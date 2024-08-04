@@ -80,8 +80,8 @@ namespace IOOP_Group_Assignment
                 try
                 {
                     conn.Open();
-                    string query = "INSERT INTO Reservations (CustomerID, RoomID, CheckinDateTime, CheckoutDateTime, Nights, Balance) " +
-                                   "VALUES (@CustomerID, @RoomType, @CheckinDateTime, @CheckoutDateTime, @Nights, @Balance)";
+                    string query = "INSERT INTO Reservations (CustomerID, RoomID, CheckinDateTime, CheckoutDateTime, Nights, Balance, ReservationStatus) " +
+                                   "VALUES (@CustomerID, @RoomType, @CheckinDateTime, @CheckoutDateTime, @Nights, @Balance, @ReservationStatus)";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@CustomerID", customerID);
@@ -90,6 +90,7 @@ namespace IOOP_Group_Assignment
                     cmd.Parameters.AddWithValue("@CheckoutDateTime", checkoutDate);
                     cmd.Parameters.AddWithValue("@Nights", nights);
                     cmd.Parameters.AddWithValue("@Balance", totalBalance);
+                    cmd.Parameters.AddWithValue("@ReservationStatus", "Unpaid");
 
                     cmd.ExecuteNonQuery();
 

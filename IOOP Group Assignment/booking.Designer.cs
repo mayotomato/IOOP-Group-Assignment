@@ -30,11 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.DisplayBox = new System.Windows.Forms.DataGridView();
+            this.CusIDTextbox = new System.Windows.Forms.TextBox();
+            this.BokingBtn = new System.Windows.Forms.Button();
+            this.DisplayBoxBooking = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.DisplayBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayBoxBooking)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -53,46 +53,47 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(135, 113);
+            this.label2.Location = new System.Drawing.Point(207, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 20);
+            this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Room ID/Name: ";
+            this.label2.Text = "Customer ID:";
             // 
-            // textBox1
+            // CusIDTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(363, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 20);
-            this.textBox1.TabIndex = 22;
+            this.CusIDTextbox.Location = new System.Drawing.Point(363, 97);
+            this.CusIDTextbox.Name = "CusIDTextbox";
+            this.CusIDTextbox.Size = new System.Drawing.Size(228, 20);
+            this.CusIDTextbox.TabIndex = 22;
             // 
-            // button1
+            // BokingBtn
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(280, 165);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 32);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BokingBtn.AutoSize = true;
+            this.BokingBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BokingBtn.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.BokingBtn.FlatAppearance.BorderSize = 0;
+            this.BokingBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.BokingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.BokingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BokingBtn.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BokingBtn.ForeColor = System.Drawing.Color.White;
+            this.BokingBtn.Location = new System.Drawing.Point(297, 178);
+            this.BokingBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.BokingBtn.Name = "BokingBtn";
+            this.BokingBtn.Size = new System.Drawing.Size(229, 32);
+            this.BokingBtn.TabIndex = 23;
+            this.BokingBtn.Text = "Submit";
+            this.BokingBtn.UseVisualStyleBackColor = false;
+            this.BokingBtn.Click += new System.EventHandler(this.BokingBtn_Click);
             // 
-            // DisplayBox
+            // DisplayBoxBooking
             // 
-            this.DisplayBox.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.DisplayBox.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DisplayBox.Location = new System.Drawing.Point(231, 232);
-            this.DisplayBox.Name = "DisplayBox";
-            this.DisplayBox.Size = new System.Drawing.Size(326, 184);
-            this.DisplayBox.TabIndex = 24;
+            this.DisplayBoxBooking.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.DisplayBoxBooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DisplayBoxBooking.Location = new System.Drawing.Point(225, 254);
+            this.DisplayBoxBooking.Name = "DisplayBoxBooking";
+            this.DisplayBoxBooking.Size = new System.Drawing.Size(395, 184);
+            this.DisplayBoxBooking.TabIndex = 24;
             // 
             // booking
             // 
@@ -100,14 +101,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.DisplayBox);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DisplayBoxBooking);
+            this.Controls.Add(this.BokingBtn);
+            this.Controls.Add(this.CusIDTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "booking";
             this.Text = "booking";
-            ((System.ComponentModel.ISupportInitialize)(this.DisplayBox)).EndInit();
+            this.Load += new System.EventHandler(this.booking_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayBoxBooking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,9 +119,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView DisplayBox;
+        private System.Windows.Forms.TextBox CusIDTextbox;
+        private System.Windows.Forms.Button BokingBtn;
+        private System.Windows.Forms.DataGridView DisplayBoxBooking;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
