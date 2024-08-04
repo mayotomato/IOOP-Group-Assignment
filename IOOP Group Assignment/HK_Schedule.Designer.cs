@@ -30,6 +30,7 @@
         {
             this.tab_Schedule = new System.Windows.Forms.TabControl();
             this.tabClnSchdl = new System.Windows.Forms.TabPage();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.data_RoomCleaning = new System.Windows.Forms.DataGridView();
             this.pnl_RoomDetailView = new System.Windows.Forms.Panel();
             this.btn_Report = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             this.btn_RoomChoose = new System.Windows.Forms.Button();
             this.cal_Cleaning = new System.Windows.Forms.MonthCalendar();
             this.tabReservations = new System.Windows.Forms.TabPage();
+            this.btn_Refresh2 = new System.Windows.Forms.Button();
             this.data_Reservations = new System.Windows.Forms.DataGridView();
             this.pnl_RoomDetailView2 = new System.Windows.Forms.Panel();
             this.btn_Report2 = new System.Windows.Forms.Button();
@@ -50,6 +52,7 @@
             this.lbl_RoomNum2 = new System.Windows.Forms.Label();
             this.btn_RoomChoose2 = new System.Windows.Forms.Button();
             this.cal_Reservations = new System.Windows.Forms.MonthCalendar();
+            this.lbl_Warning = new System.Windows.Forms.Label();
             this.tab_Schedule.SuspendLayout();
             this.tabClnSchdl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_RoomCleaning)).BeginInit();
@@ -72,6 +75,7 @@
             // tabClnSchdl
             // 
             this.tabClnSchdl.BackColor = System.Drawing.Color.White;
+            this.tabClnSchdl.Controls.Add(this.btn_Refresh);
             this.tabClnSchdl.Controls.Add(this.data_RoomCleaning);
             this.tabClnSchdl.Controls.Add(this.pnl_RoomDetailView);
             this.tabClnSchdl.Controls.Add(this.btn_RoomChoose);
@@ -84,11 +88,24 @@
             this.tabClnSchdl.Text = "Cleaning Schedule";
             this.tabClnSchdl.Click += new System.EventHandler(this.tabClnSchdl_Click);
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_Refresh.Location = new System.Drawing.Point(315, 202);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(119, 29);
+            this.btn_Refresh.TabIndex = 17;
+            this.btn_Refresh.Text = "Refresh Table";
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
             // data_RoomCleaning
             // 
             this.data_RoomCleaning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_RoomCleaning.Location = new System.Drawing.Point(6, 6);
+            this.data_RoomCleaning.MultiSelect = false;
             this.data_RoomCleaning.Name = "data_RoomCleaning";
+            this.data_RoomCleaning.ReadOnly = true;
             this.data_RoomCleaning.RowHeadersWidth = 82;
             this.data_RoomCleaning.Size = new System.Drawing.Size(553, 191);
             this.data_RoomCleaning.TabIndex = 11;
@@ -103,7 +120,7 @@
             this.pnl_RoomDetailView.Controls.Add(this.lbl_RoomNum);
             this.pnl_RoomDetailView.Location = new System.Drawing.Point(6, 203);
             this.pnl_RoomDetailView.Name = "pnl_RoomDetailView";
-            this.pnl_RoomDetailView.Size = new System.Drawing.Size(322, 213);
+            this.pnl_RoomDetailView.Size = new System.Drawing.Size(292, 213);
             this.pnl_RoomDetailView.TabIndex = 10;
             this.pnl_RoomDetailView.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_RoomDetailView_Paint);
             // 
@@ -119,7 +136,7 @@
             // 
             // btn_MarkDirty
             // 
-            this.btn_MarkDirty.Location = new System.Drawing.Point(200, 181);
+            this.btn_MarkDirty.Location = new System.Drawing.Point(169, 181);
             this.btn_MarkDirty.Name = "btn_MarkDirty";
             this.btn_MarkDirty.Size = new System.Drawing.Size(119, 29);
             this.btn_MarkDirty.TabIndex = 9;
@@ -128,7 +145,7 @@
             // 
             // btn_MarkClean
             // 
-            this.btn_MarkClean.Location = new System.Drawing.Point(200, 146);
+            this.btn_MarkClean.Location = new System.Drawing.Point(169, 146);
             this.btn_MarkClean.Name = "btn_MarkClean";
             this.btn_MarkClean.Size = new System.Drawing.Size(119, 29);
             this.btn_MarkClean.TabIndex = 8;
@@ -185,6 +202,7 @@
             // tabReservations
             // 
             this.tabReservations.BackColor = System.Drawing.Color.White;
+            this.tabReservations.Controls.Add(this.btn_Refresh2);
             this.tabReservations.Controls.Add(this.data_Reservations);
             this.tabReservations.Controls.Add(this.pnl_RoomDetailView2);
             this.tabReservations.Controls.Add(this.btn_RoomChoose2);
@@ -197,18 +215,31 @@
             this.tabReservations.Text = "Upcoming Reservations";
             this.tabReservations.Click += new System.EventHandler(this.tabReservations_Click);
             // 
+            // btn_Refresh2
+            // 
+            this.btn_Refresh2.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_Refresh2.Location = new System.Drawing.Point(315, 202);
+            this.btn_Refresh2.Name = "btn_Refresh2";
+            this.btn_Refresh2.Size = new System.Drawing.Size(119, 29);
+            this.btn_Refresh2.TabIndex = 16;
+            this.btn_Refresh2.Text = "Refresh Table";
+            this.btn_Refresh2.UseVisualStyleBackColor = false;
+            this.btn_Refresh2.Click += new System.EventHandler(this.btn_Refresh2_Click);
+            // 
             // data_Reservations
             // 
             this.data_Reservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_Reservations.Location = new System.Drawing.Point(6, 6);
+            this.data_Reservations.MultiSelect = false;
             this.data_Reservations.Name = "data_Reservations";
+            this.data_Reservations.ReadOnly = true;
             this.data_Reservations.RowHeadersWidth = 82;
             this.data_Reservations.Size = new System.Drawing.Size(553, 191);
             this.data_Reservations.TabIndex = 15;
-            this.data_Reservations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Reservations_CellContentClick);
             // 
             // pnl_RoomDetailView2
             // 
+            this.pnl_RoomDetailView2.Controls.Add(this.lbl_Warning);
             this.pnl_RoomDetailView2.Controls.Add(this.btn_Report2);
             this.pnl_RoomDetailView2.Controls.Add(this.btn_MarkPrepared);
             this.pnl_RoomDetailView2.Controls.Add(this.lbl_Condition2);
@@ -216,7 +247,7 @@
             this.pnl_RoomDetailView2.Controls.Add(this.lbl_RoomNum2);
             this.pnl_RoomDetailView2.Location = new System.Drawing.Point(6, 203);
             this.pnl_RoomDetailView2.Name = "pnl_RoomDetailView2";
-            this.pnl_RoomDetailView2.Size = new System.Drawing.Size(322, 213);
+            this.pnl_RoomDetailView2.Size = new System.Drawing.Size(292, 213);
             this.pnl_RoomDetailView2.TabIndex = 14;
             // 
             // btn_Report2
@@ -230,12 +261,13 @@
             // 
             // btn_MarkPrepared
             // 
-            this.btn_MarkPrepared.Location = new System.Drawing.Point(200, 181);
+            this.btn_MarkPrepared.Location = new System.Drawing.Point(169, 181);
             this.btn_MarkPrepared.Name = "btn_MarkPrepared";
             this.btn_MarkPrepared.Size = new System.Drawing.Size(119, 29);
             this.btn_MarkPrepared.TabIndex = 8;
             this.btn_MarkPrepared.Text = "Mark Prepared";
             this.btn_MarkPrepared.UseVisualStyleBackColor = true;
+            this.btn_MarkPrepared.Click += new System.EventHandler(this.btn_MarkPrepared_Click);
             // 
             // lbl_Condition2
             // 
@@ -286,6 +318,15 @@
             this.cal_Reservations.TabIndex = 12;
             this.cal_Reservations.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.cal_Reservations_DateChanged);
             // 
+            // lbl_Warning
+            // 
+            this.lbl_Warning.AutoSize = true;
+            this.lbl_Warning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_Warning.Location = new System.Drawing.Point(13, 94);
+            this.lbl_Warning.Name = "lbl_Warning";
+            this.lbl_Warning.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Warning.TabIndex = 13;
+            // 
             // HK_Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,5 +375,8 @@
         private System.Windows.Forms.Label lbl_RoomNum2;
         private System.Windows.Forms.Button btn_RoomChoose2;
         private System.Windows.Forms.MonthCalendar cal_Reservations;
+        private System.Windows.Forms.Button btn_Refresh2;
+        private System.Windows.Forms.Button btn_Refresh;
+        private System.Windows.Forms.Label lbl_Warning;
     }
 }

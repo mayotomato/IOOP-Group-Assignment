@@ -21,5 +21,11 @@ namespace IOOP_Group_Assignment
         {
 
         }
+
+        private void btn_Pfp_Click(object sender, EventArgs e)
+        {
+            ChangeProfilePicturePage f4 = new ChangeProfilePicturePage();
+            f4.ShowDialog();
+        }
     }
 }

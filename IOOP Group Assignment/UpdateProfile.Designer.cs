@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Pfp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_SupplyName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -37,16 +36,8 @@
             this.txtbox_SupplyName = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btn_Pfp = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn_Pfp
-            // 
-            this.btn_Pfp.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.btn_Pfp.Location = new System.Drawing.Point(133, 57);
-            this.btn_Pfp.Name = "btn_Pfp";
-            this.btn_Pfp.Size = new System.Drawing.Size(49, 46);
-            this.btn_Pfp.TabIndex = 21;
-            this.btn_Pfp.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -123,6 +114,16 @@
             this.textBox2.Size = new System.Drawing.Size(331, 26);
             this.textBox2.TabIndex = 33;
             // 
+            // btn_Pfp
+            // 
+            this.btn_Pfp.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
+            this.btn_Pfp.Location = new System.Drawing.Point(133, 57);
+            this.btn_Pfp.Name = "btn_Pfp";
+            this.btn_Pfp.Size = new System.Drawing.Size(49, 46);
+            this.btn_Pfp.TabIndex = 21;
+            this.btn_Pfp.UseVisualStyleBackColor = true;
+            this.btn_Pfp.Click += new System.EventHandler(this.btn_Pfp_Click);
+            // 
             // UpdateProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +139,7 @@
             this.Controls.Add(this.lbl_SupplyName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Pfp);
+            this.MaximizeBox = false;
             this.Name = "UpdateProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Profile";

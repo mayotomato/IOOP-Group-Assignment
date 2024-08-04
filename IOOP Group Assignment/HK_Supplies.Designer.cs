@@ -40,12 +40,14 @@
             this.lbl_SupplyName = new System.Windows.Forms.Label();
             this.data_Supplies = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_SupplyChoose = new System.Windows.Forms.Button();
             this.pnl_Supplies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Supplies)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Supplies
             // 
+            this.pnl_Supplies.Controls.Add(this.btn_SupplyChoose);
             this.pnl_Supplies.Controls.Add(this.radio_Equipment);
             this.pnl_Supplies.Controls.Add(this.radio_Cleaning);
             this.pnl_Supplies.Controls.Add(this.btn_Delete);
@@ -173,6 +175,15 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Manage Supplies";
             // 
+            // btn_SupplyChoose
+            // 
+            this.btn_SupplyChoose.Location = new System.Drawing.Point(416, 3);
+            this.btn_SupplyChoose.Name = "btn_SupplyChoose";
+            this.btn_SupplyChoose.Size = new System.Drawing.Size(119, 29);
+            this.btn_SupplyChoose.TabIndex = 17;
+            this.btn_SupplyChoose.Text = "Choose Supply";
+            this.btn_SupplyChoose.UseVisualStyleBackColor = true;
+            // 
             // HK_Supplies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +193,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnl_Supplies);
             this.Controls.Add(this.data_Supplies);
+            this.MaximizeBox = false;
             this.Name = "HK_Supplies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplies";
@@ -208,5 +220,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radio_Equipment;
         private System.Windows.Forms.RadioButton radio_Cleaning;
+        private System.Windows.Forms.Button btn_SupplyChoose;
     }
 }

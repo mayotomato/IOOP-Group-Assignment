@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeProfilePicturePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeProfilePicturePage.Designer.cs">
+      <DependentUpon>ChangeProfilePicturePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="HK_IssueReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="UpdateProfile.Designer.cs">
       <DependentUpon>UpdateProfile.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChangeProfilePicturePage.resx">
+      <DependentUpon>ChangeProfilePicturePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HK_IssueReport.resx">
       <DependentUpon>HK_IssueReport.cs</DependentUpon>
     </EmbeddedResource>

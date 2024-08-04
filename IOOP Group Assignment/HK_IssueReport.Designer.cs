@@ -75,6 +75,7 @@
             this.Controls.Add(this.btn_Report);
             this.Controls.Add(this.lbl_RoomNum);
             this.Controls.Add(this.txtbox_Notes);
+            this.MaximizeBox = false;
             this.Name = "HK_IssueReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Issue Report";
