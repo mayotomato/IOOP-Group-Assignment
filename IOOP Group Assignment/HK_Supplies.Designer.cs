@@ -41,12 +41,14 @@
             this.data_Supplies = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_SupplyChoose = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.pnl_Supplies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Supplies)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Supplies
             // 
+            this.pnl_Supplies.Controls.Add(this.btn_Refresh);
             this.pnl_Supplies.Controls.Add(this.btn_SupplyChoose);
             this.pnl_Supplies.Controls.Add(this.radio_Equipment);
             this.pnl_Supplies.Controls.Add(this.radio_Cleaning);
@@ -184,6 +186,15 @@
             this.btn_SupplyChoose.Text = "Choose Supply";
             this.btn_SupplyChoose.UseVisualStyleBackColor = true;
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Location = new System.Drawing.Point(291, 3);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(119, 29);
+            this.btn_Refresh.TabIndex = 18;
+            this.btn_Refresh.Text = "Refresh Table";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            // 
             // HK_Supplies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,5 +232,6 @@
         private System.Windows.Forms.RadioButton radio_Equipment;
         private System.Windows.Forms.RadioButton radio_Cleaning;
         private System.Windows.Forms.Button btn_SupplyChoose;
+        private System.Windows.Forms.Button btn_Refresh;
     }
 }

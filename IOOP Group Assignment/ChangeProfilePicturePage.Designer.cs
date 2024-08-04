@@ -47,13 +47,14 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
+            this.btn_Confirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(253, 33);
@@ -63,7 +64,7 @@
             // btn_Pfp
             // 
             this.btn_Pfp.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.btn_Pfp.Location = new System.Drawing.Point(22, 61);
+            this.btn_Pfp.Location = new System.Drawing.Point(22, 52);
             this.btn_Pfp.Name = "btn_Pfp";
             this.btn_Pfp.Size = new System.Drawing.Size(49, 46);
             this.btn_Pfp.TabIndex = 34;
@@ -72,7 +73,7 @@
             // button2
             // 
             this.button2.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button2.Location = new System.Drawing.Point(407, 61);
+            this.button2.Location = new System.Drawing.Point(407, 52);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(49, 46);
             this.button2.TabIndex = 37;
@@ -81,7 +82,7 @@
             // button3
             // 
             this.button3.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button3.Location = new System.Drawing.Point(331, 61);
+            this.button3.Location = new System.Drawing.Point(331, 52);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(49, 46);
             this.button3.TabIndex = 38;
@@ -90,7 +91,7 @@
             // button4
             // 
             this.button4.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button4.Location = new System.Drawing.Point(254, 61);
+            this.button4.Location = new System.Drawing.Point(254, 52);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(49, 46);
             this.button4.TabIndex = 39;
@@ -99,7 +100,7 @@
             // button5
             // 
             this.button5.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button5.Location = new System.Drawing.Point(176, 61);
+            this.button5.Location = new System.Drawing.Point(176, 52);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(49, 46);
             this.button5.TabIndex = 40;
@@ -108,7 +109,7 @@
             // button6
             // 
             this.button6.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button6.Location = new System.Drawing.Point(99, 61);
+            this.button6.Location = new System.Drawing.Point(99, 52);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(49, 46);
             this.button6.TabIndex = 41;
@@ -117,7 +118,7 @@
             // button1
             // 
             this.button1.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button1.Location = new System.Drawing.Point(99, 124);
+            this.button1.Location = new System.Drawing.Point(99, 115);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(49, 46);
             this.button1.TabIndex = 47;
@@ -126,7 +127,7 @@
             // button7
             // 
             this.button7.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button7.Location = new System.Drawing.Point(176, 124);
+            this.button7.Location = new System.Drawing.Point(176, 115);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(49, 46);
             this.button7.TabIndex = 46;
@@ -135,7 +136,7 @@
             // button8
             // 
             this.button8.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button8.Location = new System.Drawing.Point(254, 124);
+            this.button8.Location = new System.Drawing.Point(254, 115);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(49, 46);
             this.button8.TabIndex = 45;
@@ -144,7 +145,7 @@
             // button9
             // 
             this.button9.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button9.Location = new System.Drawing.Point(331, 124);
+            this.button9.Location = new System.Drawing.Point(331, 115);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(49, 46);
             this.button9.TabIndex = 44;
@@ -153,7 +154,7 @@
             // button10
             // 
             this.button10.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button10.Location = new System.Drawing.Point(407, 124);
+            this.button10.Location = new System.Drawing.Point(407, 115);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(49, 46);
             this.button10.TabIndex = 43;
@@ -162,7 +163,7 @@
             // button11
             // 
             this.button11.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button11.Location = new System.Drawing.Point(22, 124);
+            this.button11.Location = new System.Drawing.Point(22, 115);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(49, 46);
             this.button11.TabIndex = 42;
@@ -171,7 +172,7 @@
             // button12
             // 
             this.button12.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button12.Location = new System.Drawing.Point(99, 188);
+            this.button12.Location = new System.Drawing.Point(99, 179);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(49, 46);
             this.button12.TabIndex = 53;
@@ -180,7 +181,7 @@
             // button13
             // 
             this.button13.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button13.Location = new System.Drawing.Point(176, 188);
+            this.button13.Location = new System.Drawing.Point(176, 179);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(49, 46);
             this.button13.TabIndex = 52;
@@ -189,7 +190,7 @@
             // button14
             // 
             this.button14.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button14.Location = new System.Drawing.Point(254, 188);
+            this.button14.Location = new System.Drawing.Point(254, 179);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(49, 46);
             this.button14.TabIndex = 51;
@@ -198,7 +199,7 @@
             // button15
             // 
             this.button15.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button15.Location = new System.Drawing.Point(331, 188);
+            this.button15.Location = new System.Drawing.Point(331, 179);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(49, 46);
             this.button15.TabIndex = 50;
@@ -207,7 +208,7 @@
             // button16
             // 
             this.button16.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button16.Location = new System.Drawing.Point(407, 188);
+            this.button16.Location = new System.Drawing.Point(407, 179);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(49, 46);
             this.button16.TabIndex = 49;
@@ -216,18 +217,29 @@
             // button17
             // 
             this.button17.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
-            this.button17.Location = new System.Drawing.Point(22, 188);
+            this.button17.Location = new System.Drawing.Point(22, 179);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(49, 46);
             this.button17.TabIndex = 48;
             this.button17.UseVisualStyleBackColor = true;
+            // 
+            // btn_Confirm
+            // 
+            this.btn_Confirm.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_Confirm.Location = new System.Drawing.Point(361, 248);
+            this.btn_Confirm.Name = "btn_Confirm";
+            this.btn_Confirm.Size = new System.Drawing.Size(119, 29);
+            this.btn_Confirm.TabIndex = 54;
+            this.btn_Confirm.Text = "Confirm";
+            this.btn_Confirm.UseVisualStyleBackColor = false;
             // 
             // ChangeProfilePicturePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(484, 261);
+            this.ClientSize = new System.Drawing.Size(484, 280);
+            this.Controls.Add(this.btn_Confirm);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button14);
@@ -276,5 +288,6 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button btn_Confirm;
     }
 }
