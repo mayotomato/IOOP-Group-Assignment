@@ -57,6 +57,7 @@
             this.CheckOut_btn.TabIndex = 17;
             this.CheckOut_btn.Text = "Check Out";
             this.CheckOut_btn.UseVisualStyleBackColor = false;
+            this.CheckOut_btn.Click += new System.EventHandler(this.CheckOut_btn_Click_1);
             // 
             // paymBtn
             // 
