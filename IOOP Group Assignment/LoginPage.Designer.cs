@@ -19,7 +19,7 @@
             }
             base.Dispose(disposing);
         }
-
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -146,6 +146,7 @@
             this.LoginButton.TabIndex = 13;
             this.LoginButton.Text = "Log in";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // LoginPagePrompt
             // 
@@ -196,11 +197,13 @@
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.LoginDetails);
             this.Controls.Add(this.HotelTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoodStay Hotel";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.LoginDetails.ResumeLayout(false);
             this.LoginDetails.PerformLayout();
             this.ResumeLayout(false);
