@@ -93,11 +93,11 @@
     <Compile Include="Rooms1.Designer.cs">
       <DependentUpon>Rooms1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Send review.cs">
+    <Compile Include="send_a_review.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Send review.Designer.cs">
-      <DependentUpon>Send review.cs</DependentUpon>
+    <Compile Include="send_a_review.Designer.cs">
+      <DependentUpon>send_a_review.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="customer page.resx">
       <DependentUpon>customer page.cs</DependentUpon>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="Rooms1.resx">
       <DependentUpon>Rooms1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Send review.resx">
-      <DependentUpon>Send review.cs</DependentUpon>
+    <EmbeddedResource Include="send_a_review.resx">
+      <DependentUpon>send_a_review.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="GoodStayHotelDatabaseDataSet.xsc">
       <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>

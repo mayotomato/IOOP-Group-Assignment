@@ -73,5 +73,10 @@ namespace IOOP_Group_Assignment
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

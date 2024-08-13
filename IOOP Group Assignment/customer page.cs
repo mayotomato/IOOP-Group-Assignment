@@ -42,7 +42,7 @@ namespace IOOP_Group_Assignment
 
         private void btnSend_review_Click(object sender, EventArgs e)
         {
-            Send_review f2 = new Send_review();
+            send_a_review f2 = new send_a_review();
             f2.Show();
         }
     }

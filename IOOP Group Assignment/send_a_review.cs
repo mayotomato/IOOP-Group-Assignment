@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IOOP_Group_Assignment
 {
-    public partial class Send_review : Form
+    public partial class send_a_review : Form
     {
-        public Send_review()
+        public send_a_review()
         {
             InitializeComponent();
         }
