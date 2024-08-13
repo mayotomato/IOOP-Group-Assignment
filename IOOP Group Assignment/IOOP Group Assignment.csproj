@@ -176,9 +176,6 @@
     <EmbeddedResource Include="Manage Rooms %28ManagerPage%29.resx">
       <DependentUpon>Manage Rooms %28ManagerPage%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Housekeeping.resx">
-      <DependentUpon>Housekeeping.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
