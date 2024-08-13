@@ -48,12 +48,13 @@
             this.HotelTitle.AutoSize = true;
             this.HotelTitle.Font = new System.Drawing.Font("Copperplate Gothic Light", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HotelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.HotelTitle.Location = new System.Drawing.Point(143, 112);
+            this.HotelTitle.Location = new System.Drawing.Point(141, 96);
             this.HotelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HotelTitle.Name = "HotelTitle";
             this.HotelTitle.Size = new System.Drawing.Size(607, 69);
             this.HotelTitle.TabIndex = 0;
             this.HotelTitle.Text = "GoodStay Hotel";
+            this.HotelTitle.Click += new System.EventHandler(this.HotelTitle_Click);
             // 
             // UsernameBox
             // 

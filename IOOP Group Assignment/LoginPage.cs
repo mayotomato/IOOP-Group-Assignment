@@ -190,5 +190,9 @@ namespace IOOP_Group_Assignment
             return (userType, name);
         }
 
+        private void HotelTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
