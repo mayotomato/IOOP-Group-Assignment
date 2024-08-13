@@ -97,7 +97,6 @@
             // 
             // btn_Pfp
             // 
-            this.btn_Pfp.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
             this.btn_Pfp.Location = new System.Drawing.Point(12, 303);
             this.btn_Pfp.Name = "btn_Pfp";
             this.btn_Pfp.Size = new System.Drawing.Size(49, 46);

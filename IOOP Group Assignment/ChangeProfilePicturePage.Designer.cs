@@ -50,7 +50,6 @@
             // 
             // btn_Pfp2
             // 
-            this.btn_Pfp2.Image = global::IOOP_Group_Assignment.Properties.Resources.favicon;
             this.btn_Pfp2.Location = new System.Drawing.Point(101, 110);
             this.btn_Pfp2.Name = "btn_Pfp2";
             this.btn_Pfp2.Size = new System.Drawing.Size(49, 46);
@@ -59,7 +58,6 @@
             // 
             // btn_Pfp3
             // 
-            this.btn_Pfp3.Image = global::IOOP_Group_Assignment.Properties.Resources.favicon__1_;
             this.btn_Pfp3.Location = new System.Drawing.Point(178, 110);
             this.btn_Pfp3.Name = "btn_Pfp3";
             this.btn_Pfp3.Size = new System.Drawing.Size(49, 46);
@@ -68,7 +66,6 @@
             // 
             // btn_Pfp4
             // 
-            this.btn_Pfp4.Image = global::IOOP_Group_Assignment.Properties.Resources.favicon__2_;
             this.btn_Pfp4.Location = new System.Drawing.Point(256, 110);
             this.btn_Pfp4.Name = "btn_Pfp4";
             this.btn_Pfp4.Size = new System.Drawing.Size(49, 46);
@@ -77,7 +74,6 @@
             // 
             // btn_Pfp5
             // 
-            this.btn_Pfp5.Image = global::IOOP_Group_Assignment.Properties.Resources.favicon__3_;
             this.btn_Pfp5.Location = new System.Drawing.Point(333, 110);
             this.btn_Pfp5.Name = "btn_Pfp5";
             this.btn_Pfp5.Size = new System.Drawing.Size(49, 46);
@@ -86,7 +82,6 @@
             // 
             // btn_Pfp6
             // 
-            this.btn_Pfp6.Image = global::IOOP_Group_Assignment.Properties.Resources.favicon__4_;
             this.btn_Pfp6.Location = new System.Drawing.Point(409, 110);
             this.btn_Pfp6.Name = "btn_Pfp6";
             this.btn_Pfp6.Size = new System.Drawing.Size(49, 46);
@@ -95,7 +90,6 @@
             // 
             // btn_Pfp
             // 
-            this.btn_Pfp.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
             this.btn_Pfp.Location = new System.Drawing.Point(24, 110);
             this.btn_Pfp.Name = "btn_Pfp";
             this.btn_Pfp.Size = new System.Drawing.Size(49, 46);

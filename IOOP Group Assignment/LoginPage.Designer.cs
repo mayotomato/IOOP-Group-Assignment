@@ -119,7 +119,6 @@
             // 
             this.PasswordVisibilityButton.FlatAppearance.BorderSize = 0;
             this.PasswordVisibilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PasswordVisibilityButton.Image = global::IOOP_Group_Assignment.Properties.Resources.Eye_Show;
             this.PasswordVisibilityButton.Location = new System.Drawing.Point(263, 119);
             this.PasswordVisibilityButton.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordVisibilityButton.Name = "PasswordVisibilityButton";
