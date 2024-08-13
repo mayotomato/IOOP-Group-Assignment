@@ -69,11 +69,12 @@
             this.balanceDataGridViewTextBoxColumn,
             this.notesDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.reservationsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 28);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(755, 352);
+            this.dataGridView1.Size = new System.Drawing.Size(566, 286);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -193,9 +194,10 @@
             this.btnSaveChanges.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveChanges.ForeColor = System.Drawing.Color.White;
-            this.btnSaveChanges.Location = new System.Drawing.Point(610, 382);
+            this.btnSaveChanges.Location = new System.Drawing.Point(457, 318);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(157, 50);
+            this.btnSaveChanges.Size = new System.Drawing.Size(118, 41);
             this.btnSaveChanges.TabIndex = 1;
             this.btnSaveChanges.Text = "Save Changes";
             this.btnSaveChanges.UseVisualStyleBackColor = false;
@@ -203,12 +205,11 @@
             // 
             // Manage_reservations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 444);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Manage_reservations";
             this.Text = "Manage reservations";
             this.Load += new System.EventHandler(this.Manage_reservations_Load);

@@ -72,12 +72,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginPage.Designer.cs">
-      <DependentUpon>LoginPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manage reservations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,9 +95,6 @@
     </Compile>
     <EmbeddedResource Include="customer page.resx">
       <DependentUpon>customer page.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage.resx">
-      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage reservations.resx">
       <DependentUpon>Manage reservations.cs</DependentUpon>

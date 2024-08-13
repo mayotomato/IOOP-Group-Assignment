@@ -50,7 +50,7 @@ namespace IOOP_Group_Assignment
             this.btn_Rooms.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Rooms.ForeColor = System.Drawing.Color.White;
             this.btn_Rooms.Location = new System.Drawing.Point(200, 146);
-            this.btn_Rooms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Rooms.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Rooms.Name = "btn_Rooms";
             this.btn_Rooms.Size = new System.Drawing.Size(186, 32);
             this.btn_Rooms.TabIndex = 38;
@@ -70,7 +70,7 @@ namespace IOOP_Group_Assignment
             this.btn_Managereservations.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Managereservations.ForeColor = System.Drawing.Color.White;
             this.btn_Managereservations.Location = new System.Drawing.Point(200, 187);
-            this.btn_Managereservations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Managereservations.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Managereservations.Name = "btn_Managereservations";
             this.btn_Managereservations.Size = new System.Drawing.Size(186, 32);
             this.btn_Managereservations.TabIndex = 37;
@@ -99,7 +99,6 @@ namespace IOOP_Group_Assignment
             // 
             // btn_Pfp
             // 
-            this.btn_Pfp.Image = global::IOOP_Group_Assignment.Properties.Resources.person_110935__2_;
             this.btn_Pfp.Location = new System.Drawing.Point(6, 312);
             this.btn_Pfp.Name = "btn_Pfp";
             this.btn_Pfp.Size = new System.Drawing.Size(49, 46);
@@ -118,7 +117,7 @@ namespace IOOP_Group_Assignment
             this.btnSend_review.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend_review.ForeColor = System.Drawing.Color.White;
             this.btnSend_review.Location = new System.Drawing.Point(200, 228);
-            this.btnSend_review.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend_review.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend_review.Name = "btnSend_review";
             this.btnSend_review.Size = new System.Drawing.Size(186, 32);
             this.btnSend_review.TabIndex = 41;

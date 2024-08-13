@@ -23,7 +23,7 @@ namespace IOOP_Group_Assignment
             string connectionString = "your_connection_string";
 
             // Define the SQL query to retrieve data
-            string query = "SELECT * FROM YourTableName";
+            string query = "SELECT * FROM Reservations";
 
             // Create a SqlConnection
             using (SqlConnection connection = new SqlConnection(connectionString))
