@@ -61,11 +61,22 @@ namespace IOOP_Group_Assignment.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to gd.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string String1 {
+        internal static System.Drawing.Bitmap Eye_Hide {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                object obj = ResourceManager.GetObject("Eye_Hide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eye_Show {
+            get {
+                object obj = ResourceManager.GetObject("Eye_Show", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

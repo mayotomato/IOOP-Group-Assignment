@@ -118,6 +118,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GoodStayHotelDatabaseROOMS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HK_IssueReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HK_IssueReport.Designer.cs">
+	  <DependentUpon>HK_IssueReport.cs</DependentUpon>
+	</Compile>
     <Compile Include="HousekeepingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,9 +163,6 @@
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HK_IssueReport.Designer.cs">
-      <DependentUpon>HK_IssueReport.cs</DependentUpon>
     </Compile>
     <Compile Include="HK_Schedule.cs">
       <SubType>Form</SubType>
@@ -210,8 +213,8 @@
       <DependentUpon>Check_In.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HK_IssueReport.resx">
-      <DependentUpon>HK_IssueReport.cs</DependentUpon>
-    </EmbeddedResource>
+	  <DependentUpon>HK_IssueReport.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="HK_Supplies.resx">
       <DependentUpon>HK_Supplies.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +329,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>GoodStayHotelDatabase.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Eye_Show.bmp" />
+    <None Include="Resources\Eye_Hide.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\person_110935.ico" />
