@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CusIDTextbox = new System.Windows.Forms.TextBox();
             this.BokingBtn = new System.Windows.Forms.Button();
-            this.DisplayBoxBooking = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.DisplayBoxBooking)).BeginInit();
+            this.data_Booking = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Booking)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,39 +77,37 @@
             this.BokingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BokingBtn.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BokingBtn.ForeColor = System.Drawing.Color.White;
-            this.BokingBtn.Location = new System.Drawing.Point(297, 178);
+            this.BokingBtn.Location = new System.Drawing.Point(276, 151);
             this.BokingBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BokingBtn.Name = "BokingBtn";
             this.BokingBtn.Size = new System.Drawing.Size(229, 32);
             this.BokingBtn.TabIndex = 23;
             this.BokingBtn.Text = "Submit";
             this.BokingBtn.UseVisualStyleBackColor = false;
-            this.BokingBtn.Click += new System.EventHandler(this.BokingBtn_Click);
             // 
-            // DisplayBoxBooking
+            // data_Booking
             // 
-            this.DisplayBoxBooking.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.DisplayBoxBooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DisplayBoxBooking.Location = new System.Drawing.Point(225, 254);
-            this.DisplayBoxBooking.Name = "DisplayBoxBooking";
-            this.DisplayBoxBooking.Size = new System.Drawing.Size(395, 184);
-            this.DisplayBoxBooking.TabIndex = 24;
+            this.data_Booking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_Booking.Location = new System.Drawing.Point(155, 200);
+            this.data_Booking.Name = "data_Booking";
+            this.data_Booking.Size = new System.Drawing.Size(505, 238);
+            this.data_Booking.TabIndex = 25;
             // 
-            // booking
+            // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.DisplayBoxBooking);
+            this.Controls.Add(this.data_Booking);
             this.Controls.Add(this.BokingBtn);
             this.Controls.Add(this.CusIDTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "booking";
+            this.Name = "Booking";
             this.Text = "booking";
             this.Load += new System.EventHandler(this.booking_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DisplayBoxBooking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Booking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +119,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox CusIDTextbox;
         private System.Windows.Forms.Button BokingBtn;
-        private System.Windows.Forms.DataGridView DisplayBoxBooking;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridView data_Booking;
     }
 }

@@ -8,13 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace IOOP_Group_Assignment
 {
     public partial class AddCustomer : Form
     {
         // Connection string to connect to the database
-        private string connectionString = @"Server=(localdb)\mssqllocaldb;Integrated Security=true;AttachDbFilename=D:\ioop\ioop\IOOP Group Assignment\GoodStayHotelDatabase.mdf;";
+        private string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
 
         public AddCustomer()
         {

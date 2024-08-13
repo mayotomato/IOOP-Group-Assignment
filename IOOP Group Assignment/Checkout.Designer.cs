@@ -149,6 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.paymTextbox);
             this.Controls.Add(this.ComboBoxRoomType);
@@ -160,6 +161,7 @@
             this.Controls.Add(this.paymBtn);
             this.Controls.Add(this.CheckOut_btn);
             this.Name = "Checkout";
+            this.ShowInTaskbar = false;
             this.Text = "Checkout";
             this.Load += new System.EventHandler(this.Checkout_Load);
             this.ResumeLayout(false);
