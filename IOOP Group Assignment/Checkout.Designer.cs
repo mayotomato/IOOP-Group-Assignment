@@ -161,7 +161,6 @@
             this.Controls.Add(this.paymBtn);
             this.Controls.Add(this.CheckOut_btn);
             this.Name = "Checkout";
-            this.ShowInTaskbar = false;
             this.Text = "Checkout";
             this.Load += new System.EventHandler(this.Checkout_Load);
             this.ResumeLayout(false);

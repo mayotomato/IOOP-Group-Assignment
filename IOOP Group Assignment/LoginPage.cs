@@ -95,7 +95,7 @@ namespace IOOP_Group_Assignment
                 switch (userType)
                 {
                     case "Customer":
-                        CustomerPage customerForm = new CustomerPage();
+                        Customer customerForm = new Customer();
                         customerForm.Show();
                         break;
                     case "Receptionist":
