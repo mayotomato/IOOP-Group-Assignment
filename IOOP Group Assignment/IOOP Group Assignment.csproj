@@ -67,11 +67,6 @@
     <Compile Include="customer page.Designer.cs">
       <DependentUpon>customer page.cs</DependentUpon>
     </Compile>
-    <Compile Include="GoodStayHotelDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Manage reservations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,17 +104,6 @@
     <EmbeddedResource Include="send_a_review.resx">
       <DependentUpon>send_a_review.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="GoodStayHotelDatabaseDataSet.xsc">
-      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GoodStayHotelDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GoodStayHotelDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GoodStayHotelDatabaseDataSet.xss">
-      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
