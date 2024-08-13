@@ -73,5 +73,10 @@ namespace IOOP_Group_Assignment
         {
 
         }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

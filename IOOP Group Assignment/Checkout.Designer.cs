@@ -77,6 +77,7 @@
             this.paymBtn.TabIndex = 18;
             this.paymBtn.Text = "Collect Payment";
             this.paymBtn.UseVisualStyleBackColor = false;
+            this.paymBtn.Click += new System.EventHandler(this.paymBtn_Click_1);
             // 
             // labelBill
             // 
@@ -142,6 +143,7 @@
             this.paymTextbox.Name = "paymTextbox";
             this.paymTextbox.Size = new System.Drawing.Size(100, 20);
             this.paymTextbox.TabIndex = 84;
+            this.paymTextbox.TextChanged += new System.EventHandler(this.paymTextbox_TextChanged);
             // 
             // Checkout
             // 

@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace IOOP_Group_Assignment
 {
-    public partial class booking : Form
+    public partial class Booking : Form
     {
-        private string connectionString = @"Server=(localdb)\mssqllocaldb;Integrated Security=true;AttachDbFilename=D:\ioop\IOOP Group Assignment\HotelDatabase.mdf;";
+        private string connectionString = @"Server=(localdb)\mssqllocaldb;Integrated Security=true;AttachDbFilename=D:\ioop\ioop\IOOP Group Assignment\GoodStayHotelDatabase.mdf;";
 
-        public booking()
+        public Booking()
         {
             InitializeComponent();
             BokingBtn.Click += new EventHandler(this.BokingBtn_Click);
@@ -23,16 +23,21 @@ namespace IOOP_Group_Assignment
 
         private void booking_Load(object sender, EventArgs e)
         {
-
+            // Optional: Add any initialization logic if needed
         }
 
         private void BokingBtn_Click(object sender, EventArgs e)
         {
             // Step 1: Retrieve CusID
-            string cusID = CusIDTextbox.Text;
+            string cusID = CusIDTextbox.Text.Trim(); // Trim any whitespace
+
+            if (string.IsNullOrWhiteSpace(cusID))
+            {
+                MessageBox.Show("Please enter a valid Customer ID.");
+                return;
+            }
 
             // Step 2: Query the Reservations table
-            string connectionString = "YourConnectionStringHere";
             string query = "SELECT ReservationID, CheckinDateTime, CheckoutDateTime, Nights FROM Reservations WHERE CusID = @CusID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -43,30 +48,30 @@ namespace IOOP_Group_Assignment
                 try
                 {
                     connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.HasRows)
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        reader.Read();
-                        // Step 3: Format the message
-                        string reservationID = reader["ReservationID"].ToString();
-                        DateTime checkin = Convert.ToDateTime(reader["CheckinDateTime"]);
-                        DateTime checkout = Convert.ToDateTime(reader["CheckoutDateTime"]);
-                        int nights = Convert.ToInt32(reader["Nights"]);
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            // Step 3: Format the message
+                            string reservationID = reader["ReservationID"].ToString();
+                            DateTime checkin = Convert.ToDateTime(reader["CheckinDateTime"]);
+                            DateTime checkout = Convert.ToDateTime(reader["CheckoutDateTime"]);
+                            int nights = Convert.ToInt32(reader["Nights"]);
 
-                        string message = $"Your Reservation ID is {reservationID}. " +
-                                         $"You will check in on {checkin.ToString("MM/dd/yyyy")} and " +
-                                         $"check out on {checkout.ToString("MM/dd/yyyy")}. " +
-                                         $"Your stay period is for a total of {nights} nights.";
+                            string message = $"Your Reservation ID is {reservationID}. " +
+                                             $"You will check in on {checkin:MM/dd/yyyy} and " +
+                                             $"check out on {checkout:MM/dd/yyyy}. " +
+                                             $"Your stay period is for a total of {nights} nights.";
 
-                        // Step 4: Display the message
-                        DisplayBoxBooking.Text = message;
+                            // Step 4: Display the message
+                            DisplayBoxBooking.Text = message;
+                        }
+                        else
+                        {
+                            DisplayBoxBooking.Text = "No reservation found for the provided customer ID.";
+                        }
                     }
-                    else
-                    {
-                        DisplayBoxBooking.Text = "No reservation found for the provided customer ID.";
-                    }
-                    reader.Close();
                 }
                 catch (Exception ex)
                 {

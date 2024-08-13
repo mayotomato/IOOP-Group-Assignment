@@ -1,6 +1,6 @@
 ﻿namespace IOOP_Group_Assignment
 {
-    partial class booking
+    partial class Booking
     {
         /// <summary>
         /// Required designer variable.

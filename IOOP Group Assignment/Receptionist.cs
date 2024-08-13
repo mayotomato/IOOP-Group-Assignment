@@ -29,11 +29,7 @@ namespace IOOP_Group_Assignment
             Delete.ShowDialog();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
-        {
-            booking booking = new booking();
-            booking.ShowDialog();
-        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -52,5 +48,10 @@ namespace IOOP_Group_Assignment
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Booking booking = new Booking();
+            booking.ShowDialog();
+        }
     }
 }

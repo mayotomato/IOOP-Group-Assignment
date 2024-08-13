@@ -13,14 +13,19 @@ namespace IOOP_Group_Assignment
 {
     public partial class DeleteCustomer : Form
     {
-        private string connectionString = @"Server=(localdb)\mssqllocaldb;Integrated Security=true;AttachDbFilename=D:\ioop\IOOP Group Assignment\HotelDatabase.mdf;";
+        private string connectionString = @"Server=(localdb)\mssqllocaldb;Integrated Security=true;AttachDbFilename=D:\ioop\ioop\IOOP Group Assignment\GoodStayHotelDatabase.mdf;";
 
         public DeleteCustomer()
         {
             InitializeComponent();
         }
 
-        private void DeleteCustomer_Btn_Click(object sender, EventArgs e)
+        private void DeleteCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteCustomer_Btn_Click_1(object sender, EventArgs e)
         {
             string customerID = CustomerID_TextBox.Text;
 
@@ -56,10 +61,6 @@ namespace IOOP_Group_Assignment
                     MessageBox.Show("Error deleting customer: ");
                 }
             }
-        }
-        private void DeleteCustomer_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

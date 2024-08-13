@@ -51,6 +51,7 @@
             this.Full_NameTextBox.Name = "Full_NameTextBox";
             this.Full_NameTextBox.Size = new System.Drawing.Size(166, 20);
             this.Full_NameTextBox.TabIndex = 81;
+            this.Full_NameTextBox.TextChanged += new System.EventHandler(this.Full_NameTextBox_TextChanged);
             // 
             // label3
             // 
@@ -81,6 +82,7 @@
             this.AddCustomr_Btn.TabIndex = 79;
             this.AddCustomr_Btn.Text = "Add Customer";
             this.AddCustomr_Btn.UseVisualStyleBackColor = false;
+            this.AddCustomr_Btn.Click += new System.EventHandler(this.AddCustomr_Btn_Click);
             // 
             // IC_TextBox
             // 

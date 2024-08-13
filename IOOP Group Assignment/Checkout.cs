@@ -13,63 +13,37 @@ namespace IOOP_Group_Assignment
 {
     public partial class Checkout : Form
     {
-        private string connectionString = "your_connection_string_here";
+        private string connectionString = @"Server=(localdb)\mssqllocaldb;Integrated Security=true;AttachDbFilename=D:\ioop\ioop\IOOP Group Assignment\GoodStayHotelDatabase.mdf;";
+
 
         public Checkout()
         {
-            InitializeComponent();  // Initializes components defined in the .Designer.cs file
-            CheckOut_btn.Click += new EventHandler(CheckOut_btn_Click);
-            paymBtn.Click += new EventHandler(paymBtn_Click); // Attach event handler for payment button
+            InitializeComponent();  
+            CheckOut_btn.Click += new EventHandler(CheckOut_btn_Click_1);
+            paymBtn.Click += new EventHandler(paymBtn_Click_1); 
         }
-
-        private void CheckOut_btn_Click(object sender, EventArgs e)
-        {
-            string name = name_TextBox.Text;
-            string roomType = ComboBoxRoomType.SelectedItem?.ToString();
-            int reservationID = GetReservationIDByName(name);
-
-            if (reservationID > 0 && !string.IsNullOrEmpty(roomType))
-            {
-                UpdateRoomAvailability(roomType, reservationID);
-                MessageBox.Show("Room availability updated successfully.");
-            }
-            else
-            {
-                MessageBox.Show("Reservation not found or room type not selected.");
-            }
-        }
-
-        private void paymBtn_Click(object sender, EventArgs e)
-        {
-            string name = name_TextBox.Text;
-            int reservationID = GetReservationIDByName(name);
-
-            if (reservationID > 0)
-            {
-                UpdatePaymentStatus(reservationID);
-                paymTextbox.Text = "Payment has been collected. Thank you for using GoodStay Hotel.";
-            }
-            else
-            {
-                MessageBox.Show("Reservation not found.");
-            }
-        }
-
         private int GetReservationIDByName(string name)
         {
             int reservationID = 0;
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT ReservationID FROM Reservations WHERE Name = @Name", conn);
-                cmd.Parameters.AddWithValue("@Name", name);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    reservationID = (int)reader["ReservationID"];
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT ReservationID FROM Reservations WHERE Name = @Name", conn);
+                    cmd.Parameters.AddWithValue("@Name", name);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        reservationID = (int)reader["ReservationID"];
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
 
             return reservationID;
@@ -77,26 +51,40 @@ namespace IOOP_Group_Assignment
 
         private void UpdateRoomAvailability(string roomType, int reservationID)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE Rooms SET Availability = 'Available' WHERE RoomType = @RoomType AND ReservationID = @ReservationID", conn);
-                cmd.Parameters.AddWithValue("@RoomType", roomType);
-                cmd.Parameters.AddWithValue("@ReservationID", reservationID);
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE rOOMS SET Availability = 'Available' WHERE RoomType = @RoomType AND ReservationID = @ReservationID", conn);
+                    cmd.Parameters.AddWithValue("@RoomType", roomType);
+                    cmd.Parameters.AddWithValue("@ReservationID", reservationID);
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
 
         private void UpdatePaymentStatus(int reservationID)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE Reservations SET PaymentStatus = 'Collected' WHERE ReservationID = @ReservationID", conn);
-                cmd.Parameters.AddWithValue("@ReservationID", reservationID);
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE Reservations SET PaymentStatus = 'Collected' WHERE ReservationID = @ReservationID", conn);
+                    cmd.Parameters.AddWithValue("@ReservationID", reservationID);
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
 
@@ -107,7 +95,60 @@ namespace IOOP_Group_Assignment
 
         private void label6_Click(object sender, EventArgs e)
         {
+            // Handle label6 click event if necessary
+        }
 
+        private void paymBtn_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = name_TextBox.Text;
+                int reservationID = GetReservationIDByName(name);
+
+                if (reservationID > 0)
+                {
+                    UpdatePaymentStatus(reservationID);
+                    paymTextbox.Text = "Payment has been collected. Thank you for using GoodStay Hotel.";
+                }
+                else
+                {
+                    MessageBox.Show("Reservation not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+
+        }
+
+        private void paymTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckOut_btn_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = name_TextBox.Text;
+                string roomType = ComboBoxRoomType.SelectedItem?.ToString();
+                int reservationID = GetReservationIDByName(name);
+
+                if (reservationID > 0 && !string.IsNullOrEmpty(roomType))
+                {
+                    UpdateRoomAvailability(roomType, reservationID);
+                    MessageBox.Show("Room availability updated successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Reservation not found or room type not selected.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
     }
 }
