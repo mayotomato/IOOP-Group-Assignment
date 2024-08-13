@@ -68,7 +68,58 @@
     <Compile Include="ChangeProfilePicturePage.Designer.cs">
       <DependentUpon>ChangeProfilePicturePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="HK_IssueReport.cs">
+    <Compile Include="GoodStayHotelDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GoodStayHotelDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodStayHotelDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GoodStayHotelDatabaseDataSetHOUSEKEEPERS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GoodStayHotelDatabaseROOMS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodStayHotelDatabaseROOMS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs" />
+    <Compile Include="View Report %28ManagerPage%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Report %28ManagerPage%29.Designer.cs">
+      <DependentUpon>View Report %28ManagerPage%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Housekeeping %28ManagerPage%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Housekeeping %28ManagerPage%29.Designer.cs">
+      <DependentUpon>Manage Housekeeping %28ManagerPage%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Rooms %28ManagerPage%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Rooms %28ManagerPage%29.Designer.cs">
+      <DependentUpon>Manage Rooms %28ManagerPage%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Accounts %28ManagerPage%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Accounts %28ManagerPage%29.Designer.cs">
+      <DependentUpon>Manage Accounts %28ManagerPage%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerPage.Designer.cs">
+      <DependentUpon>ManagerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HK_IssueReport.Designer.cs">
@@ -113,11 +164,23 @@
     <EmbeddedResource Include="HK_Schedule.resx">
       <DependentUpon>HK_Schedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HousekeepingPage.resx">
-      <DependentUpon>HousekeepingPage.cs</DependentUpon>
+    <EmbeddedResource Include="Manage Housekeeping %28ManagerPage%29.resx">
+      <DependentUpon>Manage Housekeeping %28ManagerPage%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Rooms %28ManagerPage%29.resx">
+      <DependentUpon>Manage Rooms %28ManagerPage%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Housekeeping.resx">
+      <DependentUpon>Housekeeping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Accounts %28ManagerPage%29.resx">
+      <DependentUpon>Manage Accounts %28ManagerPage%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerPage.resx">
+      <DependentUpon>ManagerPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +189,53 @@
     <EmbeddedResource Include="UpdateProfile.resx">
       <DependentUpon>UpdateProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View Report %28ManagerPage%29.resx">
+      <DependentUpon>View Report %28ManagerPage%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="GoodStayHotelDatabaseDataSet.xsc">
+      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoodStayHotelDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet.xss">
+      <DependentUpon>GoodStayHotelDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet1.xsc">
+      <DependentUpon>GoodStayHotelDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoodStayHotelDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSet1.xss">
+      <DependentUpon>GoodStayHotelDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsc">
+      <DependentUpon>GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoodStayHotelDatabaseDataSetHOUSEKEEPERS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xss">
+      <DependentUpon>GoodStayHotelDatabaseDataSetHOUSEKEEPERS.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseROOMS.xsc">
+      <DependentUpon>GoodStayHotelDatabaseROOMS.xsd</DependentUpon>
+    </None>
+    <None Include="GoodStayHotelDatabaseROOMS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GoodStayHotelDatabaseROOMS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GoodStayHotelDatabaseROOMS.xss">
+      <DependentUpon>GoodStayHotelDatabaseROOMS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,6 +253,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="GoodStayHotelDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GoodStayHotelDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>GoodStayHotelDatabase.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\person_110935.ico" />
@@ -183,6 +309,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\favicon %284%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
