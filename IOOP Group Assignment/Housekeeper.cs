@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing;
 
 namespace IOOP_Group_Assignment
 {
@@ -16,9 +17,108 @@ namespace IOOP_Group_Assignment
 
         public string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
 
-        
 
-        
+        public int GetProfilePictureId(string userType)
+        {
+            if (string.IsNullOrEmpty(userType) ||
+                (userType != "Customers" && userType != "Receptionists" && userType != "Housekeepers"))
+            {
+                throw new ArgumentException("Invalid user type.");
+            }
+
+            string tableName = userType; // Directly use userType as tableName
+
+            string query = $"SELECT pfpid FROM {tableName}";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int pfpid))
+                    {
+                        return pfpid;
+                    }
+                    else
+                    {
+                        throw new Exception("Profile picture ID not found.");
+                    }
+                }
+            }
+        }
+
+        public void UpdateProfilePictureId(string userType, int newPfpid)
+        {
+            if (string.IsNullOrEmpty(userType) ||
+                (userType != "Customer" && userType != "Receptionist" && userType != "Housekeeping"))
+            {
+                throw new ArgumentException("Invalid user type.");
+            }
+
+            string tableName = userType; // Directly use userType as tableName
+
+            string query = $"UPDATE {tableName} SET pfpid = @NewPfpid";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NewPfpid", newPfpid);
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected == 0)
+                    {
+                        throw new Exception("No rows updated. Ensure the table and column exist.");
+                    }
+                }
+            }
+        }
+
+        public void LoadImageToButton(Button button, string connectionString, int imageId)
+        {
+            byte[] imageData = null;
+
+            // Retrieve image data from the database
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT ImageData FROM Images WHERE ID = @ID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID", imageId);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            imageData = reader["ImageData"] as byte[];
+                        }
+                    }
+                }
+            }
+
+            // Set image to button if data is available
+            if (imageData != null)
+            {
+                try
+                {
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        Image image = Image.FromStream(ms);
+                        button.Image = image;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading image: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Image not found.");
+            }
+        }
 
         private void MarkCLeaned()
         {

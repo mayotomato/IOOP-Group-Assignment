@@ -46,7 +46,7 @@ namespace IOOP_Group_Assignment
         private void execute(string imagePath)
         {
 
-            
+
 
             try
             {
@@ -59,30 +59,6 @@ namespace IOOP_Group_Assignment
             }
         }
 
-        private void CustomerRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Email";
-            NewUserLinkLabel.Text = "New user? Register account";
-
-        }
-
-        private void ReceptionistRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
-        }
-
-        private void ManagerRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
-        }
-
-        private void HousekeepingRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
-        }
 
         private void NewUserLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -171,7 +147,7 @@ namespace IOOP_Group_Assignment
             FROM (
                 SELECT 'Customer' AS UserType, Name
                 FROM Customers
-                WHERE Name = @Username AND Password = @Password
+                WHERE Username = @Username AND Password = @Password
                 UNION
                 SELECT 'Receptionist' AS UserType, Name
                 FROM Receptionists
@@ -224,6 +200,15 @@ namespace IOOP_Group_Assignment
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string imagePath = textBox1.Text;
+            execute(imagePath);
+        }
     }
 }

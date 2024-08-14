@@ -122,6 +122,7 @@
             this.Name = "HousekeepingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Housekeeping";
+            this.Load += new System.EventHandler(this.HousekeepingPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
