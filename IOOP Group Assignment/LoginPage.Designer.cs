@@ -40,8 +40,6 @@
             this.LoginPagePrompt = new System.Windows.Forms.Label();
             this.NewUserLinkLabel = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.LoginDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +48,10 @@
             this.HotelTitle.AutoSize = true;
             this.HotelTitle.Font = new System.Drawing.Font("Copperplate Gothic Light", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HotelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.HotelTitle.Location = new System.Drawing.Point(141, 96);
-            this.HotelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HotelTitle.Location = new System.Drawing.Point(282, 185);
+            this.HotelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HotelTitle.Name = "HotelTitle";
-            this.HotelTitle.Size = new System.Drawing.Size(607, 69);
+            this.HotelTitle.Size = new System.Drawing.Size(1214, 138);
             this.HotelTitle.TabIndex = 0;
             this.HotelTitle.Text = "GoodStay Hotel";
             this.HotelTitle.Click += new System.EventHandler(this.HotelTitle_Click);
@@ -62,20 +60,20 @@
             // 
             this.UsernameBox.BackColor = System.Drawing.Color.White;
             this.UsernameBox.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameBox.Location = new System.Drawing.Point(30, 37);
-            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2);
+            this.UsernameBox.Location = new System.Drawing.Point(60, 71);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UsernameBox.Name = "UsernameBox";
-            this.UsernameBox.Size = new System.Drawing.Size(229, 24);
+            this.UsernameBox.Size = new System.Drawing.Size(454, 40);
             this.UsernameBox.TabIndex = 1;
             // 
             // UserLabel
             // 
             this.UserLabel.AutoSize = true;
             this.UserLabel.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLabel.Location = new System.Drawing.Point(27, 19);
-            this.UserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UserLabel.Location = new System.Drawing.Point(54, 37);
+            this.UserLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserLabel.Name = "UserLabel";
-            this.UserLabel.Size = new System.Drawing.Size(66, 17);
+            this.UserLabel.Size = new System.Drawing.Size(127, 33);
             this.UserLabel.TabIndex = 3;
             this.UserLabel.Text = "Username";
             // 
@@ -83,10 +81,10 @@
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.Location = new System.Drawing.Point(27, 97);
-            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PasswordLabel.Location = new System.Drawing.Point(54, 187);
+            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(61, 17);
+            this.PasswordLabel.Size = new System.Drawing.Size(119, 33);
             this.PasswordLabel.TabIndex = 5;
             this.PasswordLabel.Text = "Password";
             // 
@@ -94,10 +92,10 @@
             // 
             this.PasswordBox.BackColor = System.Drawing.Color.White;
             this.PasswordBox.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordBox.Location = new System.Drawing.Point(30, 116);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordBox.Location = new System.Drawing.Point(60, 223);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.Size = new System.Drawing.Size(229, 24);
+            this.PasswordBox.Size = new System.Drawing.Size(454, 40);
             this.PasswordBox.TabIndex = 6;
             this.PasswordBox.UseSystemPasswordChar = true;
             // 
@@ -110,11 +108,11 @@
             this.LoginDetails.Controls.Add(this.UserLabel);
             this.LoginDetails.Controls.Add(this.UsernameBox);
             this.LoginDetails.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginDetails.Location = new System.Drawing.Point(281, 167);
-            this.LoginDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginDetails.Location = new System.Drawing.Point(562, 321);
+            this.LoginDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoginDetails.Name = "LoginDetails";
-            this.LoginDetails.Padding = new System.Windows.Forms.Padding(2);
-            this.LoginDetails.Size = new System.Drawing.Size(309, 159);
+            this.LoginDetails.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LoginDetails.Size = new System.Drawing.Size(618, 307);
             this.LoginDetails.TabIndex = 12;
             this.LoginDetails.TabStop = false;
             // 
@@ -122,10 +120,10 @@
             // 
             this.PasswordVisibilityButton.FlatAppearance.BorderSize = 0;
             this.PasswordVisibilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PasswordVisibilityButton.Location = new System.Drawing.Point(263, 119);
-            this.PasswordVisibilityButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordVisibilityButton.Location = new System.Drawing.Point(526, 229);
+            this.PasswordVisibilityButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordVisibilityButton.Name = "PasswordVisibilityButton";
-            this.PasswordVisibilityButton.Size = new System.Drawing.Size(32, 21);
+            this.PasswordVisibilityButton.Size = new System.Drawing.Size(64, 40);
             this.PasswordVisibilityButton.TabIndex = 16;
             this.PasswordVisibilityButton.UseVisualStyleBackColor = true;
             this.PasswordVisibilityButton.Click += new System.EventHandler(this.PasswordVisibilityButton_Click);
@@ -141,10 +139,10 @@
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Calibri", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(311, 364);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginButton.Location = new System.Drawing.Point(622, 700);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(229, 32);
+            this.LoginButton.Size = new System.Drawing.Size(458, 62);
             this.LoginButton.TabIndex = 13;
             this.LoginButton.Text = "Log in";
             this.LoginButton.UseVisualStyleBackColor = false;
@@ -154,10 +152,10 @@
             // 
             this.LoginPagePrompt.AutoSize = true;
             this.LoginPagePrompt.ForeColor = System.Drawing.Color.IndianRed;
-            this.LoginPagePrompt.Location = new System.Drawing.Point(343, 400);
-            this.LoginPagePrompt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LoginPagePrompt.Location = new System.Drawing.Point(686, 769);
+            this.LoginPagePrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LoginPagePrompt.Name = "LoginPagePrompt";
-            this.LoginPagePrompt.Size = new System.Drawing.Size(169, 13);
+            this.LoginPagePrompt.Size = new System.Drawing.Size(344, 25);
             this.LoginPagePrompt.TabIndex = 14;
             this.LoginPagePrompt.Text = "Username or password is incorrect";
             this.LoginPagePrompt.Click += new System.EventHandler(this.LoginPagePrompt_Click);
@@ -165,10 +163,10 @@
             // NewUserLinkLabel
             // 
             this.NewUserLinkLabel.AutoSize = true;
-            this.NewUserLinkLabel.Location = new System.Drawing.Point(357, 330);
-            this.NewUserLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NewUserLinkLabel.Location = new System.Drawing.Point(714, 635);
+            this.NewUserLinkLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NewUserLinkLabel.Name = "NewUserLinkLabel";
-            this.NewUserLinkLabel.Size = new System.Drawing.Size(142, 13);
+            this.NewUserLinkLabel.Size = new System.Drawing.Size(282, 25);
             this.NewUserLinkLabel.TabIndex = 15;
             this.NewUserLinkLabel.TabStop = true;
             this.NewUserLinkLabel.Text = "New user? Register account";
@@ -177,40 +175,23 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(378, 420);
+            this.linkLabel1.Location = new System.Drawing.Point(756, 808);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(92, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(186, 25);
             this.linkLabel1.TabIndex = 16;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot Password?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(753, 391);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 67);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(23, 464);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(823, 20);
-            this.textBox1.TabIndex = 18;
-            // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1768, 1079);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.NewUserLinkLabel);
             this.Controls.Add(this.LoginPagePrompt);
@@ -219,7 +200,7 @@
             this.Controls.Add(this.HotelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoodStay Hotel";
@@ -244,8 +225,6 @@
         private System.Windows.Forms.LinkLabel NewUserLinkLabel;
         private System.Windows.Forms.Button PasswordVisibilityButton;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
