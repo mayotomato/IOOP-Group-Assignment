@@ -113,23 +113,17 @@ namespace IOOP_Group_Assignment
 
         private void LoadCleaning()
         {
-            // Define the query with a parameter placeholder
             string query = "SELECT * FROM HousekeepingSchedule WHERE CAST(CleanDate AS DATE) = @CleanDate";
 
-            // Create a new SqlConnection
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString()))
             {
-                // Create a SqlDataAdapter with the query and connection
                 using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection))
                 {
-                    // Add the parameter with the date value
                     dataAdapter.SelectCommand.Parameters.AddWithValue("@CleanDate", sqlDateFormat);
 
-                    // Create a DataSet and fill it with the data
                     DataSet dataSet = new DataSet();
                     dataAdapter.Fill(dataSet, "HousekeepingSchedule");
 
-                    // Bind the DataSet to the DataGridView
                     data_RoomCleaning.DataSource = dataSet.Tables["HousekeepingSchedule"];
                 }
             }

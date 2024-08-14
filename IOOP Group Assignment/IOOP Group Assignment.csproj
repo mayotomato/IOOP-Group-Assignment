@@ -51,6 +51,9 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Log" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,8 +84,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Checkout.Designer.cs">
-	  <DependentUpon>Checkout.cs</DependentUpon>
-	</Compile>
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Check_In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,8 +223,8 @@
       <DependentUpon>booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Checkout.resx">
-	  <DependentUpon>Checkout.cs</DependentUpon>
-	</EmbeddedResource>
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Check_In.resx">
       <DependentUpon>Check_In.cs</DependentUpon>
     </EmbeddedResource>

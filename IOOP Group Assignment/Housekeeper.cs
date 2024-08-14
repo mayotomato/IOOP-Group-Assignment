@@ -7,12 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace IOOP_Group_Assignment
 {
     internal class Housekeeper
     {
 
+        public string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
+
+        
+
+        
 
         private void MarkCLeaned()
         {
@@ -21,7 +27,7 @@ namespace IOOP_Group_Assignment
 
         public void DeleteEntryFromSupplies(int id)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
+            
 
             string query = "DELETE FROM Supplies WHERE SuppliesID = @ID";
 
