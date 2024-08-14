@@ -86,6 +86,7 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckoutHandler.cs" />
     <Compile Include="Check_In.cs">
       <SubType>Form</SubType>
     </Compile>
