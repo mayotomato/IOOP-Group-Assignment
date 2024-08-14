@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace IOOP_Group_Assignment
 {
     public partial class Customer : Form
     {
+
+        public string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
         public Customer()
         {
             InitializeComponent();
@@ -24,7 +27,9 @@ namespace IOOP_Group_Assignment
 
         private void Customer_Load(object sender, EventArgs e)
         {
-
+            Housekeeper housekeeper = new Housekeeper();
+            int pfpid = housekeeper.GetProfilePictureId("Housekeepers");
+            housekeeper.LoadImageToButton(btn_Pfp, connectionString, pfpid);
         }
 
         private void btn_Rooms_Click(object sender, EventArgs e)
@@ -44,6 +49,12 @@ namespace IOOP_Group_Assignment
         {
             send_a_review f2 = new send_a_review();
             f2.Show();
+        }
+
+        private void btn_Pfp_Click(object sender, EventArgs e)
+        {
+            UpdateProfile f3 = new UpdateProfile(1); //Please change 1 to HousekeeperID received when logging in
+            f3.ShowDialog();
         }
     }
 }
