@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabcntrl_Manage_Accounts = new System.Windows.Forms.TabControl();
             this.Add = new System.Windows.Forms.TabPage();
+            this.btn_Add_Clear = new System.Windows.Forms.Button();
             this.lbl_Housekeepers = new System.Windows.Forms.Label();
             this.lbl_Receptionists = new System.Windows.Forms.Label();
             this.datagrid_Add_Housekeepers = new System.Windows.Forms.DataGridView();
@@ -57,6 +58,7 @@
             this.cmbbx_User_Type = new System.Windows.Forms.ComboBox();
             this.btn_Add_User = new System.Windows.Forms.Button();
             this.Edit = new System.Windows.Forms.TabPage();
+            this.btn_Edit_Clear = new System.Windows.Forms.Button();
             this.txtbox_Edit_Name = new System.Windows.Forms.TextBox();
             this.lbl_Edit_Name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,8 +80,6 @@
             this.passwordDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receptionistsTableAdapter = new IOOP_Group_Assignment.GoodStayHotelDatabaseDataSetTableAdapters.ReceptionistsTableAdapter();
             this.housekeepersTableAdapter = new IOOP_Group_Assignment.GoodStayHotelDatabaseDataSet1TableAdapters.HousekeepersTableAdapter();
-            this.btn_Add_Clear = new System.Windows.Forms.Button();
-            this.btn_Edit_Clear = new System.Windows.Forms.Button();
             this.tabcntrl_Manage_Accounts.SuspendLayout();
             this.Add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Add_Housekeepers)).BeginInit();
@@ -126,6 +126,16 @@
             this.Add.TabIndex = 0;
             this.Add.Text = "Add User";
             this.Add.UseVisualStyleBackColor = true;
+            // 
+            // btn_Add_Clear
+            // 
+            this.btn_Add_Clear.Location = new System.Drawing.Point(979, 191);
+            this.btn_Add_Clear.Name = "btn_Add_Clear";
+            this.btn_Add_Clear.Size = new System.Drawing.Size(92, 23);
+            this.btn_Add_Clear.TabIndex = 16;
+            this.btn_Add_Clear.Text = "Clear Selection";
+            this.btn_Add_Clear.UseVisualStyleBackColor = true;
+            this.btn_Add_Clear.Click += new System.EventHandler(this.btn_Add_Clear_Click);
             // 
             // lbl_Housekeepers
             // 
@@ -338,9 +348,9 @@
             // 
             // btn_Add_User
             // 
-            this.btn_Add_User.Location = new System.Drawing.Point(996, 371);
+            this.btn_Add_User.Location = new System.Drawing.Point(979, 369);
             this.btn_Add_User.Name = "btn_Add_User";
-            this.btn_Add_User.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add_User.Size = new System.Drawing.Size(119, 29);
             this.btn_Add_User.TabIndex = 0;
             this.btn_Add_User.Text = "Confirm";
             this.btn_Add_User.UseVisualStyleBackColor = true;
@@ -367,6 +377,16 @@
             this.Edit.TabIndex = 1;
             this.Edit.Text = "Edit User";
             this.Edit.UseVisualStyleBackColor = true;
+            // 
+            // btn_Edit_Clear
+            // 
+            this.btn_Edit_Clear.Location = new System.Drawing.Point(967, 194);
+            this.btn_Edit_Clear.Name = "btn_Edit_Clear";
+            this.btn_Edit_Clear.Size = new System.Drawing.Size(104, 23);
+            this.btn_Edit_Clear.TabIndex = 22;
+            this.btn_Edit_Clear.Text = "Clear Selection";
+            this.btn_Edit_Clear.UseVisualStyleBackColor = true;
+            this.btn_Edit_Clear.Click += new System.EventHandler(this.btn_Edit_Clear_Click);
             // 
             // txtbox_Edit_Name
             // 
@@ -436,18 +456,21 @@
             this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
+            this.nameDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // usernameDataGridViewTextBoxColumn3
             // 
             this.usernameDataGridViewTextBoxColumn3.DataPropertyName = "Username";
             this.usernameDataGridViewTextBoxColumn3.HeaderText = "Username";
             this.usernameDataGridViewTextBoxColumn3.Name = "usernameDataGridViewTextBoxColumn3";
+            this.usernameDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // passwordDataGridViewTextBoxColumn3
             // 
             this.passwordDataGridViewTextBoxColumn3.DataPropertyName = "Password";
             this.passwordDataGridViewTextBoxColumn3.HeaderText = "Password";
             this.passwordDataGridViewTextBoxColumn3.Name = "passwordDataGridViewTextBoxColumn3";
+            this.passwordDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // txtbox_Edit_Password
             // 
@@ -483,9 +506,9 @@
             // 
             // btn_Edit_User
             // 
-            this.btn_Edit_User.Location = new System.Drawing.Point(996, 370);
+            this.btn_Edit_User.Location = new System.Drawing.Point(977, 380);
             this.btn_Edit_User.Name = "btn_Edit_User";
-            this.btn_Edit_User.Size = new System.Drawing.Size(75, 23);
+            this.btn_Edit_User.Size = new System.Drawing.Size(119, 29);
             this.btn_Edit_User.TabIndex = 7;
             this.btn_Edit_User.Text = "Confirm";
             this.btn_Edit_User.UseVisualStyleBackColor = true;
@@ -548,26 +571,6 @@
             // housekeepersTableAdapter
             // 
             this.housekeepersTableAdapter.ClearBeforeFill = true;
-            // 
-            // btn_Add_Clear
-            // 
-            this.btn_Add_Clear.Location = new System.Drawing.Point(996, 212);
-            this.btn_Add_Clear.Name = "btn_Add_Clear";
-            this.btn_Add_Clear.Size = new System.Drawing.Size(75, 23);
-            this.btn_Add_Clear.TabIndex = 16;
-            this.btn_Add_Clear.Text = "Clear All";
-            this.btn_Add_Clear.UseVisualStyleBackColor = true;
-            this.btn_Add_Clear.Click += new System.EventHandler(this.btn_Add_Clear_Click);
-            // 
-            // btn_Edit_Clear
-            // 
-            this.btn_Edit_Clear.Location = new System.Drawing.Point(996, 220);
-            this.btn_Edit_Clear.Name = "btn_Edit_Clear";
-            this.btn_Edit_Clear.Size = new System.Drawing.Size(75, 23);
-            this.btn_Edit_Clear.TabIndex = 22;
-            this.btn_Edit_Clear.Text = "Clear All";
-            this.btn_Edit_Clear.UseVisualStyleBackColor = true;
-            this.btn_Edit_Clear.Click += new System.EventHandler(this.btn_Edit_Clear_Click);
             // 
             // ManageAccountsForm
             // 

@@ -53,6 +53,9 @@ namespace IOOP_Group_Assignment
             }
         }
 
+        private void txtbox_Notes_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

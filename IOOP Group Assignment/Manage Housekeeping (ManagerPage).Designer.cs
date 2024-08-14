@@ -37,6 +37,16 @@
             this.tmp_Arrow = new System.Windows.Forms.Label();
             this.lbl_Assign_Worker = new System.Windows.Forms.Label();
             this.datagrid_Schedule_Rooms = new System.Windows.Forms.DataGridView();
+            this.roomIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.floorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amenitiesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ratePerNightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availabilityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastCleanedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintenanceNotesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scheduledForCleanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.goodStayHotelDatabaseROOMSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodStayHotelDatabaseROOMS = new IOOP_Group_Assignment.GoodStayHotelDatabaseROOMS();
@@ -49,16 +59,6 @@
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomsTableAdapter = new IOOP_Group_Assignment.GoodStayHotelDatabaseROOMSTableAdapters.RoomsTableAdapter();
             this.roomsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.scheduledForCleanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maintenanceNotesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastCleanedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.availabilityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratePerNightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amenitiesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.floorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_Manage_Housekeeping.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Schedule_Rooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource2)).BeginInit();
@@ -88,9 +88,9 @@
             // 
             // btn_Assign
             // 
-            this.btn_Assign.Location = new System.Drawing.Point(506, 421);
+            this.btn_Assign.Location = new System.Drawing.Point(481, 443);
             this.btn_Assign.Name = "btn_Assign";
-            this.btn_Assign.Size = new System.Drawing.Size(75, 23);
+            this.btn_Assign.Size = new System.Drawing.Size(119, 29);
             this.btn_Assign.TabIndex = 7;
             this.btn_Assign.Text = "Assign";
             this.btn_Assign.UseVisualStyleBackColor = true;
@@ -167,6 +167,76 @@
             this.datagrid_Schedule_Rooms.Size = new System.Drawing.Size(219, 151);
             this.datagrid_Schedule_Rooms.TabIndex = 1;
             // 
+            // roomIDDataGridViewTextBoxColumn
+            // 
+            this.roomIDDataGridViewTextBoxColumn.DataPropertyName = "RoomID";
+            this.roomIDDataGridViewTextBoxColumn.HeaderText = "RoomID";
+            this.roomIDDataGridViewTextBoxColumn.Name = "roomIDDataGridViewTextBoxColumn";
+            this.roomIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roomNumberDataGridViewTextBoxColumn
+            // 
+            this.roomNumberDataGridViewTextBoxColumn.DataPropertyName = "RoomNumber";
+            this.roomNumberDataGridViewTextBoxColumn.HeaderText = "RoomNumber";
+            this.roomNumberDataGridViewTextBoxColumn.Name = "roomNumberDataGridViewTextBoxColumn";
+            this.roomNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // floorDataGridViewTextBoxColumn
+            // 
+            this.floorDataGridViewTextBoxColumn.DataPropertyName = "Floor";
+            this.floorDataGridViewTextBoxColumn.HeaderText = "Floor";
+            this.floorDataGridViewTextBoxColumn.Name = "floorDataGridViewTextBoxColumn";
+            this.floorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amenitiesDataGridViewTextBoxColumn
+            // 
+            this.amenitiesDataGridViewTextBoxColumn.DataPropertyName = "Amenities";
+            this.amenitiesDataGridViewTextBoxColumn.HeaderText = "Amenities";
+            this.amenitiesDataGridViewTextBoxColumn.Name = "amenitiesDataGridViewTextBoxColumn";
+            this.amenitiesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ratePerNightDataGridViewTextBoxColumn
+            // 
+            this.ratePerNightDataGridViewTextBoxColumn.DataPropertyName = "RatePerNight";
+            this.ratePerNightDataGridViewTextBoxColumn.HeaderText = "RatePerNight";
+            this.ratePerNightDataGridViewTextBoxColumn.Name = "ratePerNightDataGridViewTextBoxColumn";
+            this.ratePerNightDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // availabilityDataGridViewTextBoxColumn
+            // 
+            this.availabilityDataGridViewTextBoxColumn.DataPropertyName = "Availability";
+            this.availabilityDataGridViewTextBoxColumn.HeaderText = "Availability";
+            this.availabilityDataGridViewTextBoxColumn.Name = "availabilityDataGridViewTextBoxColumn";
+            this.availabilityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conditionDataGridViewTextBoxColumn
+            // 
+            this.conditionDataGridViewTextBoxColumn.DataPropertyName = "Condition";
+            this.conditionDataGridViewTextBoxColumn.HeaderText = "Condition";
+            this.conditionDataGridViewTextBoxColumn.Name = "conditionDataGridViewTextBoxColumn";
+            this.conditionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastCleanedDateDataGridViewTextBoxColumn
+            // 
+            this.lastCleanedDateDataGridViewTextBoxColumn.DataPropertyName = "LastCleanedDate";
+            this.lastCleanedDateDataGridViewTextBoxColumn.HeaderText = "LastCleanedDate";
+            this.lastCleanedDateDataGridViewTextBoxColumn.Name = "lastCleanedDateDataGridViewTextBoxColumn";
+            this.lastCleanedDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // maintenanceNotesDataGridViewTextBoxColumn
+            // 
+            this.maintenanceNotesDataGridViewTextBoxColumn.DataPropertyName = "MaintenanceNotes";
+            this.maintenanceNotesDataGridViewTextBoxColumn.HeaderText = "MaintenanceNotes";
+            this.maintenanceNotesDataGridViewTextBoxColumn.Name = "maintenanceNotesDataGridViewTextBoxColumn";
+            this.maintenanceNotesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // scheduledForCleanDataGridViewTextBoxColumn
+            // 
+            this.scheduledForCleanDataGridViewTextBoxColumn.DataPropertyName = "ScheduledForClean";
+            this.scheduledForCleanDataGridViewTextBoxColumn.HeaderText = "ScheduledForClean";
+            this.scheduledForCleanDataGridViewTextBoxColumn.Name = "scheduledForCleanDataGridViewTextBoxColumn";
+            this.scheduledForCleanDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // roomsBindingSource2
             // 
             this.roomsBindingSource2.DataMember = "Rooms";
@@ -233,76 +303,6 @@
             // roomsTableAdapter
             // 
             this.roomsTableAdapter.ClearBeforeFill = true;
-            // 
-            // scheduledForCleanDataGridViewTextBoxColumn
-            // 
-            this.scheduledForCleanDataGridViewTextBoxColumn.DataPropertyName = "ScheduledForClean";
-            this.scheduledForCleanDataGridViewTextBoxColumn.HeaderText = "ScheduledForClean";
-            this.scheduledForCleanDataGridViewTextBoxColumn.Name = "scheduledForCleanDataGridViewTextBoxColumn";
-            this.scheduledForCleanDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // maintenanceNotesDataGridViewTextBoxColumn
-            // 
-            this.maintenanceNotesDataGridViewTextBoxColumn.DataPropertyName = "MaintenanceNotes";
-            this.maintenanceNotesDataGridViewTextBoxColumn.HeaderText = "MaintenanceNotes";
-            this.maintenanceNotesDataGridViewTextBoxColumn.Name = "maintenanceNotesDataGridViewTextBoxColumn";
-            this.maintenanceNotesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastCleanedDateDataGridViewTextBoxColumn
-            // 
-            this.lastCleanedDateDataGridViewTextBoxColumn.DataPropertyName = "LastCleanedDate";
-            this.lastCleanedDateDataGridViewTextBoxColumn.HeaderText = "LastCleanedDate";
-            this.lastCleanedDateDataGridViewTextBoxColumn.Name = "lastCleanedDateDataGridViewTextBoxColumn";
-            this.lastCleanedDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // conditionDataGridViewTextBoxColumn
-            // 
-            this.conditionDataGridViewTextBoxColumn.DataPropertyName = "Condition";
-            this.conditionDataGridViewTextBoxColumn.HeaderText = "Condition";
-            this.conditionDataGridViewTextBoxColumn.Name = "conditionDataGridViewTextBoxColumn";
-            this.conditionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // availabilityDataGridViewTextBoxColumn
-            // 
-            this.availabilityDataGridViewTextBoxColumn.DataPropertyName = "Availability";
-            this.availabilityDataGridViewTextBoxColumn.HeaderText = "Availability";
-            this.availabilityDataGridViewTextBoxColumn.Name = "availabilityDataGridViewTextBoxColumn";
-            this.availabilityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ratePerNightDataGridViewTextBoxColumn
-            // 
-            this.ratePerNightDataGridViewTextBoxColumn.DataPropertyName = "RatePerNight";
-            this.ratePerNightDataGridViewTextBoxColumn.HeaderText = "RatePerNight";
-            this.ratePerNightDataGridViewTextBoxColumn.Name = "ratePerNightDataGridViewTextBoxColumn";
-            this.ratePerNightDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amenitiesDataGridViewTextBoxColumn
-            // 
-            this.amenitiesDataGridViewTextBoxColumn.DataPropertyName = "Amenities";
-            this.amenitiesDataGridViewTextBoxColumn.HeaderText = "Amenities";
-            this.amenitiesDataGridViewTextBoxColumn.Name = "amenitiesDataGridViewTextBoxColumn";
-            this.amenitiesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // floorDataGridViewTextBoxColumn
-            // 
-            this.floorDataGridViewTextBoxColumn.DataPropertyName = "Floor";
-            this.floorDataGridViewTextBoxColumn.HeaderText = "Floor";
-            this.floorDataGridViewTextBoxColumn.Name = "floorDataGridViewTextBoxColumn";
-            this.floorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // roomNumberDataGridViewTextBoxColumn
-            // 
-            this.roomNumberDataGridViewTextBoxColumn.DataPropertyName = "RoomNumber";
-            this.roomNumberDataGridViewTextBoxColumn.HeaderText = "RoomNumber";
-            this.roomNumberDataGridViewTextBoxColumn.Name = "roomNumberDataGridViewTextBoxColumn";
-            this.roomNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // roomIDDataGridViewTextBoxColumn
-            // 
-            this.roomIDDataGridViewTextBoxColumn.DataPropertyName = "RoomID";
-            this.roomIDDataGridViewTextBoxColumn.HeaderText = "RoomID";
-            this.roomIDDataGridViewTextBoxColumn.Name = "roomIDDataGridViewTextBoxColumn";
-            this.roomIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ManageHousekeepingForm
             // 

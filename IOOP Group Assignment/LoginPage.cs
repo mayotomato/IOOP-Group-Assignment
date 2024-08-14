@@ -46,7 +46,7 @@ namespace IOOP_Group_Assignment
         private void execute(string imagePath)
         {
 
-            
+
 
             try
             {
@@ -59,30 +59,6 @@ namespace IOOP_Group_Assignment
             }
         }
 
-        private void CustomerRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Email";
-            NewUserLinkLabel.Text = "New user? Register account";
-
-        }
-
-        private void ReceptionistRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
-        }
-
-        private void ManagerRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
-        }
-
-        private void HousekeepingRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
-        }
 
         private void NewUserLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -97,12 +73,12 @@ namespace IOOP_Group_Assignment
             if (passwordVisibility) 
             {
                 PasswordBox.UseSystemPasswordChar = false;
-                PasswordVisibilityButton.Image = Properties.Resources.Eye_Show;
+                PasswordVisibilityButton.Text = "Hide";
             }
             else
             {
                 PasswordBox.UseSystemPasswordChar = true;
-                PasswordVisibilityButton.Image = Properties.Resources.Eye_Hide;
+                PasswordVisibilityButton.Text = "Show";
             }
         }
 
@@ -171,7 +147,7 @@ namespace IOOP_Group_Assignment
             FROM (
                 SELECT 'Customer' AS UserType, Name
                 FROM Customers
-                WHERE Name = @Username AND Password = @Password
+                WHERE Username = @Username AND Password = @Password
                 UNION
                 SELECT 'Receptionist' AS UserType, Name
                 FROM Receptionists
@@ -223,6 +199,8 @@ namespace IOOP_Group_Assignment
         {
 
         }
+
+
 
 
     }
