@@ -110,7 +110,7 @@
             this.LoginDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoginDetails.Name = "LoginDetails";
             this.LoginDetails.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.LoginDetails.Size = new System.Drawing.Size(618, 307);
+            this.LoginDetails.Size = new System.Drawing.Size(646, 307);
             this.LoginDetails.TabIndex = 12;
             this.LoginDetails.TabStop = false;
             // 
@@ -121,8 +121,9 @@
             this.PasswordVisibilityButton.Location = new System.Drawing.Point(526, 229);
             this.PasswordVisibilityButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordVisibilityButton.Name = "PasswordVisibilityButton";
-            this.PasswordVisibilityButton.Size = new System.Drawing.Size(64, 40);
+            this.PasswordVisibilityButton.Size = new System.Drawing.Size(112, 40);
             this.PasswordVisibilityButton.TabIndex = 16;
+            this.PasswordVisibilityButton.Text = "Show";
             this.PasswordVisibilityButton.UseVisualStyleBackColor = true;
             this.PasswordVisibilityButton.Click += new System.EventHandler(this.PasswordVisibilityButton_Click);
             // 

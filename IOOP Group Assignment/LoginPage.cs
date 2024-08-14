@@ -73,12 +73,12 @@ namespace IOOP_Group_Assignment
             if (passwordVisibility) 
             {
                 PasswordBox.UseSystemPasswordChar = false;
-                PasswordVisibilityButton.Image = Properties.Resources.Eye_Show;
+                PasswordVisibilityButton.Text = "Hide";
             }
             else
             {
                 PasswordBox.UseSystemPasswordChar = true;
-                PasswordVisibilityButton.Image = Properties.Resources.Eye_Hide;
+                PasswordVisibilityButton.Text = "Show";
             }
         }
 
@@ -200,15 +200,8 @@ namespace IOOP_Group_Assignment
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string imagePath = textBox1.Text;
-            execute(imagePath);
-        }
+
+
     }
 }

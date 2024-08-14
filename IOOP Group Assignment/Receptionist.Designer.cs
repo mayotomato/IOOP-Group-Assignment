@@ -35,7 +35,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.lbl_Username = new System.Windows.Forms.Label();
             this.btn_Pfp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -170,16 +169,6 @@
             this.button6.Text = "Update Users Profile ";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // lbl_Username
-            // 
-            this.lbl_Username.AutoSize = true;
-            this.lbl_Username.Location = new System.Drawing.Point(135, 795);
-            this.lbl_Username.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lbl_Username.Name = "lbl_Username";
-            this.lbl_Username.Size = new System.Drawing.Size(68, 25);
-            this.lbl_Username.TabIndex = 37;
-            this.lbl_Username.Text = "Name";
-            // 
             // btn_Pfp
             // 
             this.btn_Pfp.Location = new System.Drawing.Point(15, 762);
@@ -196,7 +185,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1600, 865);
-            this.Controls.Add(this.lbl_Username);
             this.Controls.Add(this.btn_Pfp);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
@@ -222,7 +210,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Button btn_Pfp;
     }
 }

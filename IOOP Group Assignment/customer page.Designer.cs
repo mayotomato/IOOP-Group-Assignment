@@ -32,7 +32,6 @@ namespace IOOP_Group_Assignment
         {
             this.btn_Rooms = new System.Windows.Forms.Button();
             this.btn_Managereservations = new System.Windows.Forms.Button();
-            this.lbl_Username = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Pfp = new System.Windows.Forms.Button();
             this.btnSend_review = new System.Windows.Forms.Button();
@@ -77,16 +76,6 @@ namespace IOOP_Group_Assignment
             this.btn_Managereservations.Text = "Manage reservations";
             this.btn_Managereservations.UseVisualStyleBackColor = false;
             this.btn_Managereservations.Click += new System.EventHandler(this.btn_Managereservations_Click);
-            // 
-            // lbl_Username
-            // 
-            this.lbl_Username.AutoSize = true;
-            this.lbl_Username.Location = new System.Drawing.Point(132, 633);
-            this.lbl_Username.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lbl_Username.Name = "lbl_Username";
-            this.lbl_Username.Size = new System.Drawing.Size(68, 25);
-            this.lbl_Username.TabIndex = 35;
-            this.lbl_Username.Text = "Name";
             // 
             // label1
             // 
@@ -139,7 +128,6 @@ namespace IOOP_Group_Assignment
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Rooms);
             this.Controls.Add(this.btn_Managereservations);
-            this.Controls.Add(this.lbl_Username);
             this.Controls.Add(this.btn_Pfp);
             this.ForeColor = System.Drawing.Color.DarkBlue;
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -159,7 +147,6 @@ namespace IOOP_Group_Assignment
         #endregion
         private System.Windows.Forms.Button btn_Rooms;
         private System.Windows.Forms.Button btn_Managereservations;
-        private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Button btn_Pfp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSend_review;
