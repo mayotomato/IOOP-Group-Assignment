@@ -38,8 +38,6 @@
             this.PasswordVisibilityButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.LoginPagePrompt = new System.Windows.Forms.Label();
-            this.NewUserLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.LoginDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,30 +158,6 @@
             this.LoginPagePrompt.Text = "Username or password is incorrect";
             this.LoginPagePrompt.Click += new System.EventHandler(this.LoginPagePrompt_Click);
             // 
-            // NewUserLinkLabel
-            // 
-            this.NewUserLinkLabel.AutoSize = true;
-            this.NewUserLinkLabel.Location = new System.Drawing.Point(714, 635);
-            this.NewUserLinkLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.NewUserLinkLabel.Name = "NewUserLinkLabel";
-            this.NewUserLinkLabel.Size = new System.Drawing.Size(282, 25);
-            this.NewUserLinkLabel.TabIndex = 15;
-            this.NewUserLinkLabel.TabStop = true;
-            this.NewUserLinkLabel.Text = "New user? Register account";
-            this.NewUserLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NewUserLinkLabel_LinkClicked);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(756, 808);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(186, 25);
-            this.linkLabel1.TabIndex = 16;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forgot Password?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -192,8 +166,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1768, 1079);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.NewUserLinkLabel);
             this.Controls.Add(this.LoginPagePrompt);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.LoginDetails);
@@ -222,9 +194,7 @@
         private System.Windows.Forms.GroupBox LoginDetails;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label LoginPagePrompt;
-        private System.Windows.Forms.LinkLabel NewUserLinkLabel;
         private System.Windows.Forms.Button PasswordVisibilityButton;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
