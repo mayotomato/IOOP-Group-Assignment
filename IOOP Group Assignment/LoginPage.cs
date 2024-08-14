@@ -224,10 +224,6 @@ namespace IOOP_Group_Assignment
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string imagePath = textBox1.Text;
-            execute(imagePath);
-        }
+
     }
 }

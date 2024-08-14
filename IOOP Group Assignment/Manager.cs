@@ -86,7 +86,7 @@ namespace IOOP_Group_Assignment
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
-        public void EditRoom(string roomID, string roomNumber, string floor, string ratePerNight, string condition, string lastCleaned, string amenities, string availability, string maintenanceNotes, string sheduled)
+        public void EditRoom(string roomID, string roomNumber, string floor, string ratePerNight, string condition, DateTime lastCleaned, string amenities, string availability, string maintenanceNotes, string sheduled)
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             SqlCommand query = new SqlCommand("UPDATE Rooms SET RoomNumber  = @roomnumber, Floor = @floor, RatePerNight = @ratepernight, Condition = @condition, LastCleanedDate = @lastcleaned, Amenities = @amenities, Availability = @availability, MaintenanceNotes = @maintenancenotes, ScheduledForClean = @scheduled WHERE RoomID = @roomid", connection);
@@ -121,7 +121,7 @@ namespace IOOP_Group_Assignment
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
-        public void AddRoom(string roomNumber, string floor, string ratePerNight, string condition, string lastCleaned, string amenities, string availability, string maintenanceNotes, string sheduled)
+        public void AddRoom(string roomNumber, string floor, string ratePerNight, string condition, DateTime lastCleaned, string amenities, string availability, string maintenanceNotes, string sheduled)
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             SqlCommand query = new SqlCommand($"INSERT INTO Rooms (RoomNumber, Floor, RatePerNight, Condition, LastCleanedDate, Amenities, Availability, MaintenanceNotes, ScheduledForClean)" +
@@ -183,7 +183,7 @@ namespace IOOP_Group_Assignment
             }
         }
 
-        public void AssignSchedule(string HousekeeperID, string RoomID, string cleanDate)
+        public void AssignSchedule(string HousekeeperID, string RoomID, DateTime cleanDate)
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             SqlCommand query = new SqlCommand("INSERT INTO HousekeepingSchedule (HousekeeperID, RoomID, CleanDate) VALUES (@housekeeperid, @roomid, @cleandate)", connection);

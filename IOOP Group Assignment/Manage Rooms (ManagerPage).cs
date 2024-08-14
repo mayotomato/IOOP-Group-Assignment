@@ -42,10 +42,10 @@ namespace IOOP_Group_Assignment
 
                  //datetime convert to stringifiied datetime sql
 
-                admin.EditRoom(ID.ToString(), txtbox_Edit_Room_Number.Text, txtbox_Edit_Floor.Text, txtbox_Edit_Rate.Text, cmbbox_Edit_Condition.Text, timebox_Edit_Cleaned.Value.ToString(), txtbox_Amenities.Text, cmbbox_Availability.Text, txtbox_Notes.Text, cmbbx_Scheduled.Text);
+                admin.EditRoom(ID.ToString(), txtbox_Edit_Room_Number.Text, txtbox_Edit_Floor.Text, txtbox_Edit_Rate.Text, cmbbox_Edit_Condition.Text, timebox_Edit_Cleaned.Value, txtbox_Amenities.Text, cmbbox_Availability.Text, txtbox_Notes.Text, cmbbx_Scheduled.Text);
             } else
             {
-                admin.AddRoom(txtbox_Edit_Room_Number.Text, txtbox_Edit_Floor.Text, txtbox_Edit_Rate.Text, cmbbox_Edit_Condition.Text, timebox_Edit_Cleaned.Value.ToString(), txtbox_Amenities.Text, cmbbox_Availability.Text, txtbox_Notes.Text, cmbbx_Scheduled.Text);
+                admin.AddRoom(txtbox_Edit_Room_Number.Text, txtbox_Edit_Floor.Text, txtbox_Edit_Rate.Text, cmbbox_Edit_Condition.Text, timebox_Edit_Cleaned.Value, txtbox_Amenities.Text, cmbbox_Availability.Text, txtbox_Notes.Text, cmbbx_Scheduled.Text);
             }
 
             datagrid_Rooms.DataSource = GetData("Rooms");
