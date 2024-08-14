@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+
 
 namespace IOOP_Group_Assignment
 {
@@ -115,6 +119,31 @@ namespace IOOP_Group_Assignment
 
             // Add the information to the DataGridView
             dataGridView1.Rows.Add(roomType, $"{totalPrice} RM", roomFloor);
+
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+
+            using (connection)
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "INSERT INTO Reservations (Room_Type, Room_Floor, @Date) VALUES (@Room_Type, @Room_Floor, @Date)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Room_Type", CBRoom_Type.Text);
+                        command.Parameters.AddWithValue("@Room_Floor", CBRoom_Floor.Text);
+                        command.Parameters.AddWithValue("@Date", monthCalendar2.Text);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("You Have Checked in.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
         }
 
         private void CBRoom_Floor_SelectedIndexChanged(object sender, EventArgs e)
@@ -163,6 +192,15 @@ namespace IOOP_Group_Assignment
         {
 
         }
-        
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
