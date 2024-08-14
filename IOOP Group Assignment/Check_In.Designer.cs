@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.checkinDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.checkoutDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.roomPriceTextBox = new System.Windows.Forms.TextBox();
             this.totalBalanceTextBox = new System.Windows.Forms.TextBox();
             this.checkinButton = new System.Windows.Forms.Button();
             this.getBillButton = new System.Windows.Forms.Button();
@@ -127,16 +126,9 @@
             this.checkoutDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.checkoutDateTimePicker.TabIndex = 91;
             // 
-            // roomPriceTextBox
-            // 
-            this.roomPriceTextBox.Location = new System.Drawing.Point(262, 272);
-            this.roomPriceTextBox.Name = "roomPriceTextBox";
-            this.roomPriceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.roomPriceTextBox.TabIndex = 92;
-            // 
             // totalBalanceTextBox
             // 
-            this.totalBalanceTextBox.Location = new System.Drawing.Point(421, 272);
+            this.totalBalanceTextBox.Location = new System.Drawing.Point(337, 287);
             this.totalBalanceTextBox.Name = "totalBalanceTextBox";
             this.totalBalanceTextBox.Size = new System.Drawing.Size(100, 20);
             this.totalBalanceTextBox.TabIndex = 93;
@@ -189,7 +181,6 @@
             this.Controls.Add(this.getBillButton);
             this.Controls.Add(this.checkinButton);
             this.Controls.Add(this.totalBalanceTextBox);
-            this.Controls.Add(this.roomPriceTextBox);
             this.Controls.Add(this.checkoutDateTimePicker);
             this.Controls.Add(this.checkinDateTimePicker);
             this.Controls.Add(this.label2);
@@ -218,7 +209,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker checkinDateTimePicker;
         private System.Windows.Forms.DateTimePicker checkoutDateTimePicker;
-        private System.Windows.Forms.TextBox roomPriceTextBox;
         private System.Windows.Forms.TextBox totalBalanceTextBox;
         private System.Windows.Forms.Button checkinButton;
         private System.Windows.Forms.Button getBillButton;

@@ -34,8 +34,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.name_TextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ComboBoxRoomType = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.paymTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -114,32 +112,13 @@
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
             this.label3.Location = new System.Drawing.Point(275, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 76;
-            this.label3.Text = "Full Name:";
-            // 
-            // ComboBoxRoomType
-            // 
-            this.ComboBoxRoomType.FormattingEnabled = true;
-            this.ComboBoxRoomType.Location = new System.Drawing.Point(445, 187);
-            this.ComboBoxRoomType.Name = "ComboBoxRoomType";
-            this.ComboBoxRoomType.Size = new System.Drawing.Size(121, 21);
-            this.ComboBoxRoomType.TabIndex = 83;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(275, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 20);
-            this.label4.TabIndex = 82;
-            this.label4.Text = "Room Type:";
+            this.label3.Text = "CustomerID";
             // 
             // paymTextbox
             // 
-            this.paymTextbox.Location = new System.Drawing.Point(466, 278);
+            this.paymTextbox.Location = new System.Drawing.Point(369, 255);
             this.paymTextbox.Name = "paymTextbox";
             this.paymTextbox.Size = new System.Drawing.Size(100, 20);
             this.paymTextbox.TabIndex = 84;
@@ -151,8 +130,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.paymTextbox);
-            this.Controls.Add(this.ComboBoxRoomType);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelBill);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.name_TextBox);
@@ -175,8 +152,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox name_TextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox ComboBoxRoomType;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox paymTextbox;
     }
 }
