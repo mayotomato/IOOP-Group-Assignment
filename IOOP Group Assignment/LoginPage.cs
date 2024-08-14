@@ -22,42 +22,7 @@ namespace IOOP_Group_Assignment
             InitializeComponent();
         }
 
-        public string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
-
-        private void SaveImageToDatabase(string connectionString, string imagePath)
-        {
-            byte[] imageData = File.ReadAllBytes(imagePath);
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "INSERT INTO Images (ImageData) VALUES (@ImageData)";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@ImageData", imageData);
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
-
-
-
-        private void execute(string imagePath)
-        {
-
-            
-
-            try
-            {
-                SaveImageToDatabase(connectionString, imagePath);
-                MessageBox.Show("Image saved successfully.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
-        }
+        
 
         private void CustomerRadio_CheckedChanged(object sender, EventArgs e)
         {
