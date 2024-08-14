@@ -45,7 +45,7 @@ namespace IOOP_Group_Assignment
 
             if (housekeeperID != -1)
             {
-                admin.AssignSchedule(housekeeperID.ToString(), roomID.ToString(), timebox_Maintenance_Date.Value.ToString());
+                admin.AssignSchedule(housekeeperID.ToString(), roomID.ToString(), timebox_Maintenance_Date.Value);
             } else
             {
                 MessageBox.Show("Please Select a Housekeeper and a Room!");
