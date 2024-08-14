@@ -238,6 +238,9 @@
     <EmbeddedResource Include="HK_Schedule.resx">
       <DependentUpon>HK_Schedule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HousekeepingPage.resx">
+      <DependentUpon>HousekeepingPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage Housekeeping %28ManagerPage%29.resx">
       <DependentUpon>Manage Housekeeping %28ManagerPage%29.cs</DependentUpon>
     </EmbeddedResource>

@@ -22,32 +22,43 @@ namespace IOOP_Group_Assignment
             InitializeComponent();
         }
 
-        
+        public string connectionString = ConfigurationManager.ConnectionStrings["myCS"].ToString();
 
-        private void CustomerRadio_CheckedChanged(object sender, EventArgs e)
+        private void SaveImageToDatabase(string connectionString, string imagePath)
         {
-            UserLabel.Text = "Email";
-            NewUserLinkLabel.Text = "New user? Register account";
+            byte[] imageData = File.ReadAllBytes(imagePath);
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "INSERT INTO Images (ImageData) VALUES (@ImageData)";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ImageData", imageData);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
-        private void ReceptionistRadio_CheckedChanged(object sender, EventArgs e)
+
+
+        private void execute(string imagePath)
         {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
+
+
+
+            try
+            {
+                SaveImageToDatabase(connectionString, imagePath);
+                MessageBox.Show("Image saved successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
 
-        private void ManagerRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
-        }
-
-        private void HousekeepingRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            UserLabel.Text = "Username";
-            NewUserLinkLabel.Text = "";
-        }
 
         private void NewUserLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -136,7 +147,7 @@ namespace IOOP_Group_Assignment
             FROM (
                 SELECT 'Customer' AS UserType, Name
                 FROM Customers
-                WHERE Name = @Username AND Password = @Password
+                WHERE Username = @Username AND Password = @Password
                 UNION
                 SELECT 'Receptionist' AS UserType, Name
                 FROM Receptionists
@@ -189,6 +200,15 @@ namespace IOOP_Group_Assignment
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string imagePath = textBox1.Text;
+            execute(imagePath);
+        }
     }
 }
